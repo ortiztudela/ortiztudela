@@ -20,3 +20,9 @@ main:
     
   - title: "Guide"
     url: /markdown/
+
+  - title: "To-Future-Me"
+    url: /to-future-me/
+
+  - title: "Contact"
+    url: /contact/
