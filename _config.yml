@@ -21,9 +21,9 @@ repository               : "ortiztudela/ortiztudela.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "files/front_page_image.png"
   name             : "Javier Ortiz-Tudela"
-  pronouns         : # example: "she/her"  
+  pronouns         : "he/him"  
   bio              : #"Short biography for the left-hand sidebar"
   location         : "Earth 616"
   employer         : "Universidad de Granada"
