@@ -7,7 +7,7 @@ author_profile: true
 
 ## Bachelor Courses
 
-[Cognitive Neuroscience 2425 - Small group sessions](/teaching/ncc-2425_book/index.html)
+[Cognitive Neuroscience 2425 - Small group sessions](/teachingttt/ncc-2425_book/index.html)
 
 ## Master Courses
 
