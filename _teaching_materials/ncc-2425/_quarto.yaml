@@ -5,7 +5,7 @@ project:
 book:
   title: "Cognitive Neuroscience 2425 - Small Group Sessions"
   author: "Javier Ortiz-Tudela (feat. Carlos González-García)"
-  date: "2025"
+  date: "September, 2024"
   chapters:
     - index.qmd
     - part: "Course Information"
