@@ -3,8 +3,8 @@ project:
   output-dir: _site
 
 book:
-  title: "Cognitive Neuroscience 2425"
-  author: "Javier Ortiz-Tudela"
+  title: "Cognitive Neuroscience 2425 - Small Group Sessions"
+  author: "Javier Ortiz-Tudela (feat. Carlos González-García)"
   date: "2025"
   chapters:
     - index.qmd

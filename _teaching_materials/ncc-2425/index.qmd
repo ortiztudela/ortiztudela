@@ -1,4 +1,4 @@
-# Welcome to Cognitive Neuroscience
+# Welcome to the Small Group Sessions of Cognitive Neuroscience 2425
 
 This book contains the materials for the small group session of the Cognitive Neuroscience course (Academic year 2425). The overarching aim of these sessions is to gain in-depth knowledge about certain sub-topics in Cognitive Neuroscience which, due to time limitation, cannot be covered in detail in the big group sessions. The final outcome will be a group project in which you will create a podcast-like episode on a subtopic of your chosing within Cognitive Neuroscience.
 
