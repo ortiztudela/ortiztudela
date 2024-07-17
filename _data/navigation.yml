@@ -7,7 +7,7 @@ main:
     url: /resources/  
 
   - title: "Teaching"
-    url: "{{ site.baseurl }}/teaching/"
+    url: "/teaching/"
           
   - title: "Projects"
     url: /portfolio/
