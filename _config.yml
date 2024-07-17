@@ -21,7 +21,7 @@ repository               : "ortiztudela/ortiztudela.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "files/front_page_image.png"
+  avatar           : "foto_javi.jpg"
   name             : "Javier Ortiz-Tudela"
   pronouns         : "he/him"  
   bio              : #"Short biography for the left-hand sidebar"
@@ -138,7 +138,8 @@ exclude:
   - package.json
   - tmp
   - vendor
-  - teaching/quarto-book
+  - teaching/ncc-2425_book
+  - _teaching_materials
 keep_files:
   - .git
   - .svn

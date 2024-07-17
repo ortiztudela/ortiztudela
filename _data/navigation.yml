@@ -1,6 +1,6 @@
 # main links links
 main:
-  - title: "Publications"
+  - title: "Latest Publications"
     url: /publications/
 
   - title: "Resources"
@@ -11,9 +11,6 @@ main:
           
   - title: "Projects"
     url: /portfolio/
-    
-  - title: "To-Future-Me"
-    url: /to-future-me/
 
   - title: "Contact"
     url: /contact/

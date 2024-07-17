@@ -7,6 +7,10 @@ author_profile: true
 
 ## Contact
 
+<p style="float: right; margin: 10px 0 10px 20px;">
+  <img src="../files/front_page_image.png" alt="Profile Image" />
+</p>
+
 ### Find me here:
 
 [ortiztudela@psych.uni-frankfurt.de](mailto:ortiztudela@psych.uni-frankfurt.de)
@@ -19,4 +23,4 @@ author_profile: true
 
 **ResearchGate:** [Javier Ortiz-Tudela](https://www.researchgate.net/profile/Javier_Ortiz-Tudela)
 
-![Profile Image](https://lh4.googleusercontent.com/-30o3cr_fB7yNPu1rGBh6s8pNBaATur_oJJJuQxnbXxfhZx-h4ey00739X58063Ru7ohFNBEyZ7EgCIHejkw_5Rb4Y6a_vLj8NOCc__Dr7c-eTTmM03I9GjyolSCtaioaw=w1280)
+
