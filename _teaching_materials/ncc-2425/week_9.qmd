@@ -1,0 +1,40 @@
+# Week 9: Editing
+
+## Quick Recap
+
+At this stage, you should have an initial draft of your script and either have received or are about to receive feedback on it.
+
+## The Editing Process
+
+The general flow for creating your podcast episode should follow this pattern:
+
+Idea -> Reading -> Outline -> Reading -> Writing (first draft) -> Feedback -> Polish script -> Recording -> Editing
+
+Editing might require you to re-record some bits. This is normal. The listener will not know when certain sentences where recorded. Do use that opportunity to your advantage!
+
+### Equipment:
+- Computer
+- Headphones
+- Time, patience, and creativity!
+
+### Software:
+- If you're familiar with an audio editing program, use it!
+- Audacity is a popular choice
+- For more advanced editing, consider Descript (https://www.descript.com/) or Hindenburg Journalist (https://hindenburg.com/academy/trial/)
+
+## Tips for Quality Recording and Editing
+
+1. **Focus on content**: Audio is a coarse format, so content is key!
+2. **Enhance your recording**: Consider adding background music, sound effects, or transitions
+3. **Avoid common pitfalls**:
+   - Eliminate background noises
+   - Use a microphone that doesn't introduce buzzing
+   - If multiple people are speaking, avoid talking over each other
+4. **Listen and judge**: Always review your recording to ensure you're satisfied with the result
+
+## Final Remarks
+
+Remember that content is what is central. The format (music, transitions, edits) is just a nice envelope but one that will have a direct impact on how your audience takes in the message. Thus, it is a very important aspect that, if done poorly, can ruin the entire experience before it even begins.
+
+## Next Steps
+The next couple of weeks will be devoted to recording! Do spend time crafting the recordings and polishing them during post-production. Good luck with your edits, and remember to enjoy the process!

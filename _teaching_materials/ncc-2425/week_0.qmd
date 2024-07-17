@@ -1,0 +1,201 @@
+---
+title: "Week 0: Course Kick-off"
+bibliography: references.bib
+---
+
+
+## Course Structure
+The course is structured week-by-week, guiding you through the process of creating your podcast. Each week focuses on specific tasks and milestones, building towards your final product. The workload is distributed between in-person sessions and autonomous group work.
+
+During the in-person sessions we will explain each step in the process and present you with strategies and tools so that you can work efficiently. In addition, some of the in-person time will be dedicated for group work so that you can complement your autonomous work. If you regularly attend the in-person sessions and you deliver all the milestones in their due time, the amount of autonomous work should be minimal.
+
+### Let's start at the end (product): Your own CogNeuro Podcast!
+The main project of this course is to create a 5 to 10-minute podcast-like recording on a subtopic within Cognitive Neuroscience. Throughout the semester, you'll work through various milestones, from topic selection to the final production of your podcast episode. If you have never worked on a similar project, rest assure, we will walk you through all the steps so that, if you follow along, you will be able to complete the assignment in time.
+
+We will give you a set of broad topics for you to choose from but you will also be able (and encouraged!) to work on a different topic that you find more interesting. If you want to have a more concrete idea of what we are expecting from you, here you can find some of the episodes that were created in the 2324 edition (shared with permission form the authors).
+
+- [Poverty](_examples/Tue_11-12_Poverty.mp3)
+- [Neurosexism](_examples/Tue_11-12_Neurosexism.mp3)
+- [Stereotypes](_examples/Wed_12-13_Stereotypes-1.mp3)
+- [Consciencia](_examples/Wed_18-19_Consciencia-1.mp3)
+- [Neurosexismo](_examples/Wed_18-19_Neurosexismo.mp3)
+- [Plasticidad](_examples/Wed_18-19_Plasticidad-1.mp3)
+
+### How We'll Achieve This
+- Work in small groups arranged according to topic preferences.
+- Follow a weekly program covering all necessary steps.
+- Engage in lots of in-session work.
+- Complete partial milestones throughout the semester.
+- Participate in joint listening sessions of the recordings, Q&A, and feedback.
+
+Here you will find a detailed plan of what we will do on each session (this file will also be available on PRADO).
+
+:::{.callout-note collapse="true"}
+## Roadmap for the Course
+#### Week 0: Course Introduction and Roadmap
+- **Date:** September 18th
+- **Activities:**
+In this introductory session, we'll go over the course objectives and what you can expect to achieve by the end. We will also cover our expected timeline, deliverable milestones and how we will evaluate your work.
+
+#### Week 1: Topic Selection and Research
+- **Date:** September 25th
+- **Activities:**
+  - Presentation of the skeptical watchlist for Cognitive Neuroscience research.
+  - Introduction to available topics along with the selected papers.
+  - Students rate their topic preferences (https://forms.gle/vv24vQnko35txwyt8)
+  - Formation of groups based on topic preferences.
+
+#### Week 2: In-depth Research (Part 1)
+- **Date:** September 25th
+- **Activities:**
+  - Read and analyze the proposed paper for the selected topic.
+  - Conduct topic-specific literature searches.
+  - Distribute additional papers among group members and start reading.
+
+#### Week 3: In-depth Research (Part 2)
+- **Date:** October 2nd
+- **Activities:**
+  - Continue reading and analyzing the literature.
+  - Present findings to peers and discuss.
+  - Identify interesting subtopics for further exploration.
+  - Present popular science podcasts as examples.
+  - **Milestone:** Decide on a subtopic, a target audience and provide a tentative title for your podcast episode.
+
+#### Week 4: Episode Outline
+- **Date:** October 9th
+- **Activities:**
+  - Continue refining the content through additional reading.
+  - Develop an outline for the podcast episode collaboratively.
+  - Decide on the tone (formal, light, fun) of the episode.
+  - Assign roles for the final episode (who will speak, etc.).
+  - Begin working individually on respective sections.
+  - Seek guidance and feedback as needed.
+
+#### Week 5: Preparing Interviews
+- **Date:** October 16th
+- **Activities:**
+  - Identify and research the expert for the interview.
+  - Decide on the format for the interview (audio recording or discussion).
+  - Develop and select key questions for the interview.
+  - Integrate the interview into the episode outline.
+  - **Milestone:** Send the outline and questions for review.
+
+#### Week 6: Recording Interviews (Part 1) + Script Writing (Part 1)
+- **Date:** October 23rd
+- **Activities:**
+  - Begin recording interviews with the experts.
+  - Learn tips for writing engaging introductions and conclusions.
+  - Start writing the script for the episode.
+  - Seek guidance and feedback as needed.
+
+#### Week 7: Recording Interviews (Part 2) + Script Writing (Part 2)
+- **Date:** October 30th
+- **Activities:**
+  - Continue recording interviews.
+  - Review and adjust the episode outline if necessary.
+  - Continue writing the script.
+  - **Milestone:** Send script draft for review.
+
+#### Week 8: Script Writing (Part 3) + Intro to Recording
+- **Date:** November 6th
+- **Activities:**
+  - Introduction to podcast recording techniques.
+  - Discussion on the importance of recording environment and speaker articulation and delivery.
+  - Basic audio recording tools.
+  - Incorporate insights from interviews into the episode.
+  - Continue refining the script based on feedback.
+
+#### Week 9: Script Writing (Part 4) + Intro to Editing
+- **Date:** November 13th
+- **Activities:**
+  - Introduction to podcast editing techniques.
+  - Discussion on the use of transitions, sound effects, and music.
+  - Basic audio editing tools.
+  - Incorporate insights from interviews into the episode.
+  - Continue refining the script based on feedback.
+
+#### Week 10: Recording and Audio Editing (Part 1)
+- **Date:** November 20th
+- **Activities:**
+  - Start recording the episode using the developed script.
+  - Seek guidance and feedback as needed.
+
+#### Week 11: Recording and Audio Editing (Part 2)
+- **Date:** November 27th
+- **Activities:**
+  - Continue recording.
+  - Support in editing the recorded audio for clarity and coherence.
+  - Review and revise the entire podcast episode as a group.
+  - Make necessary edits to enhance the episode's flow and quality.
+
+#### Week 12: Podcast Presentation and Group Feedback (Part I)
+- **Date:** November 4th
+- **Activities:**
+  - Listen to the final version of the episodes as a group.
+  - Q&A session with other groups.
+  - Provide and receive constructive feedback on various aspects of the episode.
+  - Vote on different aspects of the podcast (e.g., content, clarity)
+  - Discuss feedback and the overall experience.
+
+:::
+
+## Resources
+
+### Technical Resources
+- This book!
+- PRADO platform
+- Audio recording software
+- Audio editing software
+- A regular personal-use computer
+
+### Human Resources (for interviews)
+- Your peers!
+- Researchers from the UGR (PhD students, Postdoctoral researchers, Full Professors)
+
+## Evaluation
+
+Your total grade in this project (which will be 30% of the final grade of the semester) will be divided into two components:
+
+1. **Milestones (3 points)**
+   Three deliverables for intermediate steps:
+   - Topic selection and title (Week 3) - 1 point
+   - Episode outline (Week 5) - 1 point
+   - Script draft (Week 7) - 1 point
+
+We will set specific deadlines for each one of them. In order to get the full mark for each of the milestones, you must submit your assignment before the deadline. We will apply a penalti of 50% for submissions delays < 24h and of 100% for submission delays > 24h.
+
+2. **Final Episode (7 points)**
+   Key aspects considered:
+   - Clarity and coherence of the content
+   - Correct interpretation and integration of the data and ideas
+   - Format and engagement
+   - Recording and editing quality
+
+### Podcast Evaluation Criteria
+
+| Criteria| 1 (Unacceptable) | 2 (Deficient) | 3 (Acceptable)| 4 (Good) | 5 (Excellent) |
+|---------|--------------------|---------------|---------------|----------|---------------|
+| **Clarity and Coherence** <br> _(2 points)_ | The content is confusing and difficult to follow; lacks a clear focus. | The content has some moments of clarity, but overall is difficult to understand. | There is a logical sequence for the most part with some moments of ambiguity. | The content is clear and well articulated throughout most of the podcast. | The content is extremely clear and easy to follow throughout the entire podcast.|
+| **Data Interpretation** <br> _(2 points)_ | Total lack of or erroneous interpretation of data. | Basic interpretation of data, but with significant errors or misunderstandings. | Correct interpretation of data, but lacks depth or analysis. | Good interpretation of data with detailed analysis.| Exceptional interpretation and profound analysis of the presented data. |
+| **Dynamics** <br> _(2 points)_ | The content is too dense and/or the format is not suitable for the content. | The format is correct but lacks attentional cues for the audience. | The format is adequate and includes some attentional cues. | The format is adequate and the attentional cues maintain the listener's attention. | The format is ideal and novel; attentional cues make the content integrate fluidly. |
+| **Production** <br> _(1 point)_ | Poor audio quality and careless editing; constant technical distractions. | Fair audio quality and editing, but with several distractions. | Adequate audio quality and editing, with few distractions. | High-quality audio and professional editing; minimal distractions. | Exceptional audio quality and editing; professional-grade production with no distractions. |
+
+Additionally, we will be awarding prizes in categories such as _"Most Interesting Episode"_, _"Most Fun Episode"_, and _"Best Recorded Episode"_ based on the votes of your peers. Each prize will add a 0.2 bonus to your whichever mark your podcast got according to the evaluation criteria (up to a maximum of 7 points).
+
+## Topics
+
+We have selected one research paper as a starting point for each topic. You will find these papers below and also on PRADO. The main topics include:
+
+- **Neuroanatomy and plasticity**: [@merabet2010neural]
+- **Consciousness**: [@sohn2019decoding]
+- **Brain stimulation**: [@yavari2018basic]
+- **Poverty**: [@farah2017neuroscience]
+- **Neurosexism**: [@meynell2013delusions]
+- **Stereotypes and prejudices**: [@amodio2014neuroscience]
+
+## Next Steps
+
+In the coming weeks, you will dive deeper into one of these topics. You will learn about the parts that you find more interesting and attempt at integrating them together with your work group. The ultimate goal is that you can efficiently communicate all that information to the rest of your classmates. As a bonus, you will also get to learn from their work on the things that they find fascinating! Be prepared to engage in collaborative work, conduct in-depth research, develop your science communication skills, and learn to provide (and to receive) constructive feedback.
+
+### References
+

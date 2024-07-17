@@ -1,0 +1,64 @@
+# Week 8: Recording
+
+## Quick Recap
+
+At this stage, you should have an initial draft of your script and either have received or are about to receive feedback on it.
+
+## The Recording Process
+
+The general flow for creating your podcast episode should follow this pattern:
+
+Idea -> Reading -> Outline -> Reading -> Writing (first draft) -> Feedback -> Polish script -> Recording
+
+Ensure you have a curated script before beginning the recording process.
+
+## When Should We Start Recording?
+
+It's important to start recording once you have a polished script. This will make the recording process smoother and more efficient.
+
+## Who Should Record?
+
+Distributing roles can be an effective strategy:
+
+1. **Speaking**:
+   - The voice is your main medium of communication (similar to the font in a written essay)
+   - Work on articulation, tone, and pacing
+   - Familiarize yourself with the script (know when and what to emphasize)
+   - Encourage authenticity: Let your personality guide your performance
+
+2. **Recording**:
+   - Handle equipment (microphones, recording software)
+   - Manage the recording environment
+   - Practice, practice, practice
+   - Challenge yourself (e.g., start and stop recording suddenly, push the computer)
+
+3. **Producing**:
+   - Act as a pilot listener. How does it feel?
+   - Ensure logical and engaging content
+   - Determine if anything needs to be re-recorded
+
+## Recording Equipment and Software
+
+### Equipment:
+- External microphones
+- Cell phone
+- Headphones
+- Quiet environment (avoid big, empty rooms)
+
+### Software:
+- Your cell phone's built-in recording app may be sufficient
+- For online recording or multiple audio tracks, consider using https://zencastr.com/
+
+### Audio Format:
+- Choose mp3 for easier handling later
+- Use online platforms for format conversion if needed (e.g., https://convertio.co/es/ogg-mp3/)
+
+
+## Final Remarks
+
+Remember that while technical aspects are important, the content of your podcast is paramount. Use these tools and techniques to enhance your message, not overshadow it. Always listen to your final product and be willing to make adjustments to ensure the best possible quality.
+
+As you move forward with recording, don't hesitate to seek feedback from your peers or instructors. The process of creating a podcast is iterative, and each round of feedback can help improve your final product.
+
+## Next Steps
+Next week we will talk about editing audio files. This process can greatly change the feeling of your podcast. Good luck finishing your scripts, and remember to enjoy the process of bringing your ideas to life through audio!

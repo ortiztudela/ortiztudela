@@ -1,0 +1,73 @@
+# Week 3: In-depth Research (Part 2)
+
+## Objectives
+By the end of this week, you will have to submit **the first milestone**. This will be the one of the most important steps in your podcast creation: you have to decide on the topic of the podcast, frame it for a concrete target audience and provide a tentative title.
+
+### Key Ideas from Previous Weeks
+- Decide on a sub-topic within your main topic
+- Attribute different roles to group members is a great way to maximize efficiency
+- The recording should **not** be a formal presentation of a paper
+- Use the skeptical watchlist while researching (available on this book and on PRADO)
+
+## In-depth Research II
+
+By now, you should already have, at least, a tentative idea of what you want to talk about. Now, it is time to further fine-tune that idea to make it more concrete. Keep in mind that the final product will have a maximum duration of 10 minutes. Thus you should strive for either:
+
+- Cover a narrow sub-topic within the broader umbrella topic you were assigned to
+- Provide a shallower overview of a broad topic.
+
+Both options are totally fine as long as you find it interesting (and that you are able to communicate your enthusiasm to the audience). Keep these two options in mind while digging through research so you can decide where to focus your effors.
+
+## Defining Your Podcast Audience
+
+When creating a science-based podcast (or any kind of podcast, tbh), one of the most crucial decisions you'll make is choosing your target audience. This choice should be made early in the planning process, as it will significantly influence various aspects of your podcast, including content, format, tone, and language.
+
+### Why Audience Matters
+
+1. Content Depth: The level of detail and complexity in your discussions will vary greatly depending on whether you're addressing neuroscience specialists or the general public.
+
+2. Language Use: Technical jargon appropriate for scientists might confuse a lay audience, while oversimplification could bore experts.
+
+3. Topic Selection: Your audience's background knowledge and interests will guide which topics are most relevant and engaging.
+
+4. Format and Style: The podcast's structure, length of the sections, and presentation style should cater to your audience's preferences and listening habits.
+
+### Potential Target Audiences
+
+Consider these example audience categories to aid your definition of your podcast's focus:
+
+1. Specialist Neuroscientists:
+   - Highly technical content
+   - In-depth discussions of current research
+   - Use of field-specific terminology
+
+2. General Scientists:
+   - Broader scientific context
+   - Interdisciplinary connections
+   - Less neuroscience-specific jargon
+
+3. Psychologists without Scientific Background:
+   - Focus on practical applications
+   - Simplified explanations of neuroscientific concepts
+   - Connections to psychological theories and practices
+
+4. General Population:
+   - Emphasis on relatable examples and real-world implications
+   - Clear, jargon-free explanations
+   - More time spent on foundational concepts
+
+This list is not exhaustive and other types of audiences can be considered. But bear in mind that by clearly defining your target audience in advance, you can create a more focused, engaging, and effective product. This clarity will guide your content creation process and help you build an engaging episode.
+
+## Tasks for This Week
+1. Narrow down your topic
+2. Select a target audience
+3. Continue your in-depth reading
+
+## Milestone 1
+Use the following Google Form to deliver Milestone 1. Only one member of the group needs to input the information for the entire grupo. The deadline for submission will be the end of the week.
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeG0nCKlfZym_TV4UVH8_030_JfHgytErsAyPh32Hbdi0Wbhg/viewform?embedded=true" width="640" height="1553" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+
+
+## Next Steps
+As you dive into your research, start thinking about how you'll synthesize this information for your podcast. In the coming weeks, we'll focus on outlining your episode.
