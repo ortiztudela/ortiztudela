@@ -13,11 +13,11 @@ author_profile: true
 
 ### Find me here:
 
-[ortiztudela@psych.uni-frankfurt.de](mailto:ortiztudela@psych.uni-frankfurt.de)
+[ortiztudela@ugr.es](mailto:ortiztudela@ugr.es)
 
-**GitLab:** @ortiztud ([https://gitlab.com/ortiztud](https://gitlab.com/ortiztud))
+**GitLab:** @ortiztudela ([https://gitlab.com/ortiztud](https://gitlab.com/ortiztud))
 
-**GitHub:** @ortiztud ([https://github.com/ortiztud](https://github.com/ortiztud))
+**GitHub:** @ortiztudela ([https://github.com/ortiztud](https://github.com/ortiztud))
 
 **OSF:** [Javier Ortiz-Tudela](http://osf.io/5rpmj)
 
