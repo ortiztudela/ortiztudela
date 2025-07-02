@@ -17,6 +17,9 @@ The resources listed here are open educational resources that are free to use, s
 
 [Cognitive Neuroscience 2425 - Small group sessions](/ortiztudela/teaching/ncc-2425_book/index.html)
 
+[Cognitive Neuroscience 2526 – Small group sessions](/ortiztudela/teaching/ncc-2526_book/)
+
+
 ## Master Courses
 
 _Under construction_
