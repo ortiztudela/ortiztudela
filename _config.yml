@@ -138,7 +138,6 @@ exclude:
   - package.json
   - tmp
   - vendor
-  - teaching/ncc-2425_book
   - _teaching_materials
 keep_files:
   - .git
