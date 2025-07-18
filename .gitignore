@@ -1,6 +1,4 @@
 # === Quarto ===
-*/_book/
-*/_site/
 
 # === Renders temporales ===
 local/

@@ -1,4 +1,9 @@
 .
+├── CONTRIBUTING.md
+├── Gemfile
+├── Gemfile.lock
+├── LICENSE
+├── README.md
 ├── _config.yml
 ├── _data
 │   ├── authors.yml
@@ -280,7 +285,6 @@
 │       ├── fa-solid-900.woff2
 │       ├── fa-v4compatibility.ttf
 │       └── fa-v4compatibility.woff2
-├── CONTRIBUTING.md
 ├── files
 │   ├── front_page_image.png
 │   ├── paper1.pdf
@@ -289,8 +293,6 @@
 │   ├── slides1.pdf
 │   ├── slides2.pdf
 │   └── slides3.pdf
-├── Gemfile
-├── Gemfile.lock
 ├── images
 │   ├── 3953273590_704e3899d5_m.jpg
 │   ├── 500x300.png
@@ -317,25 +319,23 @@
 │   ├── profile.png
 │   ├── safari-pinned-tab.svg
 │   └── site-logo.png
-├── LICENSE
 ├── markdown_generator
+│   ├── PubsFromBib.ipynb
 │   ├── publications.ipynb
 │   ├── publications.py
 │   ├── publications.tsv
-│   ├── PubsFromBib.ipynb
 │   ├── pubsFromBib.py
 │   ├── readme.md
 │   ├── talks.ipynb
 │   ├── talks.py
 │   └── talks.tsv
 ├── package.json
-├── README.md
 ├── talkmap
 │   ├── leaflet_dist
+│   │   ├── MarkerCluster.Default.css
+│   │   ├── MarkerCluster.css
 │   │   ├── leaflet.markercluster-src.js
 │   │   ├── leaflet.markercluster.js
-│   │   ├── MarkerCluster.css
-│   │   ├── MarkerCluster.Default.css
 │   │   └── screen.css
 │   ├── map.html
 │   └── org-locations.js
@@ -391,57 +391,60 @@
 │   │           ├── autocomplete.umd.js
 │   │           ├── fuse.min.js
 │   │           └── quarto-search.js
-│   ├── nanif-2526_book_old
-│   │   ├── _images
-│   │   │   ├── 3t_scanner.png
-│   │   │   ├── dont_panic.png
-│   │   │   ├── erps.png
-│   │   │   ├── hands-on_1
-│   │   │   │   ├── basal_ganglia.png
-│   │   │   │   ├── hc_amigdala.png
-│   │   │   │   ├── mdn.png
-│   │   │   │   ├── thalamus.png
-│   │   │   │   └── ventricles.png
-│   │   │   ├── itk_interface.png
-│   │   │   └── t1_example.png
+│   ├── ncc-2425_book
+│   │   ├── Cognitive-Neuroscience-2425---Small-Group-Sessions.pdf
+│   │   ├── _examples
+│   │   │   ├── Tue_11-12_Neurosexism.mp3
+│   │   │   ├── Tue_11-12_Poverty.mp3
+│   │   │   ├── Wed_12-13_Stereotypes-1.mp3
+│   │   │   ├── Wed_18-19_Consciencia-1.mp3
+│   │   │   ├── Wed_18-19_Neurosexismo.mp3
+│   │   │   └── Wed_18-19_Plasticidad-1.mp3
+│   │   ├── images
+│   │   │   ├── brain_podcast.png
+│   │   │   ├── podcaster.png
+│   │   │   └── search_engines.png
 │   │   ├── index.html
 │   │   ├── introduction.html
 │   │   ├── search.json
-│   │   ├── sessions
-│   │   │   ├── session-1_anatomical-1.html
-│   │   │   ├── session-1_anatomical-2.html
-│   │   │   ├── session-1_anatomical-3.html
-│   │   │   ├── session-1_anatomical.html
-│   │   │   ├── session-2_functional-neuroimaging.html
-│   │   │   ├── session-3_erp.html
-│   │   │   ├── session-4_time-frequency.html
-│   │   │   ├── session-5_task-based-fmri.html
-│   │   │   ├── session-6_functional-connectivity.html
-│   │   │   ├── session-7_machine-learning.html
-│   │   │   └── session-8_representational-similarity.html
-│   │   └── site_libs
-│   │       ├── bootstrap
-│   │       │   ├── bootstrap-icons.css
-│   │       │   ├── bootstrap-icons.woff
-│   │       │   ├── bootstrap.min.css
-│   │       │   └── bootstrap.min.js
-│   │       ├── clipboard
-│   │       │   └── clipboard.min.js
-│   │       ├── quarto-html
-│   │       │   ├── anchor.min.js
-│   │       │   ├── popper.min.js
-│   │       │   ├── quarto-syntax-highlighting.css
-│   │       │   ├── quarto.js
-│   │       │   ├── tippy.css
-│   │       │   └── tippy.umd.min.js
-│   │       ├── quarto-nav
-│   │       │   ├── headroom.min.js
-│   │       │   └── quarto-nav.js
-│   │       └── quarto-search
-│   │           ├── autocomplete.umd.js
-│   │           ├── fuse.min.js
-│   │           └── quarto-search.js
-│   ├── ncc-2425_book
+│   │   ├── site_libs
+│   │   │   ├── bootstrap
+│   │   │   │   ├── bootstrap-icons.css
+│   │   │   │   ├── bootstrap-icons.woff
+│   │   │   │   ├── bootstrap.min.css
+│   │   │   │   └── bootstrap.min.js
+│   │   │   ├── clipboard
+│   │   │   │   └── clipboard.min.js
+│   │   │   ├── quarto-html
+│   │   │   │   ├── anchor.min.js
+│   │   │   │   ├── popper.min.js
+│   │   │   │   ├── quarto-syntax-highlighting.css
+│   │   │   │   ├── quarto.js
+│   │   │   │   ├── tippy.css
+│   │   │   │   └── tippy.umd.min.js
+│   │   │   ├── quarto-nav
+│   │   │   │   ├── headroom.min.js
+│   │   │   │   └── quarto-nav.js
+│   │   │   └── quarto-search
+│   │   │       ├── autocomplete.umd.js
+│   │   │       ├── fuse.min.js
+│   │   │       └── quarto-search.js
+│   │   ├── tree.txt
+│   │   ├── week_0.html
+│   │   ├── week_1.html
+│   │   ├── week_10.html
+│   │   ├── week_11.html
+│   │   ├── week_12.html
+│   │   ├── week_2.html
+│   │   ├── week_3.html
+│   │   ├── week_4.html
+│   │   ├── week_5.html
+│   │   ├── week_6.html
+│   │   ├── week_7.html
+│   │   ├── week_8.html
+│   │   └── week_9.html
+│   ├── ncc-2425_book_old
+│   │   ├── Cognitive-Neuroscience-2425---Small-Group-Sessions.pdf
 │   │   ├── _examples
 │   │   │   ├── Tue_11-12_Neurosexism.mp3
 │   │   │   ├── Tue_11-12_Poverty.mp3
@@ -453,7 +456,6 @@
 │   │   │   ├── brain_podcast.png
 │   │   │   ├── podcaster.png
 │   │   │   └── search_engines.png
-│   │   ├── Cognitive-Neuroscience-2425---Small-Group-Sessions.pdf
 │   │   ├── index.html
 │   │   ├── introduction.html
 │   │   ├── search.json
@@ -497,7 +499,6 @@
 │       │   ├── brain_podcast.png
 │       │   ├── podcaster_2526.png
 │       │   └── search_engines.png
-│       ├── Cognitive-Neuroscience-2526---Small-Group-Sessions.pdf
 │       ├── index.html
 │       ├── introduction.html
 │       ├── search.json
@@ -538,4 +539,4 @@
 │       └── week_9.html
 └── tree.txt
 
-89 directories, 450 files
+88 directories, 452 files
