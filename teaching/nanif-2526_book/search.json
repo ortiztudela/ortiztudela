@@ -10,6 +10,16 @@
     ]
   },
   {
+    "objectID": "index.html#cómo-usar-este-libro",
+    "href": "index.html#cómo-usar-este-libro",
+    "title": "NaNif - Functional neuroimaging",
+    "section": "Cómo Usar Este Libro",
+    "text": "Cómo Usar Este Libro\nEste libro está organizado semana a semana, siguiendo la estructura del curso. Cada capítulo contiene información sobre lo que se espera para la sesión de la semana correspondiente. Además, a lo largo de las semanas encontrarás información sobre hitos concretos y cómo entregarlos.\nNavega por los capítulos usando la barra lateral o los botones de siguiente/anterior en la parte inferior de cada página.\nSi tienes alguna pregunta o necesitas más aclaraciones sobre el contenido del curso, las tareas o cualquier problema técnico relacionado con los análisis, no dudes en contactar conmigo por correo electrónico o durante las horas de tutoría. Estoy aquí para apoyar tu proceso de aprendizaje .\nRecuerda, este curso no va solo de aprender aspectos teóricos de la Neurimagen Funcional, sino también de aprender a implementar algunos de los análisis más comunes en el campo de una manera práctica. Te animamos a interactuar activamente con los materiales del curso, a participar en las discusiones durante las sesiones presenciales y aportar tus perspectivas e ideas únicas.\n¡Buena suerte y esperamos que aprendas mucho!",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Neuroimagen Funcional (Grupo en Español)</span>"
+    ]
+  },
+  {
     "objectID": "introduction.html",
     "href": "introduction.html",
     "title": "Introducción",
@@ -20,14 +30,121 @@
     ]
   },
   {
-    "objectID": "sessions/session-1_anatomical.html",
-    "href": "sessions/session-1_anatomical.html",
-    "title": "De analógico a digital",
-    "section": "",
-    "text": "¿Qué es un escáner anatómico?\nEn la primera parte de la asignatura habéis trabajado con maquetas anatómicas y con imágenes en 2D sacadas de un atlas de anatomía. Esta aproximación es genial para aprender a identificar los puntos de referencia habituales (p. ej., ventrículos) y a orientarse en el cerebro (es decir, saber dónde está qué cosa en relación a otras cosas). No obstante, cuando realizamos investigación con humanos in-vivo, no tenemos acceso directo al cerebro por aquello de que el cerebro está encerrado en una caja de hueso -el cráneo- (recordad esto porque, aunque suene trivial, será importante más adelante). La solución que tenemos, entonces, es usar técnicas indirectas que nos permitan reconstruir lo que sucede dentro del cráneo.\nLa técnica más utilizada para acceder a la anatomía del cerebro es la resonancia magnética (RM). Un escáner de RM utiliza un campo magnético muy potente y pulsos de radiofrecuencia para manipular los protones de hidrógeno en el agua de los tejidos corporales. Cuando estos protones vuelven a su estado de equilibrio, emiten señales que son captadas por el escáner y convertidas en imágenes digitales en 2D. Estas imágenes (llamadas “cortes” o “slices”) luego se combinan para formar una representación volumétrica en 3D del cerebro.\nA diferencia de otras técnicas de imagen indirecta como los rayos X o la tomografía computarizada (TC), la resonancia magnética: - No utiliza radiación ionizante - Ofrece mejor contraste entre los tejidos blandos - Permite visualizar el cerebro desde cualquier ángulo - Puede optimizarse para destacar diferentes tipos de tejidos o patologías\nEsta última característica es especialmente interesante. Para recoger sus imágenes, la MR utiliza una serie de parámetros que generalmente se conocen como “secuencias”. Cuando empecéis a trabajar con MR, oiréis frecuentemente cosas como “¿qué secuencia has utilizado?” o “¿tienes alguna secuencia para DTI que pueda utilizar?”. Piensa en esas secuencias como en las recetas que utiliza el escáner para generar sus imágenes y que contienen todos los parámetros necesarios. Modificar estos parámetros nos permite obtener diferentes tipos de imágenes del cerebro, cada una destacando diferentes aspectos de la anatomía cerebral.\nUn escáner anatómico o estructural es una secuencia de resonancia magnética (MRI) que proporciona imágenes detalladas de la anatomía cerebral. Estas imágenes:\nLas secuencias más comunes son:\nAquí tienes un ejemplo de imagen estructural T1 de alta resolución:\nLa imagen muestra los diferentes contrastes entre materia gris, materia blanca y líquido cefalorraquídeo típicos de una secuencia T1.\nPara visualizar y analizar estas imágenes, utilizaremos ITK-SNAP, una herramienta de código abierto que permite:",
+    "objectID": "introduction.html#objetivos-de-la-asignatura",
+    "href": "introduction.html#objetivos-de-la-asignatura",
+    "title": "Introducción",
+    "section": "Objetivos de la asignatura",
+    "text": "Objetivos de la asignatura\nAl completar esta asignatura…\n\nTendrás una visión global de las distintas técnicas de neuroimagen funcional.\nTe sentirás cómod@ con los distintos tipos de datos de cada técnica.\nSabrás aplicar algunos de los análisis más comunes para cada técnica.\nSabrás cómo interpretar los resultados obtenidos de cada técnica.\nAdquirirás o mejorarás tus habilidades de programación.",
     "crumbs": [
-      "Sessions",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>De analógico a digital</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#reponsable-de-la-asignatura",
+    "href": "introduction.html#reponsable-de-la-asignatura",
+    "title": "Introducción",
+    "section": "Reponsable de la asignatura",
+    "text": "Reponsable de la asignatura\n\nJavier Ortiz Tudela\n\nEmail: ortiztudela@ugr.es\nDespacho: 308 @ CIMCYC\n\n\nNota: Aunque tengo horarios de tutorías, suele ser mejor que me escribas un email con antelación y así me puedo estar preparado para tus preguntas o tus dudas.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#antes-de-comenzar",
+    "href": "introduction.html#antes-de-comenzar",
+    "title": "Introducción",
+    "section": "Antes de comenzar",
+    "text": "Antes de comenzar\n\nEsta web será tu material de referencia para el contenido teórico y para todos los ejercicios prácticos del curso. Además, utilizaremos PRADO para el seguimiento semanal de las actividades y las sesiones presenciales. Subiré las diapositivas utilizadas a PRADO después de cada sesión.\nComo ya has visto arriba, una parte importante de la asignatura es el tratamiento de datos. Para que esto se haga bien, vamos a utilizar código. Si hasta ahora no has tenido experiencia con código, no te preocupes, solo necesitas voluntad de aprender, energía y un poco de paciencia.\nLo que sí vas a necesitar es un ordenador medio decente. Este término es un poco ambiguo pero por tener una idea general, un equipo con las características de aquí abajo será suficiente. Si no puedes conseguir un equipo así, dímelo y encontraremos una solución.\n\nAl menos 8GB de RAM (¿qué es la RAM y cómo consultar cuánta tiene mi equipo?)\nProcesador de los últimos 5 años\nAl menos 20GB de espacio libre en el disco duro\nSistema operativo actualizado (Windows 10/11, MacOS o Linux)\n\nAdemás, para trabajar con estos datos, vas a necesitar instalar una serie de programas que te indicamos aquí abajo. Prueba a instalar todos ellos y si tienes algún problema, contacta conmigo antes del inicio de esta parte de la asignatura. Es importante que le dediques algo de tiempo a preparar tu espacio de trabajo (es decir, tu ordenador y los programas de aquí abajo) porque esto va a hacer que tu experiencia del curso sea más sencilla y satisfactoria.\n\nITK-Snap (v 4.2.2). Este programa lo utilizaremos para visualizar datos de neuroimagen. Es gratuito y fácil de instalar. Puedes descargarlo desde aquí. Asegúrate de descargarlo e instalarlo antes de nuestra primera sesión práctica.\nVS Code. Cuando trabajamos con código, necesitamos un editor que nos permita escribirlo, verificarlo y ejecutarlo. Si ya has trabajado con algún editor y te sientes cómod@ con él, puedes seguir utilizándolo. Pero si eres nuev@ con esto del código, te recomendamos usar VS Code (Visual Studio Code). Es un editor moderno y muy potente que es compatible con muchos lenguajes de programación distintos.\n\n\nPor favor, intenta instalar estos programas antes del inicio de esta parte de la asignatura. Te dejamos aquí un par de scripts que puedes utilizar para verificar que la instalación ha funcionado. Si tienes problemas, no te preocupes — todos hemos pasado por ahí. Como primera opción, prueba a preguntarle a tu chatbot favorito (recuerda que con tu cuenta de la UGR tienes acceso tanto a Copilot de Microsoft como a la versión segura de Gemini de Google). Si aún así, no consigues avanzar, dedicaremos unos minutos a resolver problemas de instalación al final de la primera sesión.\nAunque todo esto parezca mucho trabajo así de primeras, no temas. Estamos en esto juntos. Y sobre todo, manten la mente abierta, súbete la curiosidad a tope y no tengas miedo de preguntar.\n\n\n\nDo not be afraid of code. It is your friend.\n\n\nEn las próximas secciones, comenzamos con los contenidos de la asignatura propiamente. ¡Adelante!",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-1_anatomical-1.html",
+    "href": "sessions/session-1_anatomical-1.html",
+    "title": "De analógico a digital (I)",
+    "section": "",
+    "text": "¿Qué es un escáner anatómico?\nEn la primera parte de la asignatura habéis trabajado con maquetas anatómicas y con imágenes en 2D sacadas de un atlas de anatomía. Esta aproximación es genial para aprender a identificar los puntos de referencia habituales (p. ej., ventrículos) y a orientarse en el cerebro (es decir, saber dónde está qué cosa en relación a otras cosas). No obstante, cuando realizamos investigación con humanos in-vivo, no tenemos acceso directo al cerebro por aquello de que el cerebro está encerrado en una caja de hueso -el cráneo- (recordad esto porque, aunque suene trivial, será importante más adelante). La solución que tenemos, entonces, es usar técnicas indirectas que nos permitan reconstruir lo que sucede dentro del cráneo.\nLa técnica más utilizada para acceder a la anatomía del cerebro es la resonancia magnética (RM). Un escáner de RM utiliza un campo magnético muy potente y pulsos de radiofrecuencia para manipular los protones de hidrógeno en el agua de los tejidos corporales. Cuando estos protones vuelven a su estado de equilibrio, emiten señales que son captadas por el escáner y convertidas en imágenes digitales en 2D. Estas imágenes (llamadas “cortes” o “slices”) luego se combinan para formar una representación volumétrica en 3D del cerebro. La fuerza del campo magnético del escáner, medido en una unidad llamada Tesla, determina varios parámetros de las imágenes que se pueden obtener (entre otros, la resolución espacial máxima); como regla general, cuanto mayor sea el campo magnético, mayor será la resolución espacial que podemos alcanzar. El tipo de escáner más común para investigación en NeuroCog, es el de 3 Tesla.\nA diferencia de otras técnicas de imagen indirecta como los rayos X o la tomografía computarizada (TC), la resonancia magnética: - No utiliza radiación ionizante - Ofrece mejor contraste entre los tejidos blandos - Permite visualizar el cerebro desde cualquier ángulo - Puede optimizarse para destacar diferentes tipos de tejidos o patologías\nEsta última característica es especialmente interesante. Para recoger sus imágenes, la MR utiliza una serie de parámetros que generalmente se conocen como “secuencias”. Cuando empecéis a trabajar con MR, oiréis frecuentemente cosas como “¿qué secuencia has utilizado?” o “¿tienes alguna secuencia para DTI que pueda utilizar?”. Piensa en esas secuencias como en las recetas que utiliza el escáner para generar sus imágenes y que contienen todos los parámetros necesarios. Modificar estos parámetros nos permite obtener diferentes tipos de imágenes del cerebro, cada una destacando diferentes aspectos de la anatomía cerebral.\nPor tanto, un “escáner anatómico o estructural” es una secuencia de resonancia magnética (MRI) que proporciona imágenes detalladas de la anatomía cerebral. Estas imágenes:\nLas secuencias más comunes son:\nAquí tienes un ejemplo de imagen estructural T1 de alta resolución:\nLa imagen muestra los diferentes contrastes entre materia gris, materia blanca y líquido cefalorraquídeo típicos de una secuencia T1. ¿Qué estructuras eres capaz de identificar? ¿Qué otras cosas además del cerebro ves en esta imagen anatómica?",
+    "crumbs": [
+      "De Analógico a Digital",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>De analógico a digital (I)</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-1_anatomical-1.html#qué-es-un-escáner-anatómico",
+    "href": "sessions/session-1_anatomical-1.html#qué-es-un-escáner-anatómico",
+    "title": "De analógico a digital (I)",
+    "section": "",
+    "text": "Nota: El término “escáner” se utiliza indistintamente para referirse a la máquina que adquiere las imágenes (p. ej., el escáner está encendido) y para referirse a las imágenes en sí (p. ej., has recogido un escaner anatómico).\n\n\n\n\nImágen del escaner de 3 Tesla del CIMCYC\n\n\n\n\n\n\nTienen alta resolución espacial (típicamente 1mm³)\nMuestran excelente contraste entre los diferentes tejidos cerebrales\nSon fundamentales para:\n\nEstudios morfométricos\nAnálisis de volumen cerebral\nLocalización precisa de estructuras anatómicas\nBase para el registro con imágenes funcionales\n\n\n\n\nT1: Excelente para ver detalles anatómicos (el más común en investigación en NeuroCog)\n\nMateria gris aparece gris oscuro &lt;- ¡Importante!\nMateria blanca aparece más clara\nLíquido cefalorraquídeo (CSF) aparece negro\n\nT2: Útil para detectar patologías (poco utilizado en investigación no-clínica)\n\nCSF aparece brillante\nTejido cerebral más oscuro\n\n\n\n\n\n\nEjemplo de imagen T1 anatómica\n\n\n\n\nNota: Como habrás notado, los términos “anatómica” y “estructural” se utilizan de manera intercambiable. En muchas ocasiones, estas imágenes se denominan simplemente “T1”.",
+    "crumbs": [
+      "De Analógico a Digital",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>De analógico a digital (I)</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-1_anatomical-1.html#tabla-resumen",
+    "href": "sessions/session-1_anatomical-1.html#tabla-resumen",
+    "title": "De analógico a digital (I)",
+    "section": "Tabla resumen",
+    "text": "Tabla resumen\n\n\n\n\n\n\n\nConcepto\nDescripción\n\n\n\n\nResonancia Magnética (RM)\nTécnica que utiliza campo magnético y pulsos de radiofrecuencia para generar imágenes del cerebro sin radiación ionizante\n\n\nSecuencias\nConjunto de parámetros que determinan cómo se adquieren las imágenes de RM\n\n\nEscáner anatómico/estructural\nImágenes de alta resolución (≈1mm³) que muestran detalles de la estructura cerebral\n\n\nSecuencia T1\n- Materia gris: gris oscuro- Materia blanca: clara- Líquido cefalorraquídeo: negro- Muy común en investigación\n\n\nSecuencia T2\n- Líquido cefalorraquídeo: brillante- Tejido cerebral: oscuro- Más común en contextos clínicos\n\n\nAplicaciones\nEstudios morfométricos, análisis de volumen cerebral, localización de estructuras, base para registro con imágenes funcionales\n\n\n\nEn la siguiente sección veremos cómo abrimos e interactuamos con este tipo de imágenes.",
+    "crumbs": [
+      "De Analógico a Digital",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>De analógico a digital (I)</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-1_anatomical-2.html",
+    "href": "sessions/session-1_anatomical-2.html",
+    "title": "De analógico a digital (II)",
+    "section": "",
+    "text": "¿Cómo interactúo con imágenes estructurales?\nLas imágenes que genera la MR son unos archivos en 3D (como hemos visto en la página anterior, en realidad son un montón de imágenes 2D concatenadas). Al igual que para imágenes en 2D estaréis acostumbrados a formatos de archivos como .png, .jpeg o .gif, el formato más común para imágenes en 3D se llama Nifti y la extensión es .nii. Además, como estos archivos suelen ser grandes, es muy común (y recomendable) que nos los encontremos comprimidos. Puede que ya hayas trabajado antes con archivos comprimidos en .zip o en .rar (si no sabes qué es un archivo comprimido, mira esta web); los archivos de RM suelen comprimirse con Gunzip y la extensión es .gz. La mayor parte de programas de análisis de este tipo de datos hacen una descompresión automática al abrirlos, así que no tienes que preocuparte por descomprimirlos tú. Tanto en esta asignatura como al usar datos que te encuentres por la web, la extensión más común para archivos de MR es nii.gz.\nPara visualizar y analizar estas imágenes, utilizaremos ITK-SNAP, una herramienta de código abierto que permite:\nPara abrir un archivo nii.gz, solo tenemos que seleccionarlo, hacer click con el botón derecho, darle a “abrir con…” y seleccionar ITK-Snap de la lista de programas. Alternativamente, puedes abrir ITK-Snap primero, y pinchar en “Open image…” y de ahí, buscar el archivo en tu ordenador.\nPrueba a abrir las imagenes que puedes encontrar en esta ruta:\n~/carpeta-en-tu-ordenador/materiales_nanif/session-1/template_space-mni_res-3_brain.nii.gz.\nUna vez abierta la imagen, puedes explorarla de varias maneras:",
+    "crumbs": [
+      "De Analógico a Digital",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>De analógico a digital (II)</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-1_anatomical-2.html#cómo-interactúo-con-imágenes-estructurales",
+    "href": "sessions/session-1_anatomical-2.html#cómo-interactúo-con-imágenes-estructurales",
+    "title": "De analógico a digital (II)",
+    "section": "",
+    "text": "Visualización 3D interactiva\nSegmentación manual y semi-automática\nNavegación por cortes anatómicos\nAjustes de contraste y brillo\n\n\n\n\n\nInterfaz de ITK-Snap\n\n\n\n\n\n\nNavegación básica\n\nVistas ortogonales: ITK-SNAP muestra tres vistas perpendiculares (axial, sagital y coronal) que te permiten explorar el cerebro desde diferentes ángulos.\nCursor de navegación: El cursor cruzado se mantiene sincronizado en las tres vistas, mostrando la misma ubicación desde diferentes perspectivas.\nDesplazamiento: Usa la rueda del ratón para desplazarte por los cortes en la vista activa.\nMover imagen: Alt/Option + ratón te permite desplazar la imagen entera.\nZoom: Ctrl + rueda del ratón (o separar con dos dedos en Mac) te permite acercar o alejar la imagen.\n\n\n\nAjustes de visualización\n\nBrillo y contraste: En el menú “Tools” &gt; “Image Contrast” (o Ctrl/Cmd + I) puedes modificar estos parámetros para ver mejor las estructuras cerebrales.\nCentrarte en una vista: Puedes centrar la interfaz del programa en las diferentes vistas pinchando en las letras A, S y C (axial, sagital y coronal) junto a cada ventana; para volver al panel de visualización de las tres vistas, pulsa en el icono con cuatro cuadrantes arriba a la derecha.\n\n\n\nOrientación en el espacio\nRecuerda que las imágenes de MRI siguen convenciones neurológicas de orientación:\n\nIzquierda-Derecha: En las vistas axial y coronal, el lado izquierdo de la imagen corresponde al lado derecho del cerebro.\nAnterior-Posterior: La parte superior de la vista axial es la parte anterior (frontal) del cerebro.\nSuperior-Inferior: En las vistas coronal y sagital, la parte superior de la imagen es la parte superior del cerebro.\n\nDedica un tiempo para familiarizarte con la navegación en el espacio 3D y para identificar estructuras anatómicas principales como el cuerpo calloso, los ventrículos y la corteza cerebral. ¿Qué diferencias ves entre las dos imágenes? ¡Vamos a hacer una demo juntos!",
+    "crumbs": [
+      "De Analógico a Digital",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>De analógico a digital (II)</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-1_anatomical-2.html#tabla-resumen",
+    "href": "sessions/session-1_anatomical-2.html#tabla-resumen",
+    "title": "De analógico a digital (II)",
+    "section": "Tabla resumen",
+    "text": "Tabla resumen\n\n\n\n\n\n\n\nAspecto\nDetalles\n\n\n\n\nFormato de archivo\nNifti (.nii), comúnmente comprimido (.nii.gz)\n\n\nHerramienta\nITK-SNAP (código abierto)\n\n\nFuncionalidades\n- Visualización 3D interactiva- Segmentación manual/semi-automática- Navegación por cortes- Ajustes de contraste/brillo\n\n\nVistas principales\nAxial, Sagital, Coronal\n\n\nOrientación\n- Izquierda/Derecha: convención neurológica- Anterior (frontal)/Posterior- Superior/Inferior\n\n\n\nEn la siguiente sección aplicarás todo esto ¡a tu propio cerebro!",
+    "crumbs": [
+      "De Analógico a Digital",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>De analógico a digital (II)</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-1_anatomical-3.html",
+    "href": "sessions/session-1_anatomical-3.html",
+    "title": "De analógico a digital (III)",
+    "section": "",
+    "text": "Práctica 1. Localizando hitos en tu propio cerebro\nCréditos a Ana Paqui Palenciano (palencianoap@ugr.es)\nDeberás utilizar un software de visualización de imágenes, preferiblemente, ITK-Snap. Este software tienen la opción de trazar regiones o lesiones, para poder así generar máscaras que se utilicen en análisis futuros. En este caso, usarás esas herramientas para identificar una serie de regiones en tus propias imágenes anatómicas, en concreto, en las imágenes T1-w.\nPara cada apartado de regiones, utiliza dos planos distintos (axial, coronal, sagital). Realiza pantallazos del corte en el que hayas coloreado las regiones y pégalas en un documento indicando qué regiones aparecen. Fecha límite de envío PRADO: XX de Octubre de 2025.\nA continuación tienes la lista de regiones a identificar junto con ejemplos:\nSi necesitas ayuda para localizar las regiones de esta red, puedes consultar:",
+    "crumbs": [
+      "De Analógico a Digital",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>De analógico a digital (III)</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-1_anatomical-3.html#práctica-1.-localizando-hitos-en-tu-propio-cerebro",
+    "href": "sessions/session-1_anatomical-3.html#práctica-1.-localizando-hitos-en-tu-propio-cerebro",
+    "title": "De analógico a digital (III)",
+    "section": "",
+    "text": "Ventrículos cerebrales\n(indicando los ventrículos laterales, tercer y cuarto ventrículos, el agujero de Monro y el acueducto de Silvio). \nGanglios basales \nTálamo \nHipocampo y amígdala \nRegiones de la Red de Múltiple Demanda\n(o red de control fronto-parietal), incluyendo:\n\nSurco inferior frontal\n\nSurco intraparietal\n\nCíngulo anterior/pre-SMA\n\nInferior frontal junction\n\n\n\n\n\nDuncan (2010), Trends in Cognitive Sciences\nhttps://doi.org/10.1016/j.tics.2010.01.004\nFedorenko, Duncan & Kanwisher (2013), PNAS\nhttps://doi.org/10.1073/pnas.1315235110\nBrass et al. (2005), Trends in Cognitive Sciences\nhttps://doi.org/10.1016/j.tics.2005.05.001",
+    "crumbs": [
+      "De Analógico a Digital",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>De analógico a digital (III)</span>"
     ]
   },
   {
@@ -36,6 +153,72 @@
     "title": "Técnicas de neuroimagen: tiempo vs. espacio",
     "section": "",
     "text": "Introducción a la neuroimagen",
+    "crumbs": [
+      "Ténicas de Neuroimagen Funcional",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-2_functional-neuroimaging.html#introducción-a-la-neuroimagen",
+    "href": "sessions/session-2_functional-neuroimaging.html#introducción-a-la-neuroimagen",
+    "title": "Técnicas de neuroimagen: tiempo vs. espacio",
+    "section": "",
+    "text": "La neuroimagen permite observar el cerebro en funcionamiento sin intervención directa.\nSe usa en investigación cognitiva, diagnóstico clínico y evaluación de intervenciones.\nRetos y limitaciones:\n\nSeñales indirectas de la actividad neuronal (e.g., BOLD).\nCostes elevados y logística compleja.\nArtefactos fisiológicos y ruido ambiental.\nCompromiso entre resolución temporal y espacial.",
+    "crumbs": [
+      "Ténicas de Neuroimagen Funcional",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-2_functional-neuroimaging.html#técnicas-con-alta-resolución-temporal",
+    "href": "sessions/session-2_functional-neuroimaging.html#técnicas-con-alta-resolución-temporal",
+    "title": "Técnicas de neuroimagen: tiempo vs. espacio",
+    "section": "Técnicas con alta resolución temporal",
+    "text": "Técnicas con alta resolución temporal\n\nEEG\n\nMide la actividad eléctrica desde el cuero cabelludo.\nResolución temporal en milisegundos.\nDatos: series temporales por canal/electrodo.\nEjemplo: componente N170 para el procesamiento de caras.\n\n\n\nMEA (Microelectrode Arrays)\n\nRegistra directamente la actividad neuronal con electrodos implantados.\nResolución temporal muy alta y espacial limitada a la región implantada.\nPermite estudiar patrones locales de disparo neuronal.\nLimitado a modelos animales o casos clínicos específicos.\nEjemplo: análisis de actividad en ventanas temporales específicas o por bandas de frecuencia.",
+    "crumbs": [
+      "Ténicas de Neuroimagen Funcional",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-2_functional-neuroimaging.html#técnicas-con-alta-resolución-espacial",
+    "href": "sessions/session-2_functional-neuroimaging.html#técnicas-con-alta-resolución-espacial",
+    "title": "Técnicas de neuroimagen: tiempo vs. espacio",
+    "section": "Técnicas con alta resolución espacial",
+    "text": "Técnicas con alta resolución espacial\n\nfMRI (BOLD)\n\nMide cambios hemodinámicos asociados a la actividad cerebral.\nResolución espacial en milímetros; resolución temporal en segundos.\nDatos: volúmenes 3D a lo largo del tiempo.\nEjemplo: activación de áreas visuales ante estímulos faciales.\n\n\n\nPET\n\nUsa trazadores radioactivos para estudiar metabolismo cerebral.\nAlta resolución espacial, muy baja resolución temporal.\nMenos usada en investigación cognitiva.",
+    "crumbs": [
+      "Ténicas de Neuroimagen Funcional",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-2_functional-neuroimaging.html#técnicas-que-intentan-combinar-ambas-resoluciones",
+    "href": "sessions/session-2_functional-neuroimaging.html#técnicas-que-intentan-combinar-ambas-resoluciones",
+    "title": "Técnicas de neuroimagen: tiempo vs. espacio",
+    "section": "Técnicas que intentan combinar ambas resoluciones",
+    "text": "Técnicas que intentan combinar ambas resoluciones\n\nMEG\n\nRegistra campos magnéticos generados por la actividad neuronal.\nAlta resolución temporal y espacial moderada.\nMenor distorsión por el cráneo en comparación con EEG.\nLimitaciones: coste elevado y disponibilidad reducida.",
+    "crumbs": [
+      "Ténicas de Neuroimagen Funcional",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-2_functional-neuroimaging.html#comparación-y-resumen",
+    "href": "sessions/session-2_functional-neuroimaging.html#comparación-y-resumen",
+    "title": "Técnicas de neuroimagen: tiempo vs. espacio",
+    "section": "Comparación y resumen",
+    "text": "Comparación y resumen\n\n\n\n\n\n\n\n\n\n\n\nTécnica\nResolución Temporal\nResolución Espacial\nInvasividad\nCoste\nTipo de señal\n\n\n\n\nEEG\nAlta (ms)\nBaja\nNo\nBajo\nEléctrica\n\n\nMEA\nMuy alta (ms)\nLocal\nSí\nMedio\nEléctrica directa\n\n\nMEG\nAlta (ms)\nMedia\nNo\nMuy alto\nMagnética\n\n\nfMRI\nBaja (~2s)\nAlta\nNo\nAlto\nHemodinámica\n\n\nPET\nMuy baja (min)\nAlta\nSí (trazador)\nMuy alto\nMetabólica",
+    "crumbs": [
+      "Ténicas de Neuroimagen Funcional",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/session-2_functional-neuroimaging.html#preguntas-de-discusión",
+    "href": "sessions/session-2_functional-neuroimaging.html#preguntas-de-discusión",
+    "title": "Técnicas de neuroimagen: tiempo vs. espacio",
+    "section": "Preguntas de discusión",
+    "text": "Preguntas de discusión\nDiscute en grupo qué técnica sería más adecuada en cada caso:\n\nTeniendo en cuenta lo que has aprendido hasta ahora en el máster, ¿cuándo usarías EEG y no fMRI? ¿Y al contrario?\n¿Qué técnica utilizarías si quisieras registrar la actividad cerebral durante una conversación natural?\nPiensa una pregunta que se pudiera responder tanto con fMRI como con EEG.",
     "crumbs": [
       "Ténicas de Neuroimagen Funcional",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
@@ -105,296 +288,6 @@
     "crumbs": [
       "Sesiones prácticas",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Functional neuroimaging: RSA.</span>"
-    ]
-  },
-  {
-    "objectID": "introduction.html#course-instructor",
-    "href": "introduction.html#course-instructor",
-    "title": "Introducción",
-    "section": "Course Instructor",
-    "text": "Course Instructor\n\nJavier Ortiz Tudela\n\nEmail: ortiztudela@ugr.es\nOffice: 308 at CIMCYC\n\n\nNote: While I have office hours, it’s usually better if you send me an email in advance so that I can prepare for your questions.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción</span>"
-    ]
-  },
-  {
-    "objectID": "introduction.html#getting-started",
-    "href": "introduction.html#getting-started",
-    "title": "Introducción",
-    "section": "Getting Started",
-    "text": "Getting Started\nAs we embark on this journey together, keep an open mind, be curious, and don’t be afraid to ask questions. Cognitive neuroscience is fascinating and complex, and your task is to make it accessible and engaging for the audience.\nIn the next section, we’ll dive into the course roadmap, giving you a clear picture of what to expect in the coming weeks.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#how-to-use-this-book",
-    "href": "index.html#how-to-use-this-book",
-    "title": "NaNif - Functional neuroimaging",
-    "section": "How to Use This Book",
-    "text": "How to Use This Book\nThis book is organized week by week, following the course structure. Each chapter contains information about what is to be expected for the corresponding week’s session. Also, throughout the weeks you will find information about concrete milestones and how to deliver them.\nNavigate through the chapters using the sidebar or the next/previous buttons at the bottom of each page.\nIf you have any questions or need further clarification on the course content, assignments, or any technical issues related to podcast production, please do not hesitate to reach out to the course instructors via email or during office hours. We are here to support your learning journey and ensure you have all the resources you need to succeed in this course.\nRemember, this course is not just about learning theoretical aspects of Cognitive Neuroscience but also about learning to communicate this knowledge in a creative and practical way. We encourage you to engage actively with the course materials, participate in discussions during the on-site sessions, and bring your unique perspectives to the episodes you will create.\nGood luck, and we look forward to hearing your podcasts!",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>NaNif - Functional neuroimaging</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-2_functional-neuroimaging.html#introducción-a-la-neuroimagen",
-    "href": "sessions/session-2_functional-neuroimaging.html#introducción-a-la-neuroimagen",
-    "title": "Técnicas de neuroimagen: tiempo vs. espacio",
-    "section": "",
-    "text": "La neuroimagen permite observar el cerebro en funcionamiento sin intervención directa.\nSe usa en investigación cognitiva, diagnóstico clínico y evaluación de intervenciones.\nRetos y limitaciones:\n\nSeñales indirectas de la actividad neuronal (e.g., BOLD).\nCostes elevados y logística compleja.\nArtefactos fisiológicos y ruido ambiental.\nCompromiso entre resolución temporal y espacial.",
-    "crumbs": [
-      "Ténicas de Neuroimagen Funcional",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-2_functional-neuroimaging.html#técnicas-con-alta-resolución-temporal",
-    "href": "sessions/session-2_functional-neuroimaging.html#técnicas-con-alta-resolución-temporal",
-    "title": "Técnicas de neuroimagen: tiempo vs. espacio",
-    "section": "Técnicas con alta resolución temporal",
-    "text": "Técnicas con alta resolución temporal\n\nEEG\n\nMide la actividad eléctrica desde el cuero cabelludo.\nResolución temporal en milisegundos.\nDatos: series temporales por canal/electrodo.\nEjemplo: componente N170 para el procesamiento de caras.\n\n\n\nMEA (Microelectrode Arrays)\n\nRegistra directamente la actividad neuronal con electrodos implantados.\nResolución temporal muy alta y espacial limitada a la región implantada.\nPermite estudiar patrones locales de disparo neuronal.\nLimitado a modelos animales o casos clínicos específicos.\nEjemplo: análisis de actividad en ventanas temporales específicas o por bandas de frecuencia.",
-    "crumbs": [
-      "Ténicas de Neuroimagen Funcional",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-2_functional-neuroimaging.html#técnicas-con-alta-resolución-espacial",
-    "href": "sessions/session-2_functional-neuroimaging.html#técnicas-con-alta-resolución-espacial",
-    "title": "Técnicas de neuroimagen: tiempo vs. espacio",
-    "section": "Técnicas con alta resolución espacial",
-    "text": "Técnicas con alta resolución espacial\n\nfMRI (BOLD)\n\nMide cambios hemodinámicos asociados a la actividad cerebral.\nResolución espacial en milímetros; resolución temporal en segundos.\nDatos: volúmenes 3D a lo largo del tiempo.\nEjemplo: activación de áreas visuales ante estímulos faciales.\n\n\n\nPET\n\nUsa trazadores radioactivos para estudiar metabolismo cerebral.\nAlta resolución espacial, muy baja resolución temporal.\nMenos usada en investigación cognitiva.",
-    "crumbs": [
-      "Ténicas de Neuroimagen Funcional",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-2_functional-neuroimaging.html#técnicas-que-intentan-combinar-ambas-resoluciones",
-    "href": "sessions/session-2_functional-neuroimaging.html#técnicas-que-intentan-combinar-ambas-resoluciones",
-    "title": "Técnicas de neuroimagen: tiempo vs. espacio",
-    "section": "Técnicas que intentan combinar ambas resoluciones",
-    "text": "Técnicas que intentan combinar ambas resoluciones\n\nMEG\n\nRegistra campos magnéticos generados por la actividad neuronal.\nAlta resolución temporal y espacial moderada.\nMenor distorsión por el cráneo en comparación con EEG.\nLimitaciones: coste elevado y disponibilidad reducida.",
-    "crumbs": [
-      "Ténicas de Neuroimagen Funcional",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-2_functional-neuroimaging.html#comparación-y-resumen",
-    "href": "sessions/session-2_functional-neuroimaging.html#comparación-y-resumen",
-    "title": "Técnicas de neuroimagen: tiempo vs. espacio",
-    "section": "Comparación y resumen",
-    "text": "Comparación y resumen\n\n\n\n\n\n\n\n\n\n\n\nTécnica\nResolución Temporal\nResolución Espacial\nInvasividad\nCoste\nTipo de señal\n\n\n\n\nEEG\nAlta (ms)\nBaja\nNo\nBajo\nEléctrica\n\n\nMEA\nMuy alta (ms)\nLocal\nSí\nMedio\nEléctrica directa\n\n\nMEG\nAlta (ms)\nMedia\nNo\nMuy alto\nMagnética\n\n\nfMRI\nBaja (~2s)\nAlta\nNo\nAlto\nHemodinámica\n\n\nPET\nMuy baja (min)\nAlta\nSí (trazador)\nMuy alto\nMetabólica",
-    "crumbs": [
-      "Ténicas de Neuroimagen Funcional",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-2_functional-neuroimaging.html#actividad-qué-técnica-usarías",
-    "href": "sessions/session-2_functional-neuroimaging.html#actividad-qué-técnica-usarías",
-    "title": "Técnicas de neuroimagen: tiempo vs. espacio",
-    "section": "Actividad: ¿Qué técnica usarías?",
-    "text": "Actividad: ¿Qué técnica usarías?\nDiscute en grupo qué técnica sería más adecuada en cada caso:\n\nTeniendo en cuenta lo que has aprendido hasta ahora en el máster, ¿cuándo usarías EEG y no fMRI? ¿Y al contrario?\n¿Qué técnica utilizarías si quisieras registrar la actividad cerebral durante una conversación natural?\nPiensa una pregunta que se pudiera responder tanto con fMRI como con EEG.",
-    "crumbs": [
-      "Ténicas de Neuroimagen Funcional",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#cómo-usar-este-libro",
-    "href": "index.html#cómo-usar-este-libro",
-    "title": "NaNif - Functional neuroimaging",
-    "section": "Cómo Usar Este Libro",
-    "text": "Cómo Usar Este Libro\nEste libro está organizado semana a semana, siguiendo la estructura del curso. Cada capítulo contiene información sobre lo que se espera para la sesión de la semana correspondiente. Además, a lo largo de las semanas encontrarás información sobre hitos concretos y cómo entregarlos.\nNavega por los capítulos usando la barra lateral o los botones de siguiente/anterior en la parte inferior de cada página.\nSi tienes alguna pregunta o necesitas más aclaraciones sobre el contenido del curso, las tareas o cualquier problema técnico relacionado con los análisis, no dudes en contactar conmigo por correo electrónico o durante las horas de tutoría. Estoy aquí para apoyar tu proceso de aprendizaje .\nRecuerda, este curso no va solo de aprender aspectos teóricos de la Neurimagen Funcional, sino también de aprender a implementar algunos de los análisis más comunes en el campo de una manera práctica. Te animamos a interactuar activamente con los materiales del curso, a participar en las discusiones durante las sesiones presenciales y aportar tus perspectivas e ideas únicas.\n¡Buena suerte y esperamos que aprendas mucho!",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Neuroimagen Funcional (Grupo en Español)</span>"
-    ]
-  },
-  {
-    "objectID": "introduction.html#reponsable-de-la-asignatura",
-    "href": "introduction.html#reponsable-de-la-asignatura",
-    "title": "Introducción",
-    "section": "Reponsable de la asignatura",
-    "text": "Reponsable de la asignatura\n\nJavier Ortiz Tudela\n\nEmail: ortiztudela@ugr.es\nDespacho: 308 @ CIMCYC\n\n\nNota: Aunque tengo horarios de tutorías, suele ser mejor que me escribas un email con antelación y así me puedo estar preparado para tus preguntas o tus dudas.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción</span>"
-    ]
-  },
-  {
-    "objectID": "introduction.html#antes-de-comenzar",
-    "href": "introduction.html#antes-de-comenzar",
-    "title": "Introducción",
-    "section": "Antes de comenzar",
-    "text": "Antes de comenzar\n\nEsta web será tu material de referencia para el contenido teórico y para todos los ejercicios prácticos del curso. Además, utilizaremos PRADO para el seguimiento semanal de las actividades y las sesiones presenciales. Subiré las diapositivas utilizadas a PRADO después de cada sesión.\nComo ya has visto arriba, una parte importante de la asignatura es el tratamiento de datos. Para que esto se haga bien, vamos a utilizar código. Si hasta ahora no has tenido experiencia con código, no te preocupes, solo necesitas voluntad de aprender, energía y un poco de paciencia.\nLo que sí vas a necesitar es un ordenador medio decente. Este término es un poco ambiguo pero por tener una idea general, un equipo con las características de aquí abajo será suficiente. Si no puedes conseguir un equipo así, dímelo y encontraremos una solución.\n\nAl menos 8GB de RAM (¿qué es la RAM y cómo consultar cuánta tiene mi equipo?)\nProcesador de los últimos 5 años\nAl menos 20GB de espacio libre en el disco duro\nSistema operativo actualizado (Windows 10/11, MacOS o Linux)\n\nAdemás, para trabajar con estos datos, vas a necesitar instalar una serie de programas que te indicamos aquí abajo. Prueba a instalar todos ellos y si tienes algún problema, contacta conmigo antes del inicio de esta parte de la asignatura. Es importante que le dediques algo de tiempo a preparar tu espacio de trabajo (es decir, tu ordenador y los programas de aquí abajo) porque esto va a hacer que tu experiencia del curso sea más sencilla y satisfactoria.\n\nITK-Snap (v 4.2.2). Este programa lo utilizaremos para visualizar datos de neuroimagen. Es gratuito y fácil de instalar. Puedes descargarlo desde aquí. Asegúrate de descargarlo e instalarlo antes de nuestra primera sesión práctica.\nVS Code. Cuando trabajamos con código, necesitamos un editor que nos permita escribirlo, verificarlo y ejecutarlo. Si ya has trabajado con algún editor y te sientes cómod@ con él, puedes seguir utilizándolo. Pero si eres nuev@ con esto del código, te recomendamos usar VS Code (Visual Studio Code). Es un editor moderno y muy potente que es compatible con muchos lenguajes de programación distintos.\n\n\nPor favor, intenta instalar estos programas antes del inicio de esta parte de la asignatura. Te dejamos aquí un par de scripts que puedes utilizar para verificar que la instalación ha funcionado. Si tienes problemas, no te preocupes — todos hemos pasado por ahí. Como primera opción, prueba a preguntarle a tu chatbot favorito (recuerda que con tu cuenta de la UGR tienes acceso tanto a Copilot de Microsoft como a la versión segura de Gemini de Google). Si aún así, no consigues avanzar, dedicaremos unos minutos a resolver problemas de instalación al final de la primera sesión.\nAunque todo esto parezca mucho trabajo así de primeras, no temas. Estamos en esto juntos. Y sobre todo, manten la mente abierta, súbete la curiosidad a tope y no tengas miedo de preguntar.\n\n\n\nDo not be afraid of code. It is your friend.\n\n\nEn las próximas secciones, comenzamos con los contenidos de la asignatura propiamente. ¡Adelante!",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción</span>"
-    ]
-  },
-  {
-    "objectID": "introduction.html#objetivos-de-la-asignatura",
-    "href": "introduction.html#objetivos-de-la-asignatura",
-    "title": "Introducción",
-    "section": "Objetivos de la asignatura",
-    "text": "Objetivos de la asignatura\nAl completar esta asignatura…\n\nTendrás una visión global de las distintas técnicas de neuroimagen funcional.\nTe sentirás cómod@ con los distintos tipos de datos de cada técnica.\nSabrás aplicar algunos de los análisis más comunes para cada técnica.\nSabrás cómo interpretar los resultados obtenidos de cada técnica.\nAdquirirás o mejorarás tus habilidades de programación.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-1_anatomical.html#qué-es-un-escáner-anatómico",
-    "href": "sessions/session-1_anatomical.html#qué-es-un-escáner-anatómico",
-    "title": "De analógico a digital",
-    "section": "",
-    "text": "Nota: El término “escáner” se utiliza indistintamente para referirse a la máquina que adquiere las imágenes (p. ej., el escáner está encendido) y para referirse a las imágenes en sí (p. ej., has recogido un escaner anatómico).\n\n\n\n\n\nTienen alta resolución espacial (típicamente 1mm³)\nMuestran excelente contraste entre los diferentes tejidos cerebrales\nSon fundamentales para:\n\nEstudios morfométricos\nAnálisis de volumen cerebral\nLocalización precisa de estructuras anatómicas\nBase para el registro con imágenes funcionales\n\n\n\n\nT1: Excelente para ver detalles anatómicos\n\nMateria gris aparece gris oscuro\nMateria blanca aparece más clara\nLíquido cefalorraquídeo (CSF) aparece negro\n\nT2: Útil para detectar patologías\n\nCSF aparece brillante\nTejido cerebral más oscuro\n\n\n\n\n\n\nEjemplo de imagen T1 anatómica\n\n\n\n\n\nVisualización 3D interactiva\nSegmentación manual y semi-automática\nNavegación por cortes anatómicos\nAjustes de contraste y brillo",
-    "crumbs": [
-      "Sessions",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>De analógico a digital</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-1_anatomical.html#localizando-hitos-en-tu-propio-cerebro",
-    "href": "sessions/session-1_anatomical.html#localizando-hitos-en-tu-propio-cerebro",
-    "title": "De analógico a digital",
-    "section": "Localizando hitos en tu propio cerebro",
-    "text": "Localizando hitos en tu propio cerebro\n[Instrucciones prácticas + imágenes si las tienes]",
-    "crumbs": [
-      "Sessions",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>De analógico a digital</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-1_anatomical-1.html",
-    "href": "sessions/session-1_anatomical-1.html",
-    "title": "De analógico a digital (I)",
-    "section": "",
-    "text": "¿Qué es un escáner anatómico?\nEn la primera parte de la asignatura habéis trabajado con maquetas anatómicas y con imágenes en 2D sacadas de un atlas de anatomía. Esta aproximación es genial para aprender a identificar los puntos de referencia habituales (p. ej., ventrículos) y a orientarse en el cerebro (es decir, saber dónde está qué cosa en relación a otras cosas). No obstante, cuando realizamos investigación con humanos in-vivo, no tenemos acceso directo al cerebro por aquello de que el cerebro está encerrado en una caja de hueso -el cráneo- (recordad esto porque, aunque suene trivial, será importante más adelante). La solución que tenemos, entonces, es usar técnicas indirectas que nos permitan reconstruir lo que sucede dentro del cráneo.\nLa técnica más utilizada para acceder a la anatomía del cerebro es la resonancia magnética (RM). Un escáner de RM utiliza un campo magnético muy potente y pulsos de radiofrecuencia para manipular los protones de hidrógeno en el agua de los tejidos corporales. Cuando estos protones vuelven a su estado de equilibrio, emiten señales que son captadas por el escáner y convertidas en imágenes digitales en 2D. Estas imágenes (llamadas “cortes” o “slices”) luego se combinan para formar una representación volumétrica en 3D del cerebro. La fuerza del campo magnético del escáner, medido en una unidad llamada Tesla, determina varios parámetros de las imágenes que se pueden obtener (entre otros, la resolución espacial máxima); como regla general, cuanto mayor sea el campo magnético, mayor será la resolución espacial que podemos alcanzar. El tipo de escáner más común para investigación en NeuroCog, es el de 3 Tesla.\nA diferencia de otras técnicas de imagen indirecta como los rayos X o la tomografía computarizada (TC), la resonancia magnética: - No utiliza radiación ionizante - Ofrece mejor contraste entre los tejidos blandos - Permite visualizar el cerebro desde cualquier ángulo - Puede optimizarse para destacar diferentes tipos de tejidos o patologías\nEsta última característica es especialmente interesante. Para recoger sus imágenes, la MR utiliza una serie de parámetros que generalmente se conocen como “secuencias”. Cuando empecéis a trabajar con MR, oiréis frecuentemente cosas como “¿qué secuencia has utilizado?” o “¿tienes alguna secuencia para DTI que pueda utilizar?”. Piensa en esas secuencias como en las recetas que utiliza el escáner para generar sus imágenes y que contienen todos los parámetros necesarios. Modificar estos parámetros nos permite obtener diferentes tipos de imágenes del cerebro, cada una destacando diferentes aspectos de la anatomía cerebral.\nPor tanto, un “escáner anatómico o estructural” es una secuencia de resonancia magnética (MRI) que proporciona imágenes detalladas de la anatomía cerebral. Estas imágenes:\nLas secuencias más comunes son:\nAquí tienes un ejemplo de imagen estructural T1 de alta resolución:\nLa imagen muestra los diferentes contrastes entre materia gris, materia blanca y líquido cefalorraquídeo típicos de una secuencia T1. ¿Qué estructuras eres capaz de identificar? ¿Qué otras cosas además del cerebro ves en esta imagen anatómica?",
-    "crumbs": [
-      "De Analógico a Digital",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>De analógico a digital (I)</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-1_anatomical-1.html#qué-es-un-escáner-anatómico",
-    "href": "sessions/session-1_anatomical-1.html#qué-es-un-escáner-anatómico",
-    "title": "De analógico a digital (I)",
-    "section": "",
-    "text": "Nota: El término “escáner” se utiliza indistintamente para referirse a la máquina que adquiere las imágenes (p. ej., el escáner está encendido) y para referirse a las imágenes en sí (p. ej., has recogido un escaner anatómico).\n\n\n\n\nImágen del escaner de 3 Tesla del CIMCYC\n\n\n\n\n\n\nTienen alta resolución espacial (típicamente 1mm³)\nMuestran excelente contraste entre los diferentes tejidos cerebrales\nSon fundamentales para:\n\nEstudios morfométricos\nAnálisis de volumen cerebral\nLocalización precisa de estructuras anatómicas\nBase para el registro con imágenes funcionales\n\n\n\n\nT1: Excelente para ver detalles anatómicos (el más común en investigación en NeuroCog)\n\nMateria gris aparece gris oscuro &lt;- ¡Importante!\nMateria blanca aparece más clara\nLíquido cefalorraquídeo (CSF) aparece negro\n\nT2: Útil para detectar patologías (poco utilizado en investigación no-clínica)\n\nCSF aparece brillante\nTejido cerebral más oscuro\n\n\n\n\n\n\nEjemplo de imagen T1 anatómica\n\n\n\n\nNota: Como habrás notado, los términos “anatómica” y “estructural” se utilizan de manera intercambiable. En muchas ocasiones, estas imágenes se denominan simplemente “T1”.",
-    "crumbs": [
-      "De Analógico a Digital",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>De analógico a digital (I)</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-1_anatomical-1.html#localizando-hitos-en-tu-propio-cerebro",
-    "href": "sessions/session-1_anatomical-1.html#localizando-hitos-en-tu-propio-cerebro",
-    "title": "De analógico a digital",
-    "section": "Localizando hitos en tu propio cerebro",
-    "text": "Localizando hitos en tu propio cerebro\n[Instrucciones prácticas + imágenes si las tienes]",
-    "crumbs": [
-      "Sessions",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>De analógico a digital</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-1_anatomical-2.html",
-    "href": "sessions/session-1_anatomical-2.html",
-    "title": "De analógico a digital (II)",
-    "section": "",
-    "text": "¿Cómo interactúo con imágenes estructurales?\nLas imágenes que genera la MR son unos archivos en 3D (como hemos visto en la página anterior, en realidad son un montón de imágenes 2D concatenadas). Al igual que para imágenes en 2D estaréis acostumbrados a formatos de archivos como .png, .jpeg o .gif, el formato más común para imágenes en 3D se llama Nifti y la extensión es .nii. Además, como estos archivos suelen ser grandes, es muy común (y recomendable) que nos los encontremos comprimidos. Puede que ya hayas trabajado antes con archivos comprimidos en .zip o en .rar (si no sabes qué es un archivo comprimido, mira esta web); los archivos de RM suelen comprimirse con Gunzip y la extensión es .gz. La mayor parte de programas de análisis de este tipo de datos hacen una descompresión automática al abrirlos, así que no tienes que preocuparte por descomprimirlos tú. Tanto en esta asignatura como al usar datos que te encuentres por la web, la extensión más común para archivos de MR es nii.gz.\nPara visualizar y analizar estas imágenes, utilizaremos ITK-SNAP, una herramienta de código abierto que permite:\nPara abrir un archivo nii.gz, solo tenemos que seleccionarlo, hacer click con el botón derecho, darle a “abrir con…” y seleccionar ITK-Snap de la lista de programas. Alternativamente, puedes abrir ITK-Snap primero, y pinchar en “Open image…” y de ahí, buscar el archivo en tu ordenador.\nPrueba a abrir la imágen de un cerebro que puedes encontrar en esta ruta: :\n~/carpeta-en-tu-ordenador/materiales_nanif/session-1/template_space-mni_res-3_brain.nii.gz.\nUna vez abierta la imagen, puedes explorarla de varias maneras:",
-    "crumbs": [
-      "De Analógico a Digital",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>De analógico a digital (II)</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-1_anatomical-2.html#qué-es-un-escáner-anatómico",
-    "href": "sessions/session-1_anatomical-2.html#qué-es-un-escáner-anatómico",
-    "title": "De analógico a digital (I)",
-    "section": "",
-    "text": "Nota: El término “escáner” se utiliza indistintamente para referirse a la máquina que adquiere las imágenes (p. ej., el escáner está encendido) y para referirse a las imágenes en sí (p. ej., has recogido un escaner anatómico).\n\n\n\n\n\nTienen alta resolución espacial (típicamente 1mm³)\nMuestran excelente contraste entre los diferentes tejidos cerebrales\nSon fundamentales para:\n\nEstudios morfométricos\nAnálisis de volumen cerebral\nLocalización precisa de estructuras anatómicas\nBase para el registro con imágenes funcionales\n\n\n\n\nT1: Excelente para ver detalles anatómicos (el más común en investigación en NeuroCog)\n\nMateria gris aparece gris oscuro &lt;- ¡Importante!\nMateria blanca aparece más clara\nLíquido cefalorraquídeo (CSF) aparece negro\n\nT2: Útil para detectar patologías (poco utilizado en investigación no-clínica)\n\nCSF aparece brillante\nTejido cerebral más oscuro\n\n\n\n\n\n\nEjemplo de imagen T1 anatómica\n\n\n\n\n\n\nVisualización 3D interactiva\nSegmentación manual y semi-automática\nNavegación por cortes anatómicos\nAjustes de contraste y brillo",
-    "crumbs": [
-      "Sessions",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>De analógico a digital (I)</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-1_anatomical-2.html#localizando-hitos-en-tu-propio-cerebro",
-    "href": "sessions/session-1_anatomical-2.html#localizando-hitos-en-tu-propio-cerebro",
-    "title": "De analógico a digital (II)",
-    "section": "Localizando hitos en tu propio cerebro",
-    "text": "Localizando hitos en tu propio cerebro\n[Instrucciones prácticas + imágenes si las tienes]",
-    "crumbs": [
-      "De Analógico a Digital",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>De analógico a digital (II)</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-1_anatomical-2.html#cómo-interactúo-con-imágenes-estructurales",
-    "href": "sessions/session-1_anatomical-2.html#cómo-interactúo-con-imágenes-estructurales",
-    "title": "De analógico a digital (II)",
-    "section": "",
-    "text": "Visualización 3D interactiva\nSegmentación manual y semi-automática\nNavegación por cortes anatómicos\nAjustes de contraste y brillo\n\n\n\n\n\nInterfaz de ITK-Snap\n\n\n\n\n\n\nNavegación básica\n\nVistas ortogonales: ITK-SNAP muestra tres vistas perpendiculares (axial, sagital y coronal) que te permiten explorar el cerebro desde diferentes ángulos.\nCursor de navegación: El cursor cruzado se mantiene sincronizado en las tres vistas, mostrando la misma ubicación desde diferentes perspectivas.\nDesplazamiento: Usa la rueda del ratón para desplazarte por los cortes en la vista activa.\nMover imagen: Alt/Option + ratón te permite desplazar la imagen entera.\nZoom: Ctrl + rueda del ratón (o separar con dos dedos en Mac) te permite acercar o alejar la imagen.\n\n\n\nAjustes de visualización\n\nBrillo y contraste: En el menú “Tools” &gt; “Image Contrast” (o Ctrl/Cmd + I) puedes modificar estos parámetros para ver mejor las estructuras cerebrales.\nCentrarte en una vista: Puedes centrar la interfaz del programa en las diferentes vistas pinchando en las letras A, S y C (axial, sagital y coronal) junto a cada ventana; para volver al panel de visualización de las tres vistas, pulsa en el icono con cuatro cuadrantes arriba a la derecha.\n\n\n\nOrientación en el espacio\nRecuerda que las imágenes de MRI siguen convenciones neurológicas de orientación:\n\nIzquierda-Derecha: En las vistas axial y coronal, el lado izquierdo de la imagen corresponde al lado derecho del cerebro.\nAnterior-Posterior: La parte superior de la vista axial es la parte anterior (frontal) del cerebro.\nSuperior-Inferior: En las vistas coronal y sagital, la parte superior de la imagen es la parte superior del cerebro.\n\nDedica un tiempo para familiarizarte con la navegación en el espacio 3D y para identificar estructuras anatómicas principales como el cuerpo calloso, los ventrículos y la corteza cerebral. ¡Vamos a hacer una demo juntos!",
-    "crumbs": [
-      "De Analógico a Digital",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>De analógico a digital (II)</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-1_anatomical-1.html#tabla-resumen",
-    "href": "sessions/session-1_anatomical-1.html#tabla-resumen",
-    "title": "De analógico a digital (I)",
-    "section": "Tabla resumen",
-    "text": "Tabla resumen\n\n\n\n\n\n\n\nConcepto\nDescripción\n\n\n\n\nResonancia Magnética (RM)\nTécnica que utiliza campo magnético y pulsos de radiofrecuencia para generar imágenes del cerebro sin radiación ionizante\n\n\nSecuencias\nConjunto de parámetros que determinan cómo se adquieren las imágenes de RM\n\n\nEscáner anatómico/estructural\nImágenes de alta resolución (≈1mm³) que muestran detalles de la estructura cerebral\n\n\nSecuencia T1\n- Materia gris: gris oscuro- Materia blanca: clara- Líquido cefalorraquídeo: negro- Muy común en investigación\n\n\nSecuencia T2\n- Líquido cefalorraquídeo: brillante- Tejido cerebral: oscuro- Más común en contextos clínicos\n\n\nAplicaciones\nEstudios morfométricos, análisis de volumen cerebral, localización de estructuras, base para registro con imágenes funcionales\n\n\n\nEn la siguiente sección veremos cómo abrimos e interactuamos con este tipo de imágenes.",
-    "crumbs": [
-      "De Analógico a Digital",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>De analógico a digital (I)</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-1_anatomical-2.html#tabla-resumen",
-    "href": "sessions/session-1_anatomical-2.html#tabla-resumen",
-    "title": "De analógico a digital (II)",
-    "section": "Tabla resumen",
-    "text": "Tabla resumen\n\n\n\n\n\n\n\nAspecto\nDetalles\n\n\n\n\nFormato de archivo\nNifti (.nii), comúnmente comprimido (.nii.gz)\n\n\nHerramienta\nITK-SNAP (código abierto)\n\n\nFuncionalidades\n- Visualización 3D interactiva- Segmentación manual/semi-automática- Navegación por cortes- Ajustes de contraste/brillo\n\n\nVistas principales\nAxial, Sagital, Coronal\n\n\nOrientación\n- Izquierda/Derecha: convención neurológica- Anterior (frontal)/Posterior- Superior/Inferior\n\n\n\nEn la siguiente sección aplicarás todo esto ¡a tu propio cerebro!",
-    "crumbs": [
-      "De Analógico a Digital",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>De analógico a digital (II)</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-1_anatomical-3.html",
-    "href": "sessions/session-1_anatomical-3.html",
-    "title": "De analógico a digital (III)",
-    "section": "",
-    "text": "Práctica 1. Localizando hitos en tu propio cerebro\nCréditos a Ana Paqui Palenciano (palencianoap@ugr.es)\nDeberás utilizar un software de visualización de imágenes, preferiblemente, ITK-Snap. Este software tienen la opción de trazar regiones o lesiones, para poder así generar máscaras que se utilicen en análisis futuros. En este caso, usarás esas herramientas para identificar una serie de regiones en tus propias imágenes anatómicas, en concreto, en las imágenes T1-w.\nPara cada apartado de regiones, utiliza dos planos distintos (axial, coronal, sagital). Realiza pantallazos del corte en el que hayas coloreado las regiones y pégalas en un documento indicando qué regiones aparecen. Fecha límite de envío PRADO: XX de Octubre de 2025.\nA continuación tienes la lista de regiones a identificar junto con ejemplos:\nSi necesitas ayuda para localizar las regiones de esta red, puedes consultar:",
-    "crumbs": [
-      "De Analógico a Digital",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>De analógico a digital (III)</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-1_anatomical-3.html#práctica-1.-localizando-hitos-en-tu-propio-cerebro",
-    "href": "sessions/session-1_anatomical-3.html#práctica-1.-localizando-hitos-en-tu-propio-cerebro",
-    "title": "De analógico a digital (III)",
-    "section": "",
-    "text": "Ventrículos cerebrales\n(indicando los ventrículos laterales, tercer y cuarto ventrículos, el agujero de Monro y el acueducto de Silvio). \nGanglios basales \nTálamo \nHipocampo y amígdala \nRegiones de la Red de Múltiple Demanda\n(o red de control fronto-parietal), incluyendo:\n\nSurco inferior frontal\n\nSurco intraparietal\n\nCíngulo anterior/pre-SMA\n\nInferior frontal junction\n\n\n\n\n\nDuncan (2010), Trends in Cognitive Sciences\nhttps://doi.org/10.1016/j.tics.2010.01.004\nFedorenko, Duncan & Kanwisher (2013), PNAS\nhttps://doi.org/10.1073/pnas.1315235110\nBrass et al. (2005), Trends in Cognitive Sciences\nhttps://doi.org/10.1016/j.tics.2005.05.001",
-    "crumbs": [
-      "De Analógico a Digital",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>De analógico a digital (III)</span>"
-    ]
-  },
-  {
-    "objectID": "sessions/session-2_functional-neuroimaging.html#preguntas-de-discusión",
-    "href": "sessions/session-2_functional-neuroimaging.html#preguntas-de-discusión",
-    "title": "Técnicas de neuroimagen: tiempo vs. espacio",
-    "section": "Preguntas de discusión",
-    "text": "Preguntas de discusión\nDiscute en grupo qué técnica sería más adecuada en cada caso:\n\nTeniendo en cuenta lo que has aprendido hasta ahora en el máster, ¿cuándo usarías EEG y no fMRI? ¿Y al contrario?\n¿Qué técnica utilizarías si quisieras registrar la actividad cerebral durante una conversación natural?\nPiensa una pregunta que se pudiera responder tanto con fMRI como con EEG.",
-    "crumbs": [
-      "Ténicas de Neuroimagen Funcional",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Técnicas de neuroimagen: tiempo vs. espacio</span>"
     ]
   }
 ]
