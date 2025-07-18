@@ -1,15 +1,16 @@
-# Ignore the contents of the _site directory
-_site/
-teaching/**/_site/
-teaching/**/_book/
+# === Quarto ===
+*/_book/
+*/_site/
 
-# Ignore the directory for local files during development
+# === Renders temporales ===
 local/
+*.Rproj
+*.DS_Store
 
-# Ignore the Gemfile that is generated
+# === Node/npm ===
+node_modules/
+package-lock.json
+
+# === Ruby/Gem ===
 Gemfile.lock
 
-# Ingore files created by npm
-node_modules
-package-lock.json
-_site/
