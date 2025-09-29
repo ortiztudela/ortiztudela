@@ -16,3 +16,6 @@ I obtained my PhD with Prof. Juan Lupiañez and Prof. Luis Jiménez in 2018. Aft
 My main field is Cognitive Neuroscience with a focus on understanding cognition as a continuous stream of processes. I am currently interested in semantic congruency as a transversal manipulation across different cognitive processes. During these past few years, I have been working on predictive processing in relation to perception and episodic memory. My other interests (and therefore, most of my side projects), touch upon Attention, Perception, Memory and (Explainable) Artificial Intelligence. 
 
 I am always ready to talk about research and to discuss new (or old) ideas so if you want to get in touch, just drop me an email or find me on BlueSky (@ortiztudela.bsky.social).
+
+I'm currently working on [this](files/lab-network.html){:target="_blank"}. Let's see if it works.
+

@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "updated": "2025-09-29",
+    "note": "Edit this file to update the graph. Roles are free-form; colors/sizes are auto-mapped."
+  },
+  "nodes": [
+    {
+      "id": "Javier",
+      "role": "pi",
+      "projects": [
+        "CONNECTS"
+      ],
+      "fellowships": [
+        "Ramón y Cajal"
+      ]
+    },
+    {
+      "id": "Juan",
+      "role": "supervisor",
+      "fellowships": [
+        "Ramón y Cajal"
+      ]
+    },
+    {
+      "id": "Carlos",
+      "role": "supervisor",
+      "fellowships": [
+        "Ramón y Cajal"
+      ]
+    },
+    {
+      "id": "Rodica",
+      "role": "supervisor",
+      "fellowships": [
+        "Ramón y Cajal"
+      ]
+    },
+    {
+      "id": "Iván",
+      "role": "student",
+      "projects": [
+        "REMATCH"
+      ]
+    },
+    {
+      "id": "Linda",
+      "role": "student",
+      "projects": [
+        "CONNECTS"
+      ]
+    },
+    {
+      "id": "Miriam",
+      "role": "postdoc",
+      "projects": [
+        "CONNECTS"
+      ],
+      "fellowships": [
+        "Juan de la Cierva"
+      ]
+    },
+    {
+      "id": "Laura",
+      "role": "research_assistant",
+      "projects": [
+        "CONNECTS"
+      ]
+    },
+    {
+      "id": "Elisa",
+      "role": "research_support",
+      "projects": [
+        "CONNECTS"
+      ]
+    },
+    {
+      "id": "Matías",
+      "role": "student",
+      "projects": [
+        "AWAKE"
+      ]
+    },
+    {
+      "id": "Johanna",
+      "role": "student",
+      "projects": [
+        "AWAKE"
+      ]
+    },
+    {
+      "id": "Katie",
+      "role": "student"
+    },
+    {
+      "id": "Pablo",
+      "role": "research_assistant",
+      "projects": [
+        "FLARE"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "source": "Javier",
+      "target": "Iván",
+      "type": "supervision"
+    },
+    {
+      "source": "Juan",
+      "target": "Iván",
+      "type": "co"
+    },
+    {
+      "source": "Carlos",
+      "target": "Iván",
+      "type": "co"
+    },
+    {
+      "source": "Javier",
+      "target": "Linda",
+      "type": "supervision"
+    },
+    {
+      "source": "Javier",
+      "target": "Miriam",
+      "type": "supervision"
+    },
+    {
+      "source": "Javier",
+      "target": "Laura",
+      "type": "supervision"
+    },
+    {
+      "source": "Javier",
+      "target": "Elisa",
+      "type": "supervision"
+    },
+    {
+      "source": "Carlos",
+      "target": "Matías",
+      "type": "co"
+    },
+    {
+      "source": "Juan",
+      "target": "Matías",
+      "type": "co"
+    },
+    {
+      "source": "Carlos",
+      "target": "Johanna",
+      "type": "co"
+    },
+    {
+      "source": "Juan",
+      "target": "Johanna",
+      "type": "co"
+    },
+    {
+      "source": "Rodica",
+      "target": "Katie",
+      "type": "supervision"
+    },
+    {
+      "source": "Carlos",
+      "target": "Pablo",
+      "type": "supervision"
+    }
+  ]
+}
