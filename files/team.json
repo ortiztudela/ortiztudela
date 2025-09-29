@@ -16,35 +16,35 @@
     },
     {
       "id": "Juan",
-      "role": "supervisor",
+      "role": "pi",
       "fellowships": [
         "Ramón y Cajal"
       ]
     },
     {
       "id": "Carlos",
-      "role": "supervisor",
+      "role": "pi",
       "fellowships": [
         "Ramón y Cajal"
       ]
     },
     {
-      "id": "Rodica",
-      "role": "supervisor",
+      "id": "Rodika",
+      "role": "pi",
       "fellowships": [
         "Ramón y Cajal"
       ]
     },
     {
       "id": "Iván",
-      "role": "student",
+      "role": "PhD student",
       "projects": [
         "REMATCH"
       ]
     },
     {
       "id": "Linda",
-      "role": "student",
+      "role": "PhD student",
       "projects": [
         "CONNECTS"
       ]
@@ -74,22 +74,22 @@
       ]
     },
     {
-      "id": "Matías",
-      "role": "student",
+      "id": "Mattia",
+      "role": "PhD student",
       "projects": [
         "AWAKE"
       ]
     },
     {
       "id": "Johanna",
-      "role": "student",
+      "role": "PhD student",
       "projects": [
         "AWAKE"
       ]
     },
     {
       "id": "Katie",
-      "role": "student"
+      "role": "PhD student"
     },
     {
       "id": "Pablo",
@@ -137,12 +137,12 @@
     },
     {
       "source": "Carlos",
-      "target": "Matías",
+      "target": "Mattia",
       "type": "co"
     },
     {
       "source": "Juan",
-      "target": "Matías",
+      "target": "Mattia",
       "type": "co"
     },
     {
@@ -156,7 +156,7 @@
       "type": "co"
     },
     {
-      "source": "Rodica",
+      "source": "Rodika",
       "target": "Katie",
       "type": "supervision"
     },

@@ -17,6 +17,7 @@ My main field is Cognitive Neuroscience with a focus on understanding cognition 
 
 I am always ready to talk about research and to discuss new (or old) ideas so if you want to get in touch, just drop me an email or find me on BlueSky (@ortiztudela.bsky.social).
 
-I'm currently working on [Lab Supervision Network]({{ '/files/lab-network.html' | relative_url }}){:target="_blank"}
+I'm currently working on [Lab Supervision Network]({{ '/network/' | relative_url }}){:target="_blank" rel="noopener"}
+
 
 
