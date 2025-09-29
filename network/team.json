@@ -61,14 +61,14 @@
     },
     {
       "id": "Laura",
-      "role": "Research Assistant",
+      "role": "research_assistant",
       "projects": [
         "CONNECTS"
       ]
     },
     {
       "id": "Elisa",
-      "role": "Research Support",
+      "role": "research_support",
       "projects": [
         "CONNECTS"
       ]
@@ -93,7 +93,7 @@
     },
     {
       "id": "Pablo",
-      "role": "Research Assistant",
+      "role": "research_assistant",
       "projects": [
         "FLARE"
       ]

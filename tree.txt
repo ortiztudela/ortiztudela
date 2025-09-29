@@ -287,12 +287,14 @@
 │       └── fa-v4compatibility.woff2
 ├── files
 │   ├── front_page_image.png
+│   ├── lab-network.html
 │   ├── paper1.pdf
 │   ├── paper2.pdf
 │   ├── paper3.pdf
 │   ├── slides1.pdf
 │   ├── slides2.pdf
-│   └── slides3.pdf
+│   ├── slides3.pdf
+│   └── team.json
 ├── images
 │   ├── 3953273590_704e3899d5_m.jpg
 │   ├── 500x300.png
@@ -329,6 +331,9 @@
 │   ├── talks.ipynb
 │   ├── talks.py
 │   └── talks.tsv
+├── network
+│   ├── index.html
+│   └── team.json
 ├── package.json
 ├── talkmap
 │   ├── leaflet_dist
@@ -400,58 +405,6 @@
 │   │   │   ├── Wed_18-19_Consciencia-1.mp3
 │   │   │   ├── Wed_18-19_Neurosexismo.mp3
 │   │   │   └── Wed_18-19_Plasticidad-1.mp3
-│   │   ├── images
-│   │   │   ├── brain_podcast.png
-│   │   │   ├── podcaster.png
-│   │   │   └── search_engines.png
-│   │   ├── index.html
-│   │   ├── introduction.html
-│   │   ├── search.json
-│   │   ├── site_libs
-│   │   │   ├── bootstrap
-│   │   │   │   ├── bootstrap-icons.css
-│   │   │   │   ├── bootstrap-icons.woff
-│   │   │   │   ├── bootstrap.min.css
-│   │   │   │   └── bootstrap.min.js
-│   │   │   ├── clipboard
-│   │   │   │   └── clipboard.min.js
-│   │   │   ├── quarto-html
-│   │   │   │   ├── anchor.min.js
-│   │   │   │   ├── popper.min.js
-│   │   │   │   ├── quarto-syntax-highlighting.css
-│   │   │   │   ├── quarto.js
-│   │   │   │   ├── tippy.css
-│   │   │   │   └── tippy.umd.min.js
-│   │   │   ├── quarto-nav
-│   │   │   │   ├── headroom.min.js
-│   │   │   │   └── quarto-nav.js
-│   │   │   └── quarto-search
-│   │   │       ├── autocomplete.umd.js
-│   │   │       ├── fuse.min.js
-│   │   │       └── quarto-search.js
-│   │   ├── tree.txt
-│   │   ├── week_0.html
-│   │   ├── week_1.html
-│   │   ├── week_10.html
-│   │   ├── week_11.html
-│   │   ├── week_12.html
-│   │   ├── week_2.html
-│   │   ├── week_3.html
-│   │   ├── week_4.html
-│   │   ├── week_5.html
-│   │   ├── week_6.html
-│   │   ├── week_7.html
-│   │   ├── week_8.html
-│   │   └── week_9.html
-│   ├── ncc-2425_book_old
-│   │   ├── Cognitive-Neuroscience-2425---Small-Group-Sessions.pdf
-│   │   ├── _examples
-│   │   │   ├── Tue_11-12_Neurosexism.mp3
-│   │   │   ├── Tue_11-12_Poverty.mp3
-│   │   │   ├── Wed_12-13_Stereotypes-1.mp3
-│   │   │   ├── Wed_18-19_Consciencia-1.mp3
-│   │   │   ├── Wed_18-19_Neurosexismo.mp3
-│   │   │   └── Wed_18-19_Plasticidad-1.mp3
 │   │   ├── _images
 │   │   │   ├── brain_podcast.png
 │   │   │   ├── podcaster.png
@@ -495,9 +448,9 @@
 │   │   ├── week_8.html
 │   │   └── week_9.html
 │   └── ncc-2526_book
+│       ├── Cognitive-Neuroscience-2526---Small-Group-Sessions.pdf
 │       ├── _images
 │       │   ├── brain_podcast.png
-│       │   ├── podcaster_2526.png
 │       │   └── search_engines.png
 │       ├── index.html
 │       ├── introduction.html
@@ -539,4 +492,4 @@
 │       └── week_9.html
 └── tree.txt
 
-88 directories, 452 files
+80 directories, 413 files

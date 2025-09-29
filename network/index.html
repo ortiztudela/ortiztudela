@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lab Supervision Network</title>
+  <style>
+    html, body { margin:0; height:100%; background:#0f172a; color:#e2e8f0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; }
+    .app { display:grid; grid-template-columns:300px 1fr; grid-template-rows:auto 1fr; grid-template-areas:"header header" "sidebar main"; height:100dvh; }
+    header { grid-area:header; padding:12px 16px; border-bottom:1px solid #1f2937; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+    header h1 { font-size:18px; margin:0; font-weight:600; letter-spacing:.2px; }
+    .controls { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+    .controls input, .controls select, .controls button {
+      background:#111827; color:#e5e7eb; border:1px solid #374151; border-radius:6px; padding:6px 10px; font-size:12px;
+    }
+    .sidebar { grid-area:sidebar; border-right:1px solid #1f2937; padding:12px; overflow:auto; }
+    .legend { display:grid; gap:6px; margin-bottom:14px; }
+    .legend-item { display:flex; align-items:center; gap:8px; font-size:13px; }
+    .legend-swatch { width:12px; height:12px; border-radius:50%; border:2px solid #1f2937; box-shadow:0 0 0 1px #000 inset; }
+    .legend-edge { width:24px; height:2px; background:#94a3b8; border-radius:2px; }
+    .legend-edge.co { background:#fbbf24; }
+    .details { background:#0b1328; border:1px solid #1f2937; border-radius:8px; padding:10px; font-size:13px; }
+    .details h2 { margin:0 0 8px 0; font-size:14px; font-weight:600; }
+    .details p { margin:0 0 6px 0; color:#cbd5e1; line-height:1.45; }
+    main { grid-area:main; position:relative; }
+    svg { width:100%; height:100%; background: radial-gradient(1000px 800px at 30% 20%, #0b1225 0, #0f172a 40%, #0f172a 100%); cursor:move; }
+    .link { stroke:#94a3b8; stroke-opacity:.6; }
+    .link.co { stroke:#fbbf24; stroke-dasharray:4 3; stroke-opacity:.9; }
+    .node circle { stroke:#0b1225; stroke-width:2px; }
+    .node text { font-size:11px; pointer-events:none; fill:#e2e8f0; text-shadow:0 1px 0 rgba(0,0,0,.6); }
+    .node:hover circle { filter: drop-shadow(0 0 6px rgba(255,255,255,.3)); }
+    .highlight .link { stroke-opacity:.1; }
+    .highlight .node circle { opacity:.25; }
+    .highlight .node.active circle, .highlight .node.neighbor circle { opacity:1; }
+    .highlight .link.active { stroke-opacity:1; stroke-width:2.5px; }
+    .pill { display:inline-block; border:1px solid #374151; padding:2px 6px; border-radius:999px; font-size:11px; color:#cbd5e1; margin-right:6px; margin-bottom:6px; background:#0f1a34; }
+    .footer { position:absolute; bottom:8px; right:10px; font-size:11px; color:#94a3b8; background:rgba(2,6,23,.6); padding:4px 6px; border:1px solid #1f2937; border-radius:6px; backdrop-filter: blur(6px); }
+    a.small { color:#93c5fd; text-decoration:none; border-bottom:1px dotted #93c5fd; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Lab Supervision Network (data-driven)</h1>
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search name…"/>
+        <select id="filterRole"><option value="all">All roles</option></select>
+        <button id="fit">Fit to view</button>
+        <button id="reset">Reset</button>
+      </div>
+    </header>
+    <aside class="sidebar">
+      <div class="legend">
+        <div class="legend-item"><span class="legend-swatch" style="background:#60a5fa"></span> PI</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#34d399"></span> Supervisor</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#f472b6"></span> Student</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#c084fc"></span> Postdoc</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#f59e0b"></span> Research Staff</div>
+        <div class="legend-item"><span class="legend-edge"></span> supervision</div>
+        <div class="legend-item"><span class="legend-edge co"></span> co-supervision</div>
+      </div>
+      <div class="details" id="details">
+        <h2>Details</h2>
+        <p>Hover to highlight connections. Drag to tidy. Click to pin. Double-click to unpin.</p>
+        <p>Data source: <code>team.json</code>. Edit it to update the graph.</p>
+      </div>
+    </aside>
+    <main>
+      <svg id="viz" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid meet"></svg>
+      <div class="footer">Built with D3.js. Data from <code>team.json</code>.</div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script>
+    const roleStyle = {
+      pi:        { color:"#60a5fa", r:12, group:"PI" },
+      supervisor:{ color:"#34d399", r:10, group:"Supervisor" },
+      student:   { color:"#f472b6", r:8,  group:"Student" },
+      postdoc:   { color:"#c084fc", r:9,  group:"Postdoc" },
+      research_assistant: { color:"#f59e0b", r:9, group:"Research staff" },
+      research_support:   { color:"#f59e0b", r:9, group:"Research staff" }
+    };
+    const fallbackStyle = { color:"#94a3b8", r:8, group:"Other" };
+
+    const svg = d3.select("#viz");
+    const g = svg.append("g");
+    const details = document.getElementById("details");
+    const searchInput = document.getElementById("search");
+    const filterRole = document.getElementById("filterRole");
+
+    let nodes = [], links = [], neighbors = {}, nodeSel, linkSel, simulation;
+
+    fetch("team.json?cachebust=" + Date.now())
+      .then(r => r.json())
+      .then(data => initGraph(data))
+      .catch(err => {
+        console.error("Failed to load team.json", err);
+        details.innerHTML = "<h2>Error</h2><p>Couldn't load <code>team.json</code>. Place it next to this HTML.</p>";
+      });
+
+    function initGraph(data) {
+      nodes = data.nodes;
+      links = data.links;
+
+      const roleSet = new Set(nodes.map(n => n.role).filter(Boolean));
+      const roles = ["all", ...Array.from(roleSet).sort()];
+      filterRole.innerHTML = roles.map(r => r==="all" ? '<option value="all">All roles</option>' : `<option value="${r}">${labelize(r)}</option>`).join("");
+
+      neighbors = buildNeighborMap(nodes, links);
+
+      linkSel = g.append("g")
+        .attr("stroke-linecap", "round")
+        .selectAll("line")
+        .data(links)
+        .join("line")
+        .attr("class", d => "link" + (d.type === "co" ? " co" : ""))
+        .attr("stroke-width", d => d.type === "co" ? 2 : 1.5);
+
+      nodeSel = g.append("g")
+        .selectAll("g")
+        .data(nodes)
+        .join("g")
+        .attr("class", "node")
+        .call(drag(simulation));
+
+      nodeSel.append("circle")
+        .attr("r", d => (roleStyle[d.role]?.r ?? fallbackStyle.r))
+        .attr("fill", d => (roleStyle[d.role]?.color ?? fallbackStyle.color));
+
+      nodeSel.append("text")
+        .attr("x", 12)
+        .attr("y", 4)
+        .text(d => d.id);
+
+      nodeSel.on("click", (event, d) => { d.fx = d.x; d.fy = d.y; showDetails(d); });
+      nodeSel.on("dblclick", (event, d) => { d.fx = null; d.fy = null; showDetails({id:"Details", role:"", description:"Node unpinned."}); });
+      nodeSel.on("mouseenter", (event, d) => highlight(d));
+      nodeSel.on("mouseleave", () => clearHighlight());
+
+      simulation = d3.forceSimulation(nodes)
+        .force("link", d3.forceLink(links).id(d => d.id).distance(l => l.type === "co" ? 90 : 70).strength(l => l.type === "co" ? 0.15 : 0.08))
+        .force("charge", d3.forceManyBody().strength(-220))
+        .force("collide", d3.forceCollide().radius(d => (roleStyle[d.role]?.r ?? 8) + 14).iterations(2))
+        .force("center", d3.forceCenter(600, 400))
+        .on("tick", ticked);
+
+      const zoom = d3.zoom().scaleExtent([0.25, 3]).on("zoom", (event) => { g.attr("transform", event.transform); });
+      svg.call(zoom);
+
+      document.getElementById("fit").addEventListener("click", () => fitToView(zoom));
+      document.getElementById("reset").addEventListener("click", () => svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity));
+      searchInput.addEventListener("input", applyFilters);
+      filterRole.addEventListener("change", applyFilters);
+
+      setTimeout(() => fitToView(zoom), 900);
+    }
+
+    function labelize(s){ return (s||"").replace(/_/g," ").replace(/\w/g, m => m.toUpperCase()); }
+
+    function ticked() {
+      linkSel
+        .attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y);
+      nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);
+    }
+
+    function drag(sim) {
+      function dragstarted(event, d) {
+        if (!event.active) simulation.alphaTarget(0.2).restart();
+        d.fx = d.x; d.fy = d.y;
+      }
+      function dragged(event, d) { d.fx = event.x; d.fy = event.y; }
+      function dragended(event, d) { if (!event.active) simulation.alphaTarget(0); }
+      return d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended);
+    }
+
+    function buildNeighborMap(nodes, links) {
+      const map = {};
+      nodes.forEach(n => map[n.id] = new Set());
+      links.forEach(l => {
+        const s = typeof l.source === "object" ? l.source.id : l.source;
+        const t = typeof l.target === "object" ? l.target.id : l.target;
+        map[s].add(t); map[t].add(s);
+      });
+      return map;
+    }
+
+    function showDetails(d) {
+      const roleLabel = d.role ? labelize(d.role) : "";
+      const projs = (d.projects||[]).map(p=>`<span class="pill">${p}</span>`).join(" ");
+      const fells = (d.fellowships||[]).map(p=>`<span class="pill">${p}</span>`).join(" ");
+      const conn = describeConnections(d);
+      details.innerHTML = `
+        <h2>${d.id}</h2>
+        <p>${roleLabel ? `<span class="pill">${roleLabel}</span>` : ""}
+           ${projs} ${fells}</p>
+        <p>${conn}</p>
+        <p style="opacity:.8">Tip: Edit <code>team.json</code> to update; refresh page to see changes.</p>
+      `;
+    }
+
+    function describeConnections(d) {
+      const supervisorOf = [];
+      const coOf = [];
+      const reportsTo = [];
+
+      links.forEach(l => {
+        const s = l.source.id ?? l.source;
+        const t = l.target.id ?? l.target;
+        if (s === d.id) {
+          if (l.type === "co") coOf.push(t); else supervisorOf.push(t);
+        } else if (t === d.id) {
+          if (l.type === "co") coOf.push(s); else reportsTo.push(s);
+        }
+      });
+
+      const parts = [];
+      if (reportsTo.length) parts.push(`Reports to: ${reportsTo.join(", ")}`);
+      if (supervisorOf.length) parts.push(`Supervises: ${supervisorOf.join(", ")}`);
+      if (coOf.length) parts.push(`Co-supervision with: ${coOf.join(", ")}`);
+      return parts.join("<br/>") || "No connections.";
+    }
+
+    function highlight(d) {
+      svg.classed("highlight", true);
+      nodeSel.classed("active", n => n.id === d.id)
+             .classed("neighbor", n => (links.some(l => (l.source.id ?? l.source)===d.id && (l.target.id ?? l.target)===n.id)) || 
+                                       (links.some(l => (l.target.id ?? l.target)===d.id && (l.source.id ?? l.source)===n.id)));
+      linkSel.classed("active", l => (l.source.id ?? l.source) === d.id || (l.target.id ?? l.target) === d.id);
+    }
+    function clearHighlight() {
+      svg.classed("highlight", false);
+      nodeSel.classed("active", false).classed("neighbor", false);
+      linkSel.classed("active", false);
+    }
+
+    function applyFilters() {
+      const q = searchInput.value.trim().toLowerCase();
+      const role = filterRole.value;
+
+      nodeSel.style("display", d => {
+        const roleOk = (role === "all") || d.role === role;
+        const textOk = !q || d.id.toLowerCase().includes(q);
+        return (roleOk && textOk) ? null : "none";
+      });
+
+      const visibleIds = new Set();
+      nodeSel.each(function(d){ if (this.style.display !== "none") visibleIds.add(d.id); });
+      linkSel.style("display", l => (visibleIds.has(l.source.id ?? l.source) && visibleIds.has(l.target.id ?? l.target)) ? null : "none");
+    }
+
+    function fitToView(zoom, padding=60) {
+      const data = nodeSel.nodes().map(n => n.__data__);
+      if (!data.length) return;
+      const xs = data.map(n => n.x), ys = data.map(n => n.y);
+      const minX = Math.min(...xs), maxX = Math.max(...xs);
+      const minY = Math.min(...ys), maxY = Math.max(...ys);
+      const boxWidth = Math.max(1, maxX - minX);
+      const boxHeight = Math.max(1, maxY - minY);
+      const midX = (minX + maxX) / 2;
+      const midY = (minY + maxY) / 2;
+
+      const rect = svg.node().getBoundingClientRect();
+      const scale = Math.max(0.25, Math.min(3, Math.min((rect.width - padding) / boxWidth, (rect.height - padding) / boxHeight)));
+      const transform = d3.zoomIdentity.translate(rect.width/2, rect.height/2).scale(scale).translate(-midX, -midY);
+      svg.transition().duration(600).call(zoom.transform, transform);
+    }
+  </script>
+</body>
+</html>
