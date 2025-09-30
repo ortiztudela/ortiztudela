@@ -207,6 +207,16 @@
       "source": "Carlos",
       "target": "Pablo",
       "type": "supervisor"
+    },
+    {
+      "source": "Johannah",
+      "target": "Pablo",
+      "type": "supervisor"
+    },
+    {
+      "source": "Juan",
+      "target": "Pablo",
+      "type": "colab"
     }
   ]
 }
