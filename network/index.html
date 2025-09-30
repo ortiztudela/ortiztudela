@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lab Supervision Network</title>
+  <title>BIKE Network</title>
   <style>
     html, body { margin:0; height:100%; background:#0f172a; color:#e2e8f0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; }
     .app { display:grid; grid-template-columns:300px 1fr; grid-template-rows:auto 1fr; grid-template-areas:"header header" "sidebar main"; height:100dvh; }
@@ -19,13 +19,15 @@
     .legend-swatch { width:12px; height:12px; border-radius:50%; border:2px solid #1f2937; box-shadow:0 0 0 1px #000 inset; }
     .legend-edge { width:24px; height:2px; background:#94a3b8; border-radius:2px; }
     .legend-edge.co { background:#fbbf24; }
-    .details { background:#0b1328; border:1px solid #1f2937; border-radius:8px; padding:10px; font-size:13px; }
+    .legend-edge.colab { background: #8b5cf6; height: 2px;}
+    .details { background:#0b1328; border:1px solid #1f2937; border-radius:8px; padding:10px; font-size:13px; max-height: calc(100vh - 160px); overflow-y: auto; }
     .details h2 { margin:0 0 8px 0; font-size:14px; font-weight:600; }
     .details p { margin:0 0 6px 0; color:#cbd5e1; line-height:1.45; }
     main { grid-area:main; position:relative; }
     svg { width:100%; height:100%; background: radial-gradient(1000px 800px at 30% 20%, #0b1225 0, #0f172a 40%, #0f172a 100%); cursor:move; }
     .link { stroke:#94a3b8; stroke-opacity:.6; }
     .link.co { stroke:#fbbf24; stroke-dasharray:4 3; stroke-opacity:.9; }
+    .link.colab {stroke: #8b5cf6; stroke-dasharray: 2 4; stroke-opacity: 0.9;}
     .node circle { stroke:#0b1225; stroke-width:2px; }
     .node text { font-size:11px; pointer-events:none; fill:#e2e8f0; text-shadow:0 1px 0 rgba(0,0,0,.6); }
     .node:hover circle { filter: drop-shadow(0 0 6px rgba(255,255,255,.3)); }
@@ -41,7 +43,7 @@
 <body>
   <div class="app">
     <header>
-      <h1>Lab Supervision Network (data-driven)</h1>
+      <h1>BIKE Network</h1>
       <div class="controls">
         <input id="search" type="search" placeholder="Search name…"/>
         <select id="filterRole"><option value="all">All roles</option></select>
@@ -52,12 +54,13 @@
     <aside class="sidebar">
       <div class="legend">
         <div class="legend-item"><span class="legend-swatch" style="background:#60a5fa"></span> PI</div>
-        <div class="legend-item"><span class="legend-swatch" style="background:#34d399"></span> Supervisor</div>
-        <div class="legend-item"><span class="legend-swatch" style="background:#f472b6"></span> Student</div>
         <div class="legend-item"><span class="legend-swatch" style="background:#c084fc"></span> Postdoc</div>
-        <div class="legend-item"><span class="legend-swatch" style="background:#f59e0b"></span> Research Staff</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#f472b6"></span> PhD Student</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#34d399"></span> Research Admin Support</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#f59e0b"></span> Research Assistant</div>
         <div class="legend-item"><span class="legend-edge"></span> supervision</div>
         <div class="legend-item"><span class="legend-edge co"></span> co-supervision</div>
+        <div class="legend-item"><span class="legend-edge colab"></span> colaboration</div>
       </div>
       <div class="details" id="details">
         <h2>Details</h2>
@@ -75,12 +78,14 @@
   <script>
     const roleStyle = {
       pi:        { color:"#60a5fa", r:12, group:"PI" },
-      supervisor:{ color:"#34d399", r:10, group:"Supervisor" },
-      student:   { color:"#f472b6", r:8,  group:"Student" },
+      phd_student:   { color:"#f472b6", r:8,  group:"PhD student" },
       postdoc:   { color:"#c084fc", r:9,  group:"Postdoc" },
-      research_assistant: { color:"#f59e0b", r:9, group:"Research staff" },
-      research_support:   { color:"#f59e0b", r:9, group:"Research staff" }
+      research_assistant: { color:"#f59e0b", r:9, group:"Research Assistant" },
+      research_support:   { color:"#34d399", r:9, group:"Research Admin Support" }
     };
+    const STUDENT_ROLES     = new Set(["postdoc", "phd_student", "masters_student", "undergrad"]);
+    const SUPERVISOR_ROLES  = new Set(["supervisor", "supervision", "pi"]); // add more if you invent new labels
+
     const fallbackStyle = { color:"#94a3b8", r:8, group:"Other" };
 
     const svg = d3.select("#viz");
@@ -114,7 +119,7 @@
         .selectAll("line")
         .data(links)
         .join("line")
-        .attr("class", d => "link" + (d.type === "co" ? " co" : ""))
+        .attr("class", d => "link" + (d.type ? " " + d.type : ""))
         .attr("stroke-width", d => d.type === "co" ? 2 : 1.5);
 
       nodeSel = g.append("g")
@@ -156,7 +161,7 @@
       setTimeout(() => fitToView(zoom), 900);
     }
 
-    function labelize(s){ return (s||"").replace(/_/g," ").replace(/\w/g, m => m.toUpperCase()); }
+    function labelize(s){ return (s||"").replace(/_/g," ").replace(/\b\w/g, m => m.toUpperCase()); }
 
     function ticked() {
       linkSel
@@ -193,36 +198,147 @@
       const projs = (d.projects||[]).map(p=>`<span class="pill">${p}</span>`).join(" ");
       const fells = (d.fellowships||[]).map(p=>`<span class="pill">${p}</span>`).join(" ");
       const conn = describeConnections(d);
+
       details.innerHTML = `
-        <h2>${d.id}</h2>
-        <p>${roleLabel ? `<span class="pill">${roleLabel}</span>` : ""}
-           ${projs} ${fells}</p>
-        <p>${conn}</p>
-        <p style="opacity:.8">Tip: Edit <code>team.json</code> to update; refresh page to see changes.</p>
-      `;
+      <h2>${d.id}</h2>
+      <p>${roleLabel ? `<span class="pill">${roleLabel}</span>` : ""} ${projs} ${fells}</p>
+      <p>${conn}</p>
+      <p style="opacity:.8">Tip: Edit <code>team.json</code> and refresh.</p>
+      ${d.image ? `
+        <div style="margin-top:10px;">
+          <img src="pics/${d.image}"
+               style="width:100%; max-height:300px; object-fit:cover; border-radius:6px;" />
+        </div>` : ""}
+      ${d.site ? `
+        <div style="margin-top:8px; text-align:center;">
+          <a href="${d.site}" target="_blank"
+             style="display:inline-block; padding:6px 12px; background:#2563eb; opacity:.8; color:#fff; text-decoration:none; border-radius:4px; font-size:13px;">
+            Personal Site
+          </a>
+        </div>` : ""}
+    `;
     }
 
     function describeConnections(d) {
-      const supervisorOf = [];
-      const coOf = [];
-      const reportsTo = [];
+      // Helpers
+      const idOf = v => (v && v.id) ? v.id : v;
+      const uniq = arr => [...new Set(arr)];
+      const isStudent        = (n) => n && STUDENT_ROLES.has(n.role);
+      const isSupervisorLike = (n) => n && SUPERVISOR_ROLES.has(n.role);
 
+      // Buckets
+      const reportsTo    = [];      // supervisors of d (incoming directed supervision)
+      const supervises   = [];      // students d supervises (outgoing directed supervision)
+      const coPairs      = [];      // [{student, with:[other supervisors]}] for d
+      const collabWith   = [];      // undirected collaborations
+
+      // Index nodes by id for role checks
+      const byId = new Map(nodes.map(n => [n.id, n]));
+
+      // Build quick lookup: for each student, list all their supervisors (from both 'supervision' and 'co')
+      const studentToSupers = new Map();
       links.forEach(l => {
-        const s = l.source.id ?? l.source;
-        const t = l.target.id ?? l.target;
-        if (s === d.id) {
-          if (l.type === "co") coOf.push(t); else supervisorOf.push(t);
-        } else if (t === d.id) {
-          if (l.type === "co") coOf.push(s); else reportsTo.push(s);
+        const s = idOf(l.source), t = idOf(l.target);
+        if ((l.type === "supervision" || l.type === "supervisor" || l.type === "co") && isStudent(byId.get(t))) {
+          const arr = studentToSupers.get(t) || [];
+          arr.push(s);
+          studentToSupers.set(t, arr);
         }
       });
 
+      // Walk edges touching d
+      links.forEach(l => {
+        const s = idOf(l.source), t = idOf(l.target);
+
+        if (l.type === "colab") {
+          if (s === d.id) collabWith.push(t);
+          else if (t === d.id) collabWith.push(s);
+          return;
+        }
+
+        if (l.type === "co") {
+          // treat as undirected for "who co-supervises with me" / "who co-supervisors me"
+          if (s === d.id && isStudent(byId.get(t)) && studentToSupers.has(t)) {
+            const others = uniq(studentToSupers.get(t).filter(x => x !== d.id));
+            coPairs.push({ student: t, with: others });
+          } else if (t === d.id && isStudent(byId.get(s)) && studentToSupers.has(s)) {
+            const others = uniq(studentToSupers.get(s).filter(x => x !== d.id));
+            coPairs.push({ student: s, with: others });
+          }
+          // If d is a student on a 'co' link, their supervisors will be handled in the student clause below.
+          return;
+        }
+
+        // Directed supervision edges
+        if (l.type === "supervision" || l.type === "supervisor") {
+          if (t === d.id) reportsTo.push(s);           // someone supervises d
+          if (s === d.id && isStudent(byId.get(t))) {  // d supervises this student
+            supervises.push(t);
+            // For co-supervise display, also compute "with …" (other supervisors of that student)
+            const others = uniq((studentToSupers.get(t) || []).filter(x => x !== d.id));
+            if (others.length) coPairs.push({ student: t, with: others });
+          }
+        }
+      });
+
+      // Remove duplicates
+      const uniqReportsTo  = uniq(reportsTo);
+      const uniqSupervises = uniq(supervises);
+      const uniqCollab     = uniq(collabWith);
+
+      // Role-aware phrasing
       const parts = [];
-      if (reportsTo.length) parts.push(`Reports to: ${reportsTo.join(", ")}`);
-      if (supervisorOf.length) parts.push(`Supervises: ${supervisorOf.join(", ")}`);
-      if (coOf.length) parts.push(`Co-supervision with: ${coOf.join(", ")}`);
+      const role = d.role;
+
+      if (isStudent(d)) {
+        // Collect supervisors from BOTH supervision and co-supervision edges
+        const allSupers = [];
+        links.forEach(l => {
+          if (l.type === "supervision" || l.type === "supervisor" || l.type === "co") {
+            const s = l.source.id ?? l.source;
+            const t = l.target.id ?? l.target;
+            if (t === d.id) allSupers.push(s);
+            if (s === d.id) allSupers.push(t);
+          }
+        });
+        const uniqSupers = uniq(allSupers);
+        if (uniqSupers.length === 1) parts.push(`Supervisor: ${uniqSupers[0]}`);
+        else if (uniqSupers.length > 1) parts.push(`Supervisors: ${uniqSupers.join(", ")}`);
+      }
+      else if (isSupervisorLike(d)) {
+        if (uniqSupervises.length) {
+          parts.push(`Supervises: ${uniqSupervises.join(", ")}`);
+        }
+        // Merge same student entries (in case we added twice)
+        const byStudent = new Map();
+        coPairs.forEach(p => {
+          const cur = byStudent.get(p.student) || new Set();
+          p.with.forEach(w => cur.add(w));
+          byStudent.set(p.student, cur);
+        });
+        const coLines = [];
+        byStudent.forEach((withSet, student) => {
+          const withArr = [...withSet];
+          if (withArr.length) coLines.push(`${student} (with ${withArr.join(", ")})`);
+        });
+        if (coLines.length) parts.push(`Co-supervises: ${coLines.join("; ")}`);
+        if (uniqReportsTo.length) {
+          // In case a PI→Supervisor hierarchy exists
+          parts.push(`Reports to: ${uniqReportsTo.join(", ")}`);
+        }
+      } else {
+        // Postdoc / RA / support / other
+        if (uniqReportsTo.length === 1) parts.push(`Reports to: ${uniqReportsTo[0]}`);
+        else if (uniqReportsTo.length > 1) parts.push(`Reports to: ${uniqReportsTo.join(", ")}`);
+      }
+
+      if (uniqCollab.length === 1) parts.push(`Collaborates with: ${uniqCollab[0]}`);
+      else if (uniqCollab.length > 1) parts.push(`Collaborates with: ${uniqCollab.join(", ")}`);
+
       return parts.join("<br/>") || "No connections.";
     }
+
+
 
     function highlight(d) {
       svg.classed("highlight", true);

@@ -7,6 +7,8 @@
     {
       "id": "Javier",
       "role": "pi",
+      "image": "javier.png",
+      "site": "https://ortiztudela.github.io/ortiztudela/",
       "projects": [
         "CONNECTS"
       ],
@@ -17,6 +19,10 @@
     {
       "id": "Juan",
       "role": "pi",
+      "image": "juan.png",
+      "projects": [
+        "AWAKE"
+      ],
       "fellowships": [
         "Ramón y Cajal"
       ]
@@ -24,6 +30,11 @@
     {
       "id": "Carlos",
       "role": "pi",
+      "image": "carlos.webp",
+      "site": "https://gonzalezgarcia.github.io/",
+      "projects": [
+        "FLARE"
+      ],
       "fellowships": [
         "Ramón y Cajal"
       ]
@@ -31,20 +42,24 @@
     {
       "id": "Rodika",
       "role": "pi",
+      "image": "rodika.jpg",
+      "projects": [
+        "XXXXX"
+      ],
       "fellowships": [
         "Ramón y Cajal"
       ]
     },
     {
-      "id": "Iván",
-      "role": "PhD student",
+      "id": "Ivan",
+      "role": "phd_student",
       "projects": [
-        "REMATCH"
+        "RE:MATCH"
       ]
     },
     {
       "id": "Linda",
-      "role": "PhD student",
+      "role": "phd_student",
       "projects": [
         "CONNECTS"
       ]
@@ -75,21 +90,24 @@
     },
     {
       "id": "Mattia",
-      "role": "PhD student",
+      "role": "phd_student",
       "projects": [
         "AWAKE"
       ]
     },
     {
-      "id": "Johanna",
-      "role": "PhD student",
+      "id": "Johannah",
+      "role": "phd_student",
       "projects": [
-        "AWAKE"
+        "Aha!"
       ]
     },
     {
       "id": "Katie",
-      "role": "PhD student"
+      "role": "research_assistant",
+      "projects": [
+        "CONNECTS"
+      ]
     },
     {
       "id": "Pablo",
@@ -102,38 +120,63 @@
   "links": [
     {
       "source": "Javier",
-      "target": "Iván",
-      "type": "supervision"
+      "target": "Carlos",
+      "type": "colab"
+    },
+    {
+      "source": "Johannah",
+      "target": "Javier",
+      "type": "colab"
+    },
+    {
+      "source": "Carlos",
+      "target": "Juan",
+      "type": "colab"
     },
     {
       "source": "Juan",
-      "target": "Iván",
+      "target": "Javier",
+      "type": "colab"
+    },
+    {
+      "source": "Rodika",
+      "target": "Javier",
+      "type": "colab"
+    },
+    {
+      "source": "Javier",
+      "target": "Ivan",
+      "type": "co"
+    },
+    {
+      "source": "Juan",
+      "target": "Ivan",
       "type": "co"
     },
     {
       "source": "Carlos",
-      "target": "Iván",
+      "target": "Ivan",
       "type": "co"
     },
     {
       "source": "Javier",
       "target": "Linda",
-      "type": "supervision"
+      "type": "supervisor"
     },
     {
       "source": "Javier",
       "target": "Miriam",
-      "type": "supervision"
+      "type": "colab"
     },
     {
       "source": "Javier",
       "target": "Laura",
-      "type": "supervision"
+      "type": "supervisor"
     },
     {
       "source": "Javier",
       "target": "Elisa",
-      "type": "supervision"
+      "type": "supervisor"
     },
     {
       "source": "Carlos",
@@ -147,23 +190,23 @@
     },
     {
       "source": "Carlos",
-      "target": "Johanna",
+      "target": "Johannah",
       "type": "co"
     },
     {
       "source": "Juan",
-      "target": "Johanna",
+      "target": "Johannah",
       "type": "co"
     },
     {
       "source": "Rodika",
       "target": "Katie",
-      "type": "supervision"
+      "type": "supervisor"
     },
     {
       "source": "Carlos",
       "target": "Pablo",
-      "type": "supervision"
+      "type": "supervisor"
     }
   ]
 }
