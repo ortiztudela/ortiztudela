@@ -115,6 +115,13 @@
       "projects": [
         "FLARE"
       ]
+    },
+    {
+      "id": "Irene",
+      "role": "visiting_researcher",
+      "projects": [
+        "CONNECTS"
+      ]
     }
   ],
   "links": [
@@ -216,6 +223,11 @@
     {
       "source": "Juan",
       "target": "Pablo",
+      "type": "colab"
+    },
+    {
+      "source": "Javier",
+      "target": "Irene",
       "type": "colab"
     }
   ]
