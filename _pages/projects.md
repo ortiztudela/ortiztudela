@@ -34,4 +34,4 @@ Uses reinforcement learning (RL) models to quantify belief & trust updating.
 Combines in‑lab experiments with large‑scale conjoint surveys.
 Aims at translating findings into evidence‑based interventions & guidelines.
 
-If you want to know more about the project, [visit our site]().
+If you want to know more about the project, [visit our site]({{ '/_projects/cocombu/' | relative_url }}){:target="_blank" rel="noopener"}
