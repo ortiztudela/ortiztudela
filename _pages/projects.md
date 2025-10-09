@@ -34,4 +34,4 @@ Uses reinforcement learning (RL) models to quantify belief & trust updating.
 Combines in‑lab experiments with large‑scale conjoint surveys.
 Aims at translating findings into evidence‑based interventions & guidelines.
 
-If you want to know more about the project, [visit our site]({{ '/network/' | relative_url }}){:target="_blank" rel="noopener"}
+If you want to know more about the project, [visit our site](https://ortiztudela.github.io/ortiztudela/cocombu/)
