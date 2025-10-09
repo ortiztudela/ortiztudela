@@ -25,3 +25,13 @@ In this project we point at memory traces as a candidate source of predictions. 
 Unexpected events are more informative than expected ones by mere definition: unexpected events carry information that the system could not anticipate and, therefore, are a perfect situation for our brains to update their knowledge. Conversely, fully expected events can be seamlessly integrated within our schemas, thus facilitating their processing and leading, in turn, to an easier access from memory. 
 
 In this project we aim at exploring this apparent contradiction by assessing the effects that different degrees of prediction fulfillment have on the acquisition of new information and the updating of previous knowledge.
+
+## CoCoMBU: Cognitive and Contextual Mechanisms of Belief Updating
+CoCoMBU addresses how people form and revise beliefs about salient social issues—focusing initially on economic inequality and immigration—in information environments that mix factual reporting with narrative frames.
+
+Integrates cognitive learning & memory research with social-psychological factors.
+Uses reinforcement learning (RL) models to quantify belief & trust updating.
+Combines in‑lab experiments with large‑scale conjoint surveys.
+Aims at translating findings into evidence‑based interventions & guidelines.
+
+If you want to know more about the project, [visit our site]().
