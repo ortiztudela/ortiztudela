@@ -250,6 +250,11 @@
       "source": "Javier",
       "target": "Noah",
       "type": "colab"
+    },
+    {
+      "source": "Miriam",
+      "target": "Laura",
+      "type": "colab"
     }
   ]
 }
