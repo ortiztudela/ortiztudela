@@ -60,6 +60,7 @@
     {
       "id": "Linda",
       "role": "phd_student",
+      "image": "linda.jpg",
       "projects": [
         "CONNECTS"
       ]
