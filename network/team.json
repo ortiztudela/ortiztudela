@@ -131,6 +131,7 @@
     {
       "id": "Noah",
       "role": "visiting_researcher",
+      "image": "noah.png",
       "projects": [
         "CONNECTS"
       ]
