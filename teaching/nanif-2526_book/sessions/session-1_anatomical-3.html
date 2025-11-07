@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -209,7 +243,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#práctica-1.-localizando-hitos-en-tu-propio-cerebro" id="toc-práctica-1.-localizando-hitos-en-tu-propio-cerebro" class="nav-link active" data-scroll-target="#práctica-1.-localizando-hitos-en-tu-propio-cerebro">Práctica 1. Localizando hitos en tu propio cerebro</a></li>
+  <li><a href="#práctica-1.-localizando-hitos-en-tu-propio-cerebro" id="toc-práctica-1.-localizando-hitos-en-tu-propio-cerebro" class="nav-link active" data-scroll-target="#práctica-1.-localizando-hitos-en-tu-propio-cerebro">Práctica 1. Localizando hitos en tu propio cerebro</a>
+  <ul class="collapse">
+  <li><a href="#preparando-las-imágenes-brutas-conversión-de-dicom-a-nifti" id="toc-preparando-las-imágenes-brutas-conversión-de-dicom-a-nifti" class="nav-link" data-scroll-target="#preparando-las-imágenes-brutas-conversión-de-dicom-a-nifti">Preparando las imágenes brutas (conversión de DICOM a Nifti)</a></li>
+  <li><a href="#ya-estamos-listos" id="toc-ya-estamos-listos" class="nav-link" data-scroll-target="#ya-estamos-listos">¡Ya estamos listos!</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -240,8 +278,96 @@ ul.task-list li input[type="checkbox"] {
 <p style="text-align: right;">
 <em>Créditos a Ana Paqui Palenciano (palencianoap@ugr.es)</em>
 </p>
+<section id="preparando-las-imágenes-brutas-conversión-de-dicom-a-nifti" class="level3">
+<h3 class="anchored" data-anchor-id="preparando-las-imágenes-brutas-conversión-de-dicom-a-nifti">Preparando las imágenes brutas (conversión de DICOM a Nifti)</h3>
+<p>Cuando las imágenes de resonancia magnética salen del escáner, suelen venir en un formato llamado DICOM (.dcm). Este formato es útil para ciertas cosas pero, en la práctica, no solemos trabajar con él. Como hemos visto en la sección anterior, nuestro formato estrella es Nifti, así que el primer paso es convertirlas. Para ello, podemos seguir una de las dos aproximaciones de aquí abajo. La primera es ideal para hacer este proceso robusto y generalizable a una muestra grande de participantes y la segunda nos vale para una conversión (sucia) pequeña y rápida: para esta práctica, elegid la que más os atraiga.</p>
+<section id="opción-1-conversión-mediante-código" class="level4">
+<h4 class="anchored" data-anchor-id="opción-1-conversión-mediante-código">Opción 1: Conversión mediante código</h4>
+<p>El programa más común en NeuroCog para esto se llama <strong>dcm2niix</strong> y para poder utilizarlo tendréis que instalarlo en vuestro ordenador. Aquí abajo tenéis instrucciones sobre cómo hacer esto en MacOs y Windows.</p>
+<section id="en-mac" class="level5">
+<h5 class="anchored" data-anchor-id="en-mac">💻 En <strong>Mac</strong></h5>
+<ol type="1">
+<li><p>Abre la aplicación <strong>Terminal</strong> (puedes buscarla con Spotlight).</p></li>
+<li><p>Instala <strong>Homebrew</strong> (si no lo tienes) copiando y pegando esto:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/bin/bash</span> <span class="at">-c</span> <span class="st">"</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="va">)</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Instala <strong>dcm2niix</strong> con:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install dcm2niix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Comprueba que funciona:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dcm2niix</span> <span class="at">-h</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Si ves el texto de ayuda, ya está listo.</p></li>
+</ol>
+<hr>
+</section>
+<section id="en-windows" class="level5">
+<h5 class="anchored" data-anchor-id="en-windows">🪟 En <strong>Windows</strong></h5>
+<ol type="1">
+<li><p>Entra en la página oficial: 👉 <a href="https://github.com/rordenlab/dcm2niix/releases">https://github.com/rordenlab/dcm2niix/releases</a></p></li>
+<li><p>Descarga el archivo ZIP de la versión más reciente para <strong>Windows (dcm2niix_win.zip)</strong>.</p></li>
+<li><p>Descomprime el ZIP en una carpeta fácil de encontrar, por ejemplo: <code>C:\Program Files\dcm2niix</code></p></li>
+<li><p>Añade esa carpeta a la <strong>variable de entorno PATH</strong>:</p>
+<ul>
+<li><p>Escribe <em>“Editar las variables de entorno del sistema”</em> en el buscador de Windows y ábrelo.</p></li>
+<li><p>Haz clic en <strong>Variables de entorno</strong> → selecciona <strong>Path</strong> → <strong>Editar</strong> → <strong>Nuevo</strong>.</p></li>
+<li><p>Añade:</p>
+<pre><code>C:\Program Files\dcm2niix</code></pre></li>
+<li><p>Acepta todo.</p></li>
+</ul></li>
+<li><p>Abre <strong>PowerShell</strong> o <strong>cmd</strong> y escribe:</p></li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dcm2niix</span> <span class="at">-h</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Si ves el texto de ayuda, la instalación está correcta.</p>
+<p>Una vez que lo hayas instalado, ya podréis usarlo desde tu terminal del sistema y, por lo tanto, desde tu IDE favorito. Aquí abajo tenéis un script de Python para poder realizar esta conversión.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  <span class="im">import</span> os</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="im">import</span> subprocess</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ==== AJUSTA ESTAS TRES VARIABLES ==========================</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Pon aquí la ruta a la carpeta que contiene tus DICOM (.dcm)</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  dicom_folder <span class="op">=</span> <span class="vs">r"/RUTA/A/TU/CARPETA/CON/DICOMS"</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Cambia estos placeholders por tu código de sujeto y resolución</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  subcode <span class="op">=</span> <span class="st">"PON_AQUI_TU_SUBCODE"</span>      <span class="co"># p.ej. "01" o "NaNif01"</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  resolution <span class="op">=</span> <span class="st">"PON_AQUI_TU_RESOLUCION"</span>  <span class="co"># p.ej. "1mm"</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ===========================================================</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Carpeta donde se guardará el NIfTI (puede ser la misma que la de los DICOM)</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  output_folder <span class="op">=</span> dicom_folder</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Nombre BIDS del archivo de salida (sin extensión)</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  bids_name <span class="op">=</span> <span class="ss">f"sub-</span><span class="sc">{</span>subcode<span class="sc">}</span><span class="ss">_space-native_res-</span><span class="sc">{</span>resolution<span class="sc">}</span><span class="ss">_t1w"</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Comando para llamar a dcm2niix</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># IMPORTANTE: Debes tener dcm2niix instalado y accesible desde la terminal</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  cmd <span class="op">=</span> [</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>      <span class="st">"dcm2niix"</span>,</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>      <span class="st">"-z"</span>, <span class="st">"y"</span>,              <span class="co"># comprimir en .nii.gz</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>      <span class="st">"-f"</span>, bids_name,        <span class="co"># nombre del archivo de salida (sin extensión)</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>      <span class="st">"-o"</span>, output_folder,    <span class="co"># carpeta de salida</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>      dicom_folder            <span class="co"># carpeta con los DICOM</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ejecutar la conversión</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  subprocess.run(cmd, check<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">"Conversión completada. Archivo creado como:"</span>)</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(os.path.join(output_folder, bids_name <span class="op">+</span> <span class="st">".nii.gz"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="opción-2-conversión-con-interfaz" class="level4">
+<h4 class="anchored" data-anchor-id="opción-2-conversión-con-interfaz">Opción 2: Conversión con interfaz</h4>
+<p>ITK-SNAP puede <strong>abrir</strong> carpetas con archivos DICOM y <strong>guardar</strong> el volumen en formato NIfTI (<code>.nii</code> o <code>.nii.gz</code>), pero no está pensado como conversor masivo ni conserva metadatos con la misma precisión que <code>dcm2niix</code>. Si aun así quieres hacerlo:</p>
+<ol type="1">
+<li>Abre <strong>ITK-SNAP</strong>.</li>
+<li>Ve a <strong>File → Open Main Image…</strong>.</li>
+<li>Selecciona la carpeta que contiene los <code>.dcm</code> (no un archivo suelto).</li>
+<li>Espera a que ITK-SNAP los cargue como un solo volumen.</li>
+<li>Luego elige <strong>File → Save Image As…</strong> y selecciona formato <strong>NIfTI (.nii o .nii.gz)</strong>.</li>
+</ol>
+<p><strong>! Recomendación para el futuro:</strong> Usa <strong><code>dcm2niix</code></strong> para convertir, y <strong>ITK-SNAP</strong> para visualizar o segmentar. <code>dcm2niix</code> es el estándar en neuroimagen y asegura compatibilidad con <strong>BIDS</strong> y software como <strong>FSL</strong>, <strong>SPM</strong> o <strong>AFNI</strong>.</p>
+</section>
+</section>
+<section id="ya-estamos-listos" class="level3">
+<h3 class="anchored" data-anchor-id="ya-estamos-listos">¡Ya estamos listos!</h3>
 <p>Deberás utilizar un software de visualización de imágenes, preferiblemente, <strong>ITK-Snap</strong>. Este software tienen la opción de trazar regiones o lesiones, para poder así generar máscaras que se utilicen en análisis futuros. En este caso, usarás esas herramientas para identificar una serie de regiones en tus propias imágenes anatómicas, en concreto, en las imágenes <strong>T1-w</strong>.</p>
-<p>Para cada apartado de regiones, utiliza <strong>dos planos distintos</strong> (axial, coronal, sagital). Realiza pantallazos del corte en el que hayas coloreado las regiones y pégalas en un documento indicando qué regiones aparecen. <strong>Fecha límite de envío PRADO:</strong> XX de Octubre de 2025.</p>
 <p>A continuación tienes la lista de regiones a identificar junto con ejemplos:</p>
 <ol type="1">
 <li><p><strong>Ventrículos cerebrales</strong><br>
@@ -249,30 +375,12 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Ganglios basales</strong> <img src="https://github.com/ortiztudela/media-assets/blob/main/teaching/basal_ganglia.png?raw=true" class="img-fluid"></p></li>
 <li><p><strong>Tálamo</strong> <img src="https://github.com/ortiztudela/media-assets/blob/main/teaching/thalamus.png?raw=true" class="img-fluid"></p></li>
 <li><p><strong>Hipocampo y amígdala</strong> <img src="https://github.com/ortiztudela/media-assets/blob/main/teaching/hc_amigdala.png?raw=true" class="img-fluid"></p></li>
-<li><p><strong>Regiones de la Red de Múltiple Demanda</strong><br>
-(o red de control fronto-parietal), incluyendo:</p>
-<ul>
-<li>Surco inferior frontal<br>
-</li>
-<li>Surco intraparietal<br>
-</li>
-<li>Cíngulo anterior/pre-SMA<br>
-</li>
-<li>Inferior frontal junction</li>
-</ul></li>
 </ol>
-<p><img src="https://github.com/ortiztudela/media-assets/blob/main/teaching/mdn.png?raw=true" class="img-fluid"></p>
-<p>Si necesitas ayuda para localizar las regiones de esta red, puedes consultar:</p>
-<ul>
-<li>Duncan (2010), <em>Trends in Cognitive Sciences</em><br>
-<a href="https://doi.org/10.1016/j.tics.2010.01.004">https://doi.org/10.1016/j.tics.2010.01.004</a></li>
-<li>Fedorenko, Duncan &amp; Kanwisher (2013), <em>PNAS</em><br>
-<a href="https://doi.org/10.1073/pnas.1315235110">https://doi.org/10.1073/pnas.1315235110</a></li>
-<li>Brass et al.&nbsp;(2005), <em>Trends in Cognitive Sciences</em><br>
-<a href="https://doi.org/10.1016/j.tics.2005.05.001">https://doi.org/10.1016/j.tics.2005.05.001</a></li>
-</ul>
+<p>Para cada apartado de regiones, intenta visualizarlas en <strong>dos planos distintos</strong> (p.&nbsp;ej., axial, coronal, sagital). ¿Qué diferencias notas a simple vista con esas mismas regiones en el cerebro <em>template</em> que hemos abierto antes? ¿Podrías concluir algo solo con esta comparación?</p>
+<p>En las siguientes sesiones empezaremos a trabajar con código (Python) así que, si habéis hecho la conversión con ITK-Snap, podéis aprovechar el tiempo de trabajo autónomo para realizar el pequeño ejercicio de arriba que os servirá de práctica.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
