@@ -60,6 +60,7 @@
     {
       "id": "Linda",
       "role": "phd_student",
+      "image": "linda.jpg",
       "projects": [
         "CONNECTS"
       ]
@@ -67,6 +68,7 @@
     {
       "id": "Miriam",
       "role": "postdoc",
+      "image": "miriam.jpg",
       "projects": [
         "CONNECTS"
       ],
@@ -77,6 +79,7 @@
     {
       "id": "Laura",
       "role": "research_assistant",
+      "image": "laura.jpeg",
       "projects": [
         "CONNECTS"
       ]
@@ -84,6 +87,7 @@
     {
       "id": "Elisa",
       "role": "research_support",
+      "image": "elisa.jpg",
       "projects": [
         "CONNECTS"
       ]
@@ -119,6 +123,15 @@
     {
       "id": "Irene",
       "role": "visiting_researcher",
+      "image": "irene.jpg",
+      "projects": [
+        "CONNECTS"
+      ]
+    },
+    {
+      "id": "Noah",
+      "role": "visiting_researcher",
+      "image": "noah.png",
       "projects": [
         "CONNECTS"
       ]
@@ -228,6 +241,21 @@
     {
       "source": "Javier",
       "target": "Irene",
+      "type": "colab"
+    },
+    {
+      "source": "Irene",
+      "target": "Miriam",
+      "type": "colab"
+    },
+    {
+      "source": "Javier",
+      "target": "Noah",
+      "type": "colab"
+    },
+    {
+      "source": "Miriam",
+      "target": "Laura",
       "type": "colab"
     }
   ]
