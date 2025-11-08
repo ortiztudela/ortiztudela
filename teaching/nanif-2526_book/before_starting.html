@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>De analógico a digital (II) – NaNif - Functional neuroimaging</title>
+<title>Antes de comenzar – NaNif - Functional neuroimaging</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../sessions/session-1_anatomical-3.html" rel="next">
-<link href="../sessions/session-1_anatomical-1.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./sessions/session-1_anatomical-1.html" rel="next">
+<link href="./introduction.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -81,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sessions/session-1_anatomical-1.html">De Analógico a Digital</a></li><li class="breadcrumb-item"><a href="../sessions/session-1_anatomical-2.html"><span class="chapter-title">De analógico a digital (II)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html">Introducción</a></li><li class="breadcrumb-item"><a href="./before_starting.html"><span class="chapter-title">Antes de comenzar</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -96,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">NaNif - Functional neuroimaging</a> 
+      <a href="./">NaNif - Functional neuroimaging</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -108,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Neuroimagen Funcional (Grupo en Español)</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Neuroimagen Funcional (Grupo en Español)</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -122,12 +156,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Resumen de la asignatura</span></a>
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Resumen de la asignatura</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../before_starting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Antes de comenzar</span></a>
+  <a href="./before_starting.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Antes de comenzar</span></a>
   </div>
 </li>
       </ul>
@@ -143,17 +177,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sessions/session-1_anatomical-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">De analógico a digital (I)</span></a>
+  <a href="./sessions/session-1_anatomical-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">De analógico a digital (I)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sessions/session-1_anatomical-2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">De analógico a digital (II)</span></a>
+  <a href="./sessions/session-1_anatomical-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">De analógico a digital (II)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sessions/session-1_anatomical-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">De analógico a digital (III)</span></a>
+  <a href="./sessions/session-1_anatomical-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">De analógico a digital (III)</span></a>
   </div>
 </li>
       </ul>
@@ -169,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sessions/session-2_functional-neuroimaging.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Técnicas de neuroimagen: tiempo vs.&nbsp;espacio</span></a>
+  <a href="./sessions/session-2_functional-neuroimaging.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Técnicas de neuroimagen: tiempo vs.&nbsp;espacio</span></a>
   </div>
 </li>
       </ul>
@@ -185,32 +219,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sessions/session-5_task-based-fmri.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functional neuroimaging: Task-based fMRI.</span></a>
+  <a href="./sessions/session-5_task-based-fmri.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functional neuroimaging: Task-based fMRI.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sessions/session-6_functional-connectivity.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functional neuroimaging: Functional Connectivity.</span></a>
+  <a href="./sessions/session-6_functional-connectivity.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functional neuroimaging: Functional Connectivity.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sessions/session-3_erp.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functional neuroimaging: ERPs.</span></a>
+  <a href="./sessions/session-3_erp.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functional neuroimaging: ERPs.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sessions/session-4_time-frequency.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functional neuroimaging: Time-frequency Analysis.</span></a>
+  <a href="./sessions/session-4_time-frequency.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functional neuroimaging: Time-frequency Analysis.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sessions/session-7_machine-learning.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functional neuroimaging: Classifiers.</span></a>
+  <a href="./sessions/session-7_machine-learning.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functional neuroimaging: Classifiers.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sessions/session-8_representational-similarity.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functional neuroimaging: RSA.</span></a>
+  <a href="./sessions/session-8_representational-similarity.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functional neuroimaging: RSA.</span></a>
   </div>
 </li>
       </ul>
@@ -225,22 +259,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#cómo-interactúo-con-imágenes-estructurales" id="toc-cómo-interactúo-con-imágenes-estructurales" class="nav-link active" data-scroll-target="#cómo-interactúo-con-imágenes-estructurales">¿Cómo interactúo con imágenes estructurales?</a>
+  <li><a href="#información-general" id="toc-información-general" class="nav-link active" data-scroll-target="#información-general">Información general</a></li>
+  <li><a href="#requisitos-de-hardware-y-software" id="toc-requisitos-de-hardware-y-software" class="nav-link" data-scroll-target="#requisitos-de-hardware-y-software">Requisitos de <em>hardware</em> y <em>software</em></a></li>
+  <li><a href="#trabajando-con-librerías-dentro-de-vs-code" id="toc-trabajando-con-librerías-dentro-de-vs-code" class="nav-link" data-scroll-target="#trabajando-con-librerías-dentro-de-vs-code">Trabajando con <em>librerías</em> dentro de VS Code</a>
   <ul class="collapse">
-  <li><a href="#navegación-básica" id="toc-navegación-básica" class="nav-link" data-scroll-target="#navegación-básica">Navegación básica</a></li>
-  <li><a href="#ajustes-de-visualización" id="toc-ajustes-de-visualización" class="nav-link" data-scroll-target="#ajustes-de-visualización">Ajustes de visualización</a></li>
-  <li><a href="#orientación-en-el-espacio" id="toc-orientación-en-el-espacio" class="nav-link" data-scroll-target="#orientación-en-el-espacio">Orientación en el espacio</a></li>
+  <li><a href="#tip-final-vs-code" id="toc-tip-final-vs-code" class="nav-link" data-scroll-target="#tip-final-vs-code">💡 Tip final (VS Code)</a></li>
   </ul></li>
-  <li><a href="#tabla-resumen" id="toc-tabla-resumen" class="nav-link" data-scroll-target="#tabla-resumen">Tabla resumen</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sessions/session-1_anatomical-1.html">De Analógico a Digital</a></li><li class="breadcrumb-item"><a href="../sessions/session-1_anatomical-2.html"><span class="chapter-title">De analógico a digital (II)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html">Introducción</a></li><li class="breadcrumb-item"><a href="./before_starting.html"><span class="chapter-title">Antes de comenzar</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">De analógico a digital (II)</span></h1>
+<h1 class="title"><span class="chapter-title">Antes de comenzar</span></h1>
 </div>
 
 
@@ -257,93 +290,106 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="cómo-interactúo-con-imágenes-estructurales" class="level2">
-<h2 class="anchored" data-anchor-id="cómo-interactúo-con-imágenes-estructurales">¿Cómo interactúo con imágenes estructurales?</h2>
-<p>Las imágenes que genera la MR son unos archivos en 3D (como hemos visto en la página anterior, en realidad son un montón de imágenes 2D concatenadas). Al igual que para imágenes en 2D estaréis acostumbrados a formatos de archivos como <code>.png</code>, <code>.jpeg</code> o <code>.gif</code>, el formato más común para imágenes en 3D se llama Nifti y la extensión es <code>.nii</code>. Además, como estos archivos suelen ser grandes, es muy común (y recomendable) que nos los encontremos comprimidos. Puede que ya hayas trabajado antes con archivos comprimidos en <code>.zip</code> o en <code>.rar</code> (<a href="https://www.lenovo.com/es/es/glossary/compressed-file/">si no sabes qué es un archivo comprimido, mira esta web</a>); los archivos de RM suelen comprimirse con Gunzip y la extensión es <code>.gz</code>. La mayor parte de programas de análisis de este tipo de datos hacen una descompresión automática al abrirlos, así que no tienes que preocuparte por descomprimirlos tú. Tanto en esta asignatura como al usar datos que te encuentres por la web, la extensión más común para archivos de MR es <code>nii.gz</code>.</p>
-<p>Para visualizar y analizar estas imágenes, utilizaremos ITK-SNAP, una herramienta de código abierto que permite:</p>
-<ul>
-<li>Visualización 3D interactiva</li>
-<li>Segmentación manual y semi-automática</li>
-<li>Navegación por cortes anatómicos</li>
-<li>Ajustes de contraste y brillo</li>
-</ul>
-<p>Para abrir un archivo <code>nii.gz</code>, solo tenemos que seleccionarlo, hacer click con el botón derecho, darle a “abrir con…” y seleccionar ITK-Snap de la lista de programas. Alternativamente, puedes abrir ITK-Snap primero, y pinchar en “Open image…” y de ahí, buscar el archivo en tu ordenador.</p>
+<section id="información-general" class="level2">
+<h2 class="anchored" data-anchor-id="información-general">Información general</h2>
+<p>Esta web será tu material de referencia para el contenido teórico y para todos los ejercicios prácticos del curso. Además, utilizaremos PRADO para el seguimiento semanal de las actividades y las sesiones presenciales. Subiré las diapositivas utilizadas a PRADO después de cada sesión. Como ya has visto arriba, una parte importante de la asignatura es el tratamiento de datos. Para que esto se haga bien, vamos a utilizar código. Si hasta ahora no has tenido experiencia con código, no te preocupes, solo necesitas voluntad de aprender, energía y un poco de paciencia. En el resto de esta sección vamos a ayudarte a preparar tu ambiente de trabajo para que puedas aprovechar el curso al máximo.</p>
+<p>Aunque todo esto parezca mucho trabajo así de primeras, no temas. Estamos en esto juntos. Y sobre todo, manten la mente abierta, súbete la curiosidad a tope y <em>no tengas miedo de preguntar</em>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://github.com/ortiztudela/media-assets/blob/main/teaching/itk_interface.png?raw=true" class="img-fluid figure-img"></p>
-<figcaption>Interfaz de ITK-Snap</figcaption>
+<p><img src="https://github.com/ortiztudela/media-assets/blob/main/teaching/dont_panic.png?raw=true" class="img-fluid figure-img"></p>
+<figcaption>Do not be afraid of code. It is your friend.</figcaption>
 </figure>
 </div>
-<p>Prueba a abrir las imagenes que puedes encontrar en esta ruta:</p>
-<p><code>~/carpeta-en-tu-ordenador/materiales_nanif/session-1/template_space-mni_res-3_brain.nii.gz</code>.</p>
-<p>Una vez abierta la imagen, puedes explorarla de varias maneras:</p>
-<section id="navegación-básica" class="level3">
-<h3 class="anchored" data-anchor-id="navegación-básica">Navegación básica</h3>
-<ul>
-<li><strong>Vistas ortogonales</strong>: ITK-SNAP muestra tres vistas perpendiculares (axial, sagital y coronal) que te permiten explorar el cerebro desde diferentes ángulos.</li>
-<li><strong>Cursor de navegación</strong>: El cursor cruzado se mantiene sincronizado en las tres vistas, mostrando la misma ubicación desde diferentes perspectivas.</li>
-<li><strong>Desplazamiento</strong>: Usa la rueda del ratón para desplazarte por los cortes en la vista activa.</li>
-<li><strong>Mover imagen</strong>: Alt/Option + ratón te permite desplazar la imagen entera.</li>
-<li><strong>Zoom</strong>: Ctrl + rueda del ratón (o separar con dos dedos en Mac) te permite acercar o alejar la imagen.</li>
+</section>
+<section id="requisitos-de-hardware-y-software" class="level2">
+<h2 class="anchored" data-anchor-id="requisitos-de-hardware-y-software">Requisitos de <em>hardware</em> y <em>software</em></h2>
+<p>Una de las cosas que sí vas a necesitar es un ordenador <em>medio decente</em>. Este término es un poco ambiguo pero por tener una idea general, un equipo con las características de aquí abajo será suficiente. Si no puedes conseguir un equipo así, dímelo y encontraremos una solución.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Al menos 8GB de RAM (<a href="https://www.pccomponentes.com/como-saber-la-ram-de-mi-pc">¿qué es la RAM y cómo consultar cuánta tiene mi equipo?</a>)</label></li>
+<li><label><input type="checkbox">Procesador de los últimos 5 años</label></li>
+<li><label><input type="checkbox">Al menos 20GB de espacio libre en el disco duro</label></li>
+<li><label><input type="checkbox">Sistema operativo actualizado (Windows 10/11, MacOS o Linux)</label></li>
 </ul>
-</section>
-<section id="ajustes-de-visualización" class="level3">
-<h3 class="anchored" data-anchor-id="ajustes-de-visualización">Ajustes de visualización</h3>
-<ul>
-<li><strong>Brillo y contraste</strong>: En el menú “Tools” &gt; “Image Contrast” (o Ctrl/Cmd + I) puedes modificar estos parámetros para ver mejor las estructuras cerebrales.</li>
-<li><strong>Centrarte en una vista</strong>: Puedes centrar la interfaz del programa en las diferentes vistas pinchando en las letras <code>A</code>, <code>S</code> y <code>C</code> (axial, sagital y coronal) junto a cada ventana; para volver al panel de visualización de las tres vistas, pulsa en el icono con cuatro cuadrantes arriba a la derecha.</li>
+<p>Además, para trabajar con estos datos, vas a necesitar instalar una serie de programas que te indicamos aquí abajo. Prueba a instalar todos ellos y si tienes algún problema, contacta conmigo <strong>antes del inicio de esta parte de la asignatura</strong>. Es importante que le dediques algo de tiempo a preparar tu espacio de trabajo (es decir, tu ordenador y los programas de aquí abajo) porque esto va a hacer que tu experiencia del curso sea más sencilla y satisfactoria.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">ITK-Snap (v 4.2.2). Este programa lo utilizaremos para visualizar datos de neuroimagen. Es gratuito y fácil de instalar. Puedes descargarlo desde <a href="http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4">aquí</a>. Asegúrate de descargarlo e instalarlo antes de nuestra primera sesión práctica.</label></li>
+<li><label><input type="checkbox">VS Code. Cuando trabajamos con código, necesitamos un editor que nos permita escribirlo, verificarlo y ejecutarlo. Si ya has trabajado con algún editor y te sientes cómod@ con él, puedes seguir utilizándolo. Pero si eres nuev@ con esto del código, te recomendamos usar VS Code (Visual Studio Code). Es un editor moderno y muy potente que es compatible con muchos lenguajes de programación distintos.</label></li>
 </ul>
+<p>Por favor, intenta instalar estos programas <strong>antes del inicio de esta parte de la asignatura</strong>. Si tienes problemas, no te preocupes — todos hemos pasado por ahí. Como primera opción, prueba a preguntarle a tu chatbot favorito (recuerda que <a href="https://ceprud.ugr.es/formacion-tic/inteligencia-artificial/guia-uso">con tu cuenta de la UGR tienes acceso tanto a Copilot de Microsoft como a la versión segura de Gemini de Google</a>). Si aún así, no consigues avanzar, dedicaremos unos minutos a resolver problemas de instalación al final de la primera sesión.</p>
 </section>
-<section id="orientación-en-el-espacio" class="level3">
-<h3 class="anchored" data-anchor-id="orientación-en-el-espacio">Orientación en el espacio</h3>
-<p>Recuerda que las imágenes de MRI siguen convenciones neurológicas de orientación:</p>
+<section id="trabajando-con-librerías-dentro-de-vs-code" class="level2">
+<h2 class="anchored" data-anchor-id="trabajando-con-librerías-dentro-de-vs-code">Trabajando con <em>librerías</em> dentro de VS Code</h2>
+<p>Para muchos de los análisis que vamos a aprender, nos vamos a apoyar en <em>librerías</em> creadas por la comunidad. Las librerías son onjuntos de código ya escrito por otras personas que podemos reutilizar para no tener que empezar desde cero cada vez. Por ejemplo, en lugar de programar nosotros mismos cómo leer un archivo de resonancia magnética, podemos usar una librería como Nibabel, que ya incluye todas las funciones necesarias para hacerlo. Puedes entender estas librerías como <em>mini-programas</em> que cumplen distintas funciones. En las siguientes líneas te explicamos cómo instalar desde dentro Visual Studio Code todas las librerías que vamos a utilizar en el curso.</p>
+<ol type="1">
+<li><strong>Abrir VS Code</strong></li>
+</ol>
 <ul>
-<li><strong>Izquierda-Derecha</strong>: En las vistas axial y coronal, el lado izquierdo de la imagen corresponde al lado derecho del cerebro.</li>
-<li><strong>Anterior-Posterior</strong>: La parte superior de la vista axial es la parte anterior (frontal) del cerebro.</li>
-<li><strong>Superior-Inferior</strong>: En las vistas coronal y sagital, la parte superior de la imagen es la parte superior del cerebro.</li>
+<li>Abre <strong>Visual Studio Code</strong>.</li>
+<li>Desde ahí dentro, abre la carpeta del curso en tu ordenador (por ejemplo: <code>NaNif-2526</code>).</li>
 </ul>
-<p>Dedica un tiempo para familiarizarte con la navegación en el espacio 3D y para identificar estructuras anatómicas principales como el cuerpo calloso, los ventrículos y la corteza cerebral. ¿Qué diferencias ves entre las dos imágenes? ¡Vamos a hacer una demo juntos!</p>
-</section>
-</section>
-<section id="tabla-resumen" class="level2">
-<h2 class="anchored" data-anchor-id="tabla-resumen">Tabla resumen</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 47%">
-<col style="width: 52%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Aspecto</th>
-<th>Detalles</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Formato de archivo</strong></td>
-<td>Nifti (<code>.nii</code>), comúnmente comprimido (<code>.nii.gz</code>)</td>
-</tr>
-<tr class="even">
-<td><strong>Herramienta</strong></td>
-<td>ITK-SNAP (código abierto)</td>
-</tr>
-<tr class="odd">
-<td><strong>Funcionalidades</strong></td>
-<td>- Visualización 3D interactiva<br>- Segmentación manual/semi-automática<br>- Navegación por cortes<br>- Ajustes de contraste/brillo</td>
-</tr>
-<tr class="even">
-<td><strong>Vistas principales</strong></td>
-<td>Axial, Sagital, Coronal</td>
-</tr>
-<tr class="odd">
-<td><strong>Orientación</strong></td>
-<td>- Izquierda/Derecha: convención neurológica<br>- Anterior (frontal)/Posterior<br>- Superior/Inferior</td>
-</tr>
-</tbody>
-</table>
-<p>En la siguiente sección aplicarás todo esto ¡a tu propio cerebro!</p>
+<ol start="2" type="1">
+<li><strong>Abrir una terminal dentro de VS Code</strong></li>
+</ol>
+<ul>
+<li>En la barra superior, haz clic en <strong>View → Terminal</strong> <em>(o usa el atajo <code>Ctrl +</code> (<code>Ctrl</code> + acento grave))</em></li>
+<li>Se abrirá una ventana en la parte inferior de VS Code. Esa terminal está conectada a tu entorno de Python.</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Comprobar que Python está disponible</strong></li>
+</ol>
+<ul>
+<li>Escribe en la terminal:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>👉 Si aparece algo como <code>Python 3.10.12</code>, todo va bien. Si no, instala Python desde <a href="https://www.python.org/downloads/">python.org/downloads</a> y reinicia VS Code.</li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Crear un entorno virtual</strong></li>
+</ol>
+<ul>
+<li>Esto evita conflictos con otras instalaciones de Python. En la terminal escribe:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv nanif-course</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>Luego actívalo escribiendo:</p></li>
+<li><p><strong>Windows:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nanif-course\Scripts\activate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Mac/Linux:</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> nanif-course/bin/activate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Verás que aparece <code>(nanif-course)</code> al inicio de la línea en la terminal. ✅ Eso indica que estás dentro del entorno virtual.</p></li>
+</ul>
+<ol start="5" type="1">
+<li><strong>Instalar las librerías necesarias</strong></li>
+</ol>
+<ul>
+<li>En la misma terminal, copia y pega esto:</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install nilearn nibabel pandas matplotlib pingouin pathlib mne scipy seaborn sklearn scipy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="6" type="1">
+<li><strong>Verificar instalación</strong></li>
+</ol>
+<ul>
+<li>Una vez termine, prueba en la terminal:</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-c</span> <span class="st">"import nilearn, nibabel, pandas, matplotlib; print('✅ Todo instalado correctamente')"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Si ves el mensaje ✅, ya está todo listo.</li>
+</ul>
+<hr>
+<section id="tip-final-vs-code" class="level3">
+<h3 class="anchored" data-anchor-id="tip-final-vs-code">💡 Tip final (VS Code)</h3>
+<p>Una vez creado el entorno:</p>
+<ol type="1">
+<li>Abre el <strong>Command Palette</strong> (<code>Ctrl+Shift+P</code> o <code>Cmd+Shift+P</code>).</li>
+<li>Busca “<strong>Python: Select Interpreter</strong>”.</li>
+<li>Elige el que diga algo como <code>Python 3.10 ('nanif-course': venv)</code>.</li>
+</ol>
+<p>Así VS Code usará ese entorno automáticamente al ejecutar tus scripts.</p>
+<p>En las próximas secciones, comenzamos con los contenidos de la asignatura propiamente. ¡Adelante!</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -769,13 +815,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sessions/session-1_anatomical-1.html" class="pagination-link" aria-label="De analógico a digital (I)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">De analógico a digital (I)</span></span>
+      <a href="./introduction.html" class="pagination-link" aria-label="Resumen de la asignatura">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Resumen de la asignatura</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sessions/session-1_anatomical-3.html" class="pagination-link" aria-label="De analógico a digital (III)">
-        <span class="nav-page-text"><span class="chapter-title">De analógico a digital (III)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./sessions/session-1_anatomical-1.html" class="pagination-link" aria-label="De analógico a digital (I)">
+        <span class="nav-page-text"><span class="chapter-title">De analógico a digital (I)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
