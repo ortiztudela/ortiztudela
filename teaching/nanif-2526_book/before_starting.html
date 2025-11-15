@@ -340,23 +340,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Escribe en la terminal:</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>👉 Si aparece algo como <code>Python 3.10.12</code>, todo va bien. Si no, instala Python desde <a href="https://www.python.org/downloads/">python.org/downloads</a> y reinicia VS Code.</li>
+<li>👉 Si aparece algo como <code>Python 3.10.12</code>, todo va bien. Si no, instala Python desde <a href="https://www.python.org/downloads/">python.org/downloads</a> y reinicia VS Code. Tras la instalación, escribe en la terminal:</li>
 </ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exit()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>para cerrar python.</p>
 <ol start="4" type="1">
 <li><strong>Crear un entorno virtual</strong></li>
 </ol>
 <ul>
 <li>Esto evita conflictos con otras instalaciones de Python. En la terminal escribe:</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv nanif-course</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv nanif-course</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li><p>Luego actívalo escribiendo:</p></li>
 <li><p><strong>Windows:</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nanif-course\Scripts\activate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nanif-course\Scripts\activate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p><strong>Mac/Linux:</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> nanif-course/bin/activate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> nanif-course/bin/activate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Verás que aparece <code>(nanif-course)</code> al inicio de la línea en la terminal. ✅ Eso indica que estás dentro del entorno virtual.</p></li>
 </ul>
 <ol start="5" type="1">
@@ -365,17 +367,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>En la misma terminal, copia y pega esto:</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install nilearn nibabel pandas matplotlib pingouin pathlib mne scipy seaborn sklearn scipy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install nilearn nibabel pandas matplotlib pingouin pathlib mne scipy seaborn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="6" type="1">
 <li><strong>Verificar instalación</strong></li>
 </ol>
 <ul>
 <li>Una vez termine, prueba en la terminal:</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-c</span> <span class="st">"import nilearn, nibabel, pandas, matplotlib; print('✅ Todo instalado correctamente')"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-c</span> <span class="st">"import nilearn, nibabel, pandas, matplotlib; print('✅ Todo instalado correctamente')"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Si ves el mensaje ✅, ya está todo listo.</li>
 </ul>
+<ol start="7" type="1">
+<li><strong>Instalar extensiones para ejecución interactiva</strong></li>
+</ol>
+<ul>
+<li>Instala la extensión de <strong>Python</strong> de Microsoft desde el marketplace de VS Code (búscala como “Python” y haz clic en Install).</li>
+<li>Una vez instalada, también instala la extensión de <strong>Jupyter</strong> (búscala como “Jupyter” en el marketplace).</li>
+</ul>
+<p>Con estas extensiones podrás ejecutar scripts de Python de forma interactiva directamente desde VS Code.</p>
 <hr>
 <section id="tip-final-vs-code" class="level3">
 <h3 class="anchored" data-anchor-id="tip-final-vs-code">💡 Tip final (VS Code)</h3>
@@ -383,9 +393,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>Abre el <strong>Command Palette</strong> (<code>Ctrl+Shift+P</code> o <code>Cmd+Shift+P</code>).</li>
 <li>Busca “<strong>Python: Select Interpreter</strong>”.</li>
-<li>Elige el que diga algo como <code>Python 3.10 ('nanif-course': venv)</code>.</li>
+<li>Elige el que diga algo como <code>Python 3.10 ('nanif-course': venv)</code>. Así VS Code usará ese entorno automáticamente al ejecutar tus scripts.</li>
 </ol>
-<p>Así VS Code usará ese entorno automáticamente al ejecutar tus scripts.</p>
 <p>En las próximas secciones, comenzamos con los contenidos de la asignatura propiamente. ¡Adelante!</p>
 
 
