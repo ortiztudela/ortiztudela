@@ -139,6 +139,20 @@
       "projects": [
         "CONNECTS"
       ]
+    },
+    {
+      "id": "Lejla",
+      "role": "visiting_researcher",
+      "projects": [
+        "CONNECTS"
+      ]
+    },
+    {
+      "id": "Luis",
+      "role": "postdoc",
+      "projects": [
+        "CONNECTS"
+      ]
     }
   ],
   "links": [
@@ -255,6 +269,16 @@
     {
       "source": "Irene",
       "target": "Former BIKErs",
+      "type": "colab"
+    },
+    {
+      "source": "Javier",
+      "target": "Lejla",
+      "type": "colab"
+    },
+    {
+      "source": "Javier",
+      "target": "Luis",
       "type": "colab"
     }
   ]
