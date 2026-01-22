@@ -120,6 +120,7 @@
     {
       "id": "Pablo",
       "role": "research_assistant",
+      "image": "pablo.jpg",
       "projects": [
         "FLARE"
       ]
