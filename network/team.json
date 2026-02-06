@@ -135,7 +135,7 @@
     },
     {
       "id": "Noah",
-      "role": "visiting_researcher",
+      "role": "alumni",
       "image": "noah.png",
       "projects": [
         "CONNECTS"
@@ -259,8 +259,8 @@
       "type": "colab"
     },
     {
-      "source": "Javier",
-      "target": "Noah",
+      "source": "Noah",
+      "target": "Former BIKErs",
       "type": "colab"
     },
     {
