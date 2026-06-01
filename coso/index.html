@@ -338,44 +338,6 @@
     }
     .btn-outline:hover { background: var(--accent); color: #fff; }
 
-    /* ── MEETINGS ── */
-    #meetings { background: var(--paper); }
-    .meetings-layout {
-      display: grid; grid-template-columns: 2fr 1fr;
-      gap: 80px; align-items: start;
-    }
-    .meetings-text p { color: var(--ink-mid); margin-bottom: 20px; }
-    .meeting-format { margin-top: 40px; }
-    .format-item {
-      display: flex; gap: 20px; padding: 20px 0;
-      border-top: 1px solid var(--rule);
-    }
-    .format-item:last-child { border-bottom: 1px solid var(--rule); }
-    .format-num {
-      font-family: var(--serif); font-style: italic;
-      font-size: 1.2rem; color: var(--rule);
-      flex-shrink: 0; width: 28px; padding-top: 2px;
-    }
-    .format-item h4 { font-family: var(--serif); font-size: 0.98rem; font-weight: 700; margin-bottom: 4px; }
-    .format-item p { font-size: 0.88rem; color: var(--ink-mid); }
-    .meetings-aside {
-      background: var(--accent);
-      padding: 40px;
-      color: rgba(255,255,255,0.9);
-    }
-    .meetings-aside h3 {
-      font-family: var(--serif); font-size: 1.15rem;
-      color: #fff; margin-bottom: 16px;
-    }
-    .meetings-aside p { font-size: 0.88rem; color: rgba(255,255,255,0.65); margin-bottom: 24px; }
-    .meetings-aside .info-row {
-      display: flex; justify-content: space-between;
-      padding: 12px 0; border-top: 1px solid rgba(255,255,255,0.15);
-      font-size: 0.82rem;
-    }
-    .meetings-aside .info-row .label { color: rgba(255,255,255,0.5); }
-    .meetings-aside .info-row .val { color: rgba(255,255,255,0.9); font-weight: 500; }
-
     /* ── FOOTER ── */
     footer {
       background: var(--ink); color: rgba(245,242,235,0.4);
@@ -406,7 +368,6 @@
       .hero-scroll { left: 32px; }
       section { padding: 80px 32px; }
       .about-grid, .projects-intro, .people-header,
-      .meetings-layout { grid-template-columns: 1fr; gap: 40px; }
       .project-grid { grid-template-columns: 1fr; }
       .approach-grid { grid-template-columns: 1fr; }
       .people-grid { grid-template-columns: repeat(2, 1fr); }
@@ -424,7 +385,6 @@
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#people">People</a></li>
-      <li><a href="#meetings">Meetings</a></li>
     </ul>
   </nav>
 
