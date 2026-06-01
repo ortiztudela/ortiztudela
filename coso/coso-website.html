@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoSo · Cognition for Society</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1814;
+      --ink-mid: #4a4740;
+      --ink-light: #8a8780;
+      --paper: #f5f2eb;
+      --paper-warm: #ede9df;
+      --rule: #d8d3c8;
+      --accent: #2b5c3a;
+      --accent-light: #e8f0eb;
+      --accent-muted: #6a9c7a;
+      --serif: 'Libre Baskerville', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px;
+      height: 60px;
+    }
+    .nav-brand {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-brand span { color: var(--accent); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ── HERO ── */
+    .hero {
+      padding-top: 60px;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-text {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 80px 64px 80px 80px;
+      position: relative; z-index: 2;
+    }
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+      line-height: 1.12;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-subtitle {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--ink-mid);
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--ink-mid);
+      max-width: 420px;
+      line-height: 1.8;
+      margin-bottom: 52px;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .hero-cta:hover { background: #1e4028; }
+    .hero-visual {
+      background: var(--accent);
+      position: relative;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-visual svg { position: absolute; width: 100%; height: 100%; opacity: 0.18; }
+    .hero-quote {
+      position: relative; z-index: 2;
+      padding: 60px;
+      color: rgba(255,255,255,0.92);
+    }
+    .hero-quote blockquote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .hero-quote cite {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      font-style: normal;
+    }
+    .hero-scroll {
+      position: absolute; bottom: 36px; left: 80px;
+      display: flex; align-items: center; gap: 12px;
+      font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--ink-light);
+    }
+    .hero-scroll::before {
+      content: '';
+      display: block; width: 32px; height: 1px;
+      background: var(--ink-light);
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 120px 80px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 48px;
+      display: flex; align-items: center; gap: 16px;
+    }
+    .section-label::after {
+      content: ''; display: block; flex: 1; max-width: 60px;
+      height: 1px; background: var(--accent-muted);
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+      line-height: 1.2; font-weight: 700; color: var(--ink);
+      margin-bottom: 24px;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: #fff; border-top: 1px solid var(--rule); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: start;
+    }
+    .about-text p {
+      color: var(--ink-mid); margin-bottom: 20px;
+      font-size: 1.02rem;
+    }
+    .about-pillars { display: flex; flex-direction: column; gap: 0; }
+    .pillar {
+      padding: 28px 0;
+      border-top: 1px solid var(--rule);
+    }
+    .pillar:last-child { border-bottom: 1px solid var(--rule); }
+    .pillar-num {
+      font-family: var(--serif); font-style: italic;
+      font-size: 0.75rem; color: var(--accent-muted);
+      margin-bottom: 6px;
+    }
+    .pillar h3 {
+      font-family: var(--serif); font-size: 1.05rem;
+      font-weight: 700; margin-bottom: 8px;
+    }
+    .pillar p { font-size: 0.92rem; color: var(--ink-mid); }
+
+    /* ── PROJECTS ── */
+    #projects { background: var(--paper); }
+    .projects-intro {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: end; margin-bottom: 64px;
+    }
+    .projects-intro p { color: var(--ink-mid); font-size: 1rem; max-width: 420px; }
+    .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .project-card {
+      background: #fff;
+      padding: 40px;
+      position: relative; overflow: hidden;
+      transition: background 0.25s;
+      cursor: default;
+    }
+    .project-card:hover { background: var(--accent-light); }
+    .project-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 3px; height: 0;
+      background: var(--accent);
+      transition: height 0.3s ease;
+    }
+    .project-card:hover::before { height: 100%; }
+    .project-tag {
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent-muted); margin-bottom: 16px;
+    }
+    .project-card h3 {
+      font-family: var(--serif); font-size: 1.15rem;
+      font-weight: 700; margin-bottom: 12px; line-height: 1.3;
+    }
+    .project-card p { font-size: 0.9rem; color: var(--ink-mid); line-height: 1.75; }
+
+    /* ── APPROACH ── */
+    #approach { background: var(--ink); }
+    #approach .section-label { color: var(--accent-muted); }
+    #approach .section-label::after { background: var(--accent-muted); }
+    #approach h2 { color: var(--paper); }
+    .approach-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: rgba(255,255,255,0.08);
+      margin-top: 64px;
+    }
+    .approach-item {
+      background: var(--ink);
+      padding: 44px 36px;
+      transition: background 0.2s;
+    }
+    .approach-item:hover { background: #252320; }
+    .approach-icon {
+      width: 36px; height: 36px; margin-bottom: 24px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .approach-icon svg { width: 28px; height: 28px; stroke: var(--accent-muted); fill: none; stroke-width: 1.5; }
+    .approach-item h3 {
+      font-family: var(--serif); font-size: 1.05rem;
+      font-weight: 700; color: var(--paper);
+      margin-bottom: 12px;
+    }
+    .approach-item p { font-size: 0.88rem; color: rgba(245,242,235,0.5); line-height: 1.8; }
+
+    /* ── PEOPLE ── */
+    #people { background: var(--ink); border-top: 1px solid var(--rule); }
+    .people-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: end; margin-bottom: 64px; color: var(--paper);
+    }
+    .people-header p { color: var(--paper); max-width: 400px; }
+    .people-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+    .person {
+      display: flex; flex-direction: column;
+    }
+    .person-avatar {
+      width: 100%;
+      aspect-ratio: 1;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    
+    .person-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .person-name {
+      font-family: var(--serif); font-weight: 700;
+      font-size: 0.95rem; margin-bottom: 4px;
+      color: var(--paper);
+      
+    }
+    .person-role {
+      font-size: 0.8rem; color: var(--accent); font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .person-note { font-size: 0.82rem; color: var(--ink-light); }
+    .people-join {
+      margin-top: 64px; padding: 40px;
+      border: 1px solid var(--rule);
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--paper);
+      gap: 32px;
+    }
+    .people-join p {
+      font-family: var(--serif); font-style: italic;
+      font-size: 1.1rem; color: var(--ink-mid); max-width: 480px;
+    }
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 12px 28px; text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .btn-outline:hover { background: var(--accent); color: #fff; }
+
+    /* ── MEETINGS ── */
+    #meetings { background: var(--paper); }
+    .meetings-layout {
+      display: grid; grid-template-columns: 2fr 1fr;
+      gap: 80px; align-items: start;
+    }
+    .meetings-text p { color: var(--ink-mid); margin-bottom: 20px; }
+    .meeting-format { margin-top: 40px; }
+    .format-item {
+      display: flex; gap: 20px; padding: 20px 0;
+      border-top: 1px solid var(--rule);
+    }
+    .format-item:last-child { border-bottom: 1px solid var(--rule); }
+    .format-num {
+      font-family: var(--serif); font-style: italic;
+      font-size: 1.2rem; color: var(--rule);
+      flex-shrink: 0; width: 28px; padding-top: 2px;
+    }
+    .format-item h4 { font-family: var(--serif); font-size: 0.98rem; font-weight: 700; margin-bottom: 4px; }
+    .format-item p { font-size: 0.88rem; color: var(--ink-mid); }
+    .meetings-aside {
+      background: var(--accent);
+      padding: 40px;
+      color: rgba(255,255,255,0.9);
+    }
+    .meetings-aside h3 {
+      font-family: var(--serif); font-size: 1.15rem;
+      color: #fff; margin-bottom: 16px;
+    }
+    .meetings-aside p { font-size: 0.88rem; color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+    .meetings-aside .info-row {
+      display: flex; justify-content: space-between;
+      padding: 12px 0; border-top: 1px solid rgba(255,255,255,0.15);
+      font-size: 0.82rem;
+    }
+    .meetings-aside .info-row .label { color: rgba(255,255,255,0.5); }
+    .meetings-aside .info-row .val { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink); color: rgba(245,242,235,0.4);
+      padding: 48px 80px;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.8rem;
+    }
+    .footer-brand {
+      font-family: var(--serif); font-size: 1rem;
+      color: rgba(245,242,235,0.7);
+    }
+    footer a { color: rgba(245,242,235,0.4); text-decoration: none; }
+
+    /* ── FADE-IN ── */
+    .fade-in {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { gap: 20px; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-text { padding: 60px 32px 60px; }
+      .hero-visual { height: 320px; }
+      .hero-scroll { left: 32px; }
+      section { padding: 80px 32px; }
+      .about-grid, .projects-intro, .people-header,
+      .meetings-layout { grid-template-columns: 1fr; gap: 40px; }
+      .project-grid { grid-template-columns: 1fr; }
+      .approach-grid { grid-template-columns: 1fr; }
+      .people-grid { grid-template-columns: repeat(2, 1fr); }
+      .people-join { flex-direction: column; }
+      footer { flex-direction: column; gap: 16px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-brand" href="#"><span>Co</span>So</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#people">People</a></li>
+      <li><a href="#meetings">Meetings</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">CIMCYC · University of Granada</p>
+      <h1>CoSo: Cognition<br><em>for Society</em></h1>
+      <p class="hero-subtitle">From basic science to society</p>
+      <p class="hero-desc">
+        CoSo is an interdisciplinary research hub bringing together projects that apply foundational knowledge of human cognition to real social challenges.
+      </p>
+      <a href="#about" class="hero-cta">Discover our work</a>
+    </div>
+    <div class="hero-visual">
+      <!-- Decorative background grid pattern -->
+      <svg viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="600" height="800" fill="url(#grid)"/>
+        <circle cx="300" cy="400" r="220" fill="none" stroke="white" stroke-width="0.5"/>
+        <circle cx="300" cy="400" r="160" fill="none" stroke="white" stroke-width="0.5"/>
+        <circle cx="300" cy="400" r="100" fill="none" stroke="white" stroke-width="0.5"/>
+        <line x1="80" y1="400" x2="520" y2="400" stroke="white" stroke-width="0.5"/>
+        <line x1="300" y1="180" x2="300" y2="620" stroke="white" stroke-width="0.5"/>
+        <line x1="144" y1="244" x2="456" y2="556" stroke="white" stroke-width="0.5"/>
+        <line x1="456" y1="244" x2="144" y2="556" stroke="white" stroke-width="0.5"/>
+      </svg>
+      <div class="hero-quote">
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll to explore</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <p class="section-label fade-in">About</p>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <h2>Basic cognition,<br>real-world impact</h2>
+          <p>
+            CoSo encompases several independent research projects at CIMCYC that share a common scientific approach: applying what we know about basic human cognition to understand — and address — pressing social phenomena.
+          </p>
+          <p>
+            We hold regular monthly meetings to share progress, cross-pollinate ideas, identify synergies, and provide mutual support — especially for early-career researchers navigating the space between fields.
+          </p>
+        </div>
+        <div class="about-pillars fade-in">
+          <div class="pillar">
+            <p class="pillar-num">I</p>
+            <h3>Computational approach</h3>
+            <p>We leverage a computational views of human cognition to bridge the gap between cognitive science and social research.</p>
+          </div>
+          <div class="pillar">
+            <p class="pillar-num">II</p>
+            <h3>Social relevance</h3>
+            <p>Every project connects fundamental cognitive mechanisms to phenomena that matter in people's lives and in society.</p>
+          </div>
+          <div class="pillar">
+            <p class="pillar-num">III</p>
+            <h3>Collaborative spirit</h3>
+            <p>CoSo's project are organically and necessarily interdisciplinary.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-inner">
+      <p class="section-label fade-in">Research projects</p>
+      <div class="projects-intro">
+        <h2 class="fade-in">Current projects</h2>
+        <p class="fade-in">
+          The projects currently under the CoSo umbrella share a common lens — but each asks a distinct question about the relationship between cognition and the social world.
+        </p>
+      </div>
+      <div class="project-grid">
+        
+          <div class="project-card fade-in">
+            <p class="project-tag">Collaborative project @ CIMCYC</p>
+            <a href="https://ortiztudela.github.io/ortiztudela/cocombu/" target="_blank">
+              <h3>CoCoMBU </h3>
+            </a>
+            <p>We address how people form and revise beliefs about economic inequality and immigration in information environments that mix factual reporting with narrative frames.</p>
+          </div>
+        
+        <div class="project-card fade-in">
+          <p class="project-tag">Collaborative project @ CIMCYC</p>
+          <h3>UNLEARN-CVAW</h3>
+          <p> Wse study the cognitive mechanisms underlying the increasing prevalence of online disinformation about (cyber)violence against women, which reinforces sexist beliefs and perpetuates discrimination in digital spaces.</p>
+        </div>
+        <div class="project-card fade-in">
+          <p class="project-tag">International collaboration (University of Crete)</p>
+          <h3>BELID</h3>
+          <p>Exploring the cognitive mechanisms that mediate belief updating and trust building in social contexts as a function of political identity.</p>
+        </div>
+        <div class="project-card fade-in">
+          <p class="project-tag">International collaboration (University of Sarajevo)</p>
+          <h3>Cognition in Cognitive Warfare</h3>
+          <p>What can we learn from experimental research on perception and memory to inform studies on cognitive attacks and defense strategies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEOPLE -->
+  <section id="people">
+    <div class="section-inner">
+      <p class="section-label fade-in">People</p>
+      <div class="people-header">
+        <h2 class="fade-in" style="color: var(--paper);">People involved</h2>
+        <p class="fade-in">CoSo brings together researchers at different stages of their careers. Get to know us below.</p>
+      </div>
+      <div class="people-grid">
+        <div class="person fade-in">
+          <div class="person-avatar">
+            <img src="pics/rocio.jpg" alt="Rocío Vizcaíno-Cuenca" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <p class="person-name">Rocío Vizcaíno-Cuenca</p>
+          <p class="person-note">UNLEARN-CVAW</p>
+        </div>
+        <div class="person fade-in">
+          <div class="person-avatar">
+            <img src="pics/fran.jpeg" alt="Francisco Garre-Frutos" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <p class="person-name">Francisco Garre-Frutos</p>
+          <p class="person-note">UNLEARN-CVAW</p>
+        </div>
+        <div class="person fade-in">
+          <div class="person-avatar">
+            <img src="pics/giannis.jpg" alt="Efraín García-Sánchez" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <p class="person-name">Giannis Lois</p>
+          <p class="person-note">Belief and Trust Updating</p>
+        </div>
+        <div class="person fade-in">
+          <div class="person-avatar">
+            <img src="pics/lejla.jpeg" alt="Lejla Salihagic" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <p class="person-name">Lejla Salihagic</p>
+          <p class="person-note">Cognitive Warfare</p>
+        </div>
+        <div class="person fade-in">
+          <div class="person-avatar">
+            <img src="pics/juan.jpg" alt="Efraín García-Sánchez" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <p class="person-name">Juan Linde-Domingo</p>
+          <p class="person-note">Cognitive Warfare</p>
+        </div>
+        <div class="person fade-in">
+          <a href="https://www.pps-ugr.es/quienes-somos/efrain-garcia-sanchez/" target="_blank">
+            <div class="person-avatar">
+              <img src="pics/efrain.jpg" alt="Efraín García-Sánchez" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+          </a>
+          <p class="person-name">Efraín García-Sánchez</p>
+          <p class="person-note">CoCoMBU</p>
+        </div>
+        <div class="person fade-in">
+          <a href="https://ortiztudela.github.io/ortiztudela/cocombu/" target="_blank">
+            <div class="person-avatar">
+              <img src="pics/javier.jpg" alt="Javier Ortiz-Tudela" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+          </a>
+          <p class="person-name">Javier Ortiz-Tudela</p>
+          <p class="person-note">CoCoMBU</p>
+        </div>
+        <div class="person fade-in">
+          <div class="person-avatar">
+            <img src="pics/pablo.png" alt="Pablo Solana" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <p class="person-name">Pablo Solana</p>
+          <p class="person-note">UNLEARN-CVAW</p>
+        </div>
+        <div class="person fade-in">
+          <div class="person-avatar">
+            <img src="pics/paula.jpg" alt="Paula Pena" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <p class="person-name">Paula Pena</p>
+          <p class="person-note">UNLEARN-CVAW</p>
+        </div>
+        <div class="person fade-in">
+          <div class="person-avatar">
+            <img src="pics/davide.jpg" alt="Davide Melita" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <p class="person-name">Davide Melita</p>
+          <p class="person-note">CoCoMBU</p>
+        </div>
+      </div>
+      <div class="people-join fade-in">
+        <p>"CoSo is open to researchers working on applying cognitive science to social phenomena — whether you want to join an existing project or bring your own work into the conversation."</p>
+        <a href="mailto:ortiztudela@ugr.es" class="btn-outline">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">CoSo · Cognition for Society</div>
+    <div>CIMCYC · University of Granada · Spain</div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
