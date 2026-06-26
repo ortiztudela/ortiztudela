@@ -303,7 +303,7 @@
   <section class="section" id="goal">
     <h2>Goal</h2>
     <p>
-      The broader aim is to create a high-level semantic model that can be compared with lower-level visual models and with human or neural representational geometries. Instead of training the network to classify images into object labels, the target is a vector of associated concepts: for example, a dog image should activate associations such as <em>leash</em>, <em>bone</em>, or <em>pet</em>, while a piano should activate a different semantic neighbourhood.
+      The broader aim is to create a high-level semantic model that can be contrasted with lower-level visual models and with human or neural representational geometries. Instead of training the network to classify images into object labels, the target is a vector of associated concepts: for example, a dog image should activate associations such as <em>leash</em>, <em>bone</em>, or <em>pet</em>, while a piano should activate a different semantic neighbourhood.
     </p>
     <p>
       This makes the model useful as a bridge between object recognition and richer semantic cognition: it still receives images as input, but its output approximates the associative structure that humans bring to those objects.
@@ -331,7 +331,9 @@
   <section class="section" id="pipeline">
     <h2>Pipeline</h2>
     <p>
-      The current implementation follows a static, reproducible pipeline from class-label mapping to visualization. The same outputs can later be used to compute representational dissimilarity matrices and compare this model with behavioural, fMRI, EEG, or other artificial-network representations.
+       We have trained a convolutional neural network to predict semantic association profiles directly from images. The model starts from a Taskonomy `class_object` encoder and fine-tunes it on ImageNet images paired with association vectors derived from SWOW free-association norms.
+ 
+      The current implementation follows a static, reproducible pipeline that can later be used to compute representational dissimilarity matrices and compare this model with behavioural, fMRI, EEG, or other artificial-network representations. And many more options! If you have any, reach out!
     </p>
 
     <div class="pipeline">

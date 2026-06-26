@@ -17,11 +17,9 @@ If you want to know more about the project, [visit our site](https://sites.googl
 
 ## Learning semantic associations from images
 
-This project builds a neural network model that predicts semantic association profiles directly from images. The model starts from a Taskonomy `class_object` encoder and fine-tunes it on ImageNet images paired with association vectors derived from SWOW free-association norms. The goal is to create a high-level semantic model that can be compared with lower-level visual models and with human or neural representational geometries in the CONNECTS framework.
+Artificial neural networks excel at object classification. Given a 2D image of an object (e.g., the picture of a samoyedo), state-of-the-art convolutional neural networks are able to categorize the image as containing one concrete verbal label (e.g., "dog"). However, "object naming" is just one the many high-level tasks that humans can perform with an image. In this project we want to mimic human's semantic access. Namely, given the image of an object, access an distribution of concepts that are semantically associated with the concept represented in the image. The goal is to create a high-level semantic model that can be compared with lower-level visual models and with human or neural representational geometries.
 
-The pipeline maps ImageNet labels to SWOW cues, constructs 5,000-dimensional association vectors for each class, downloads a balanced subset of ImageNet images, fine-tunes the encoder and association head, and evaluates whether predicted vectors recover the target association structure using rank-based and top-k metrics.
-
-[Visit our site](https://ortiztudela.github.io/ortiztudela/association-model/)
+Check out more details at [our site](https://ortiztudela.github.io/ortiztudela/association-model/)
 
 
 ## How do memories inform predictions?
