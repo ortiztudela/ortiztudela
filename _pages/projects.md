@@ -15,6 +15,15 @@ This seemingly paradoxical state represents a cognitive puzzle that questions wh
 If you want to know more about the project, [visit our site](https://sites.google.com/view/connects-site).
 
 
+## Learning semantic associations from images
+
+This project builds a neural network model that predicts semantic association profiles directly from images. The model starts from a Taskonomy `class_object` encoder and fine-tunes it on ImageNet images paired with association vectors derived from SWOW free-association norms. The goal is to create a high-level semantic model that can be compared with lower-level visual models and with human or neural representational geometries in the CONNECTS framework.
+
+The pipeline maps ImageNet labels to SWOW cues, constructs 5,000-dimensional association vectors for each class, downloads a balanced subset of ImageNet images, fine-tunes the encoder and association head, and evaluates whether predicted vectors recover the target association structure using rank-based and top-k metrics.
+
+[Visit our site](https://ortiztudela.github.io/ortiztudela/association-model/)
+
+
 ## How do memories inform predictions?
 
 One of the assumptions of predictive processing accounts is that high-order representations, and/or structures, send information downwards (i.e., feedback signals) to lower levels on the processing hierarchy. However, the nature of those high-order representations is still unknown. 
@@ -35,3 +44,11 @@ Combines in‑lab experiments with large‑scale conjoint surveys.
 Aims at translating findings into evidence‑based interventions & guidelines.
 
 If you want to know more about the project, [visit our site](https://ortiztudela.github.io/ortiztudela/cocombu/)
+
+
+## CoSo: Cognition for Society
+CoSo encompases several independent research projects at CIMCYC that share a common scientific approach: applying what we know about basic human cognition to understand — and address — pressing social phenomena.
+
+We hold regular monthly meetings to share progress, cross-pollinate ideas, identify synergies, and provide mutual support — especially for early-career researchers navigating the space between fields.
+
+[Visit our site](https://ortiztudela.github.io/ortiztudela/coso/)
