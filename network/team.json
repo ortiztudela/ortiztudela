@@ -183,6 +183,13 @@
       "projects": [
         "XXXXX"
       ]
+    },
+    {
+      "id": "Robin",
+      "role": "postdoc",
+      "projects": [
+        "AWAKE"
+      ]
     }
   ],
   "links": [
@@ -334,6 +341,11 @@
     {
       "source": "Javier",
       "target": "Klara",
+      "type": "colab"
+    },
+    {
+      "source": "Juan",
+      "target": "Robin",
       "type": "colab"
     }
   ]
