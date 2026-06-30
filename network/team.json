@@ -82,7 +82,7 @@
     },
     {
       "id": "Laura",
-      "role": "research_assistant",
+      "role": "phd_student",
       "image": "laura.jpeg",
       "projects": [
         "CONNECTS"
@@ -266,7 +266,7 @@
     {
       "source": "Miriam",
       "target": "Laura",
-      "type": "colab"
+      "type": "cosupervisor"
     },
     {
       "source": "Irene",
