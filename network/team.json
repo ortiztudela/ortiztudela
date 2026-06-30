@@ -163,6 +163,13 @@
         "CONNECTS"
       ]
     },
+    {
+      "id": "Umut",
+      "role": "postdoc",
+      "projects": [
+        "visiting_researcher"
+      ]
+    }
   ],
   "links": [
     {
@@ -303,6 +310,11 @@
     {
       "source": "Javier",
       "target": "Almudena",
+      "type": "colab"
+    },
+    {
+      "source": "Javier",
+      "target": "Umut",
       "type": "colab"
     },
   ]
