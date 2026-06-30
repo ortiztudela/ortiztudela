@@ -165,9 +165,23 @@
     },
     {
       "id": "Umut",
+      "role": "visiting_researcher",
+      "projects": [
+        "CONNECTS"
+      ]
+    },
+    {
+      "id": "Klara",
       "role": "postdoc",
       "projects": [
-        "visiting_researcher"
+        "CONNECTS"
+      ]
+    },
+        {
+      "id": "Claudia",
+      "role": "phd_student",
+      "projects": [
+        "XXXXX"
       ]
     }
   ],
@@ -175,11 +189,6 @@
     {
       "source": "Javier",
       "target": "Carlos",
-      "type": "colab"
-    },
-    {
-      "source": "Johannah",
-      "target": "Javier",
       "type": "colab"
     },
     {
@@ -315,6 +324,16 @@
     {
       "source": "Javier",
       "target": "Umut",
+      "type": "supervisor"
+    },
+    {
+      "source": "Rodika",
+      "target": "Claudia",
+      "type": "supervisor"
+    },
+    {
+      "source": "Javier",
+      "target": "Klara",
       "type": "colab"
     }
   ]
