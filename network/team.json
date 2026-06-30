@@ -155,7 +155,14 @@
       "projects": [
         "CONNECTS"
       ]
-    }
+    },
+    {
+      "id": "Almudena",
+      "role": "postdoc",
+      "projects": [
+        "CONNECTS"
+      ]
+    },
   ],
   "links": [
     {
@@ -287,6 +294,16 @@
       "source": "Juan",
       "target": "Lejla",
       "type": "co"
-    }
+    },
+    {
+      "source": "Carlos",
+      "target": "Almudena",
+      "type": "colab"
+    },
+    {
+      "source": "Javier",
+      "target": "Almudena",
+      "type": "colab"
+    },
   ]
 }
