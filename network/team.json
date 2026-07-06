@@ -197,6 +197,13 @@
       "projects": [
         ""
       ]
+    },
+    {
+      "id": "Paula",
+      "role": "research_assistant",
+      "projects": [
+        "CONNECTS"
+      ]
     }
   ],
   "links": [
@@ -359,6 +366,11 @@
       "source": "Carlos",
       "target": "Nika",
       "type": "colab"
+    },
+        {
+      "source": "Javier",
+      "target": "Paula",
+      "type": "supervisor"
     }
   ]
 }
