@@ -177,7 +177,7 @@
         "CONNECTS"
       ]
     },
-        {
+    {
       "id": "Claudia",
       "role": "phd_student",
       "projects": [
@@ -191,7 +191,7 @@
         "AWAKE"
       ]
     },
-        {
+    {
       "id": "Nika",
       "role": "alumni",
       "projects": [
@@ -362,12 +362,12 @@
       "target": "Robin",
       "type": "colab"
     },
-        {
+    {
       "source": "Nika",
       "target": "Former BIKErs",
       "type": "colab"
     },
-        {
+    {
       "source": "Javier",
       "target": "Paula",
       "type": "supervisor"
